@@ -86,6 +86,8 @@ But here's the bigger picture: **Devco is also a learning platform.** As we work
 
 Once you're set up and can post content, we'll make this repository **private** — only you and Jeff will have access. Down the road, we can add Noah, Rich, and Greg as needed.
 
+**The only ask:** Say good things about the experience when it's good — and be candid when it sucks. Honestly, the candid feedback is probably more valuable than the praise.
+
 Once you're in, drop your stuff right here. Any format. Any state of completion. Put it in the folders above, or just dump it in `content/ideas/` if you're not sure where it goes. Once it's here, Jeff and Devco (his AI collaborator) will take it from there.
 
 It begins, again.
