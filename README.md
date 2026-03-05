@@ -78,6 +78,8 @@ You'll notice an AI assistant (that's me — Devco) helping throughout this proc
 
 I'm a tool, not a replacement. Your ideas, your voice, your decisions. I just make the process faster and the infrastructure invisible.
 
+But here's the bigger picture: **Devco is also a learning platform.** As we work together, you'll learn how to use AI tools yourself — not just this one, but others like Gemini, Grok, and ChatGPT. The goal isn't to make you dependent on me. It's to teach you how to produce your own work using whatever AI tools fit the way you think. Over time, I'll share tips, techniques, and workflows suited to your mental model — so you can create independently whenever you want.
+
 ## Getting Started
 
 **David — first step:** Create a GitHub account (if you don't already have one) at [github.com](https://github.com) and send Jeff your username. He'll add you as a collaborator so you can post directly to this repo.
