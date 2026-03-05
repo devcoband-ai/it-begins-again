@@ -48,11 +48,29 @@ The practice room was a forty-five-minute drive to Sandersville — a sleepy sma
 
 ---
 
-That's when I met Noah.
+That's when I met Noah and Greg.
 
-Noah was the lead guitar player. Like Rich, he seemed shy. He had cheap gear. David had a compact drum set. Rich played a Rickenbacker. I stood there with my instrument and thought: *what the fuck am I doing here?*
+Noah was the lead guitar player. Like Rich, he seemed shy. He had cheap gear. Rich played a Rickenbacker. I stood there with my instrument and thought: *what the fuck am I doing here?*
+
+And then there was Greg. The drummer. Quiet, reserved. Part of the Sandersville crew with David. He didn't say much. He just played.
+
+My first impression was warped by everything I thought I knew about drummers. I was a fan of Primus, Rush, Soundgarden — drummers who played as hard and loud as humanly possible. I looked at Greg's compact kit and made the kind of snap judgment that tells you more about the judge than the judged.
+
+I was all wrong.
+
+Greg played with the precision of a jazz musician. He didn't need to play hard unless the moment called for it. Every hit meant something. Nothing was wasted.
 
 They had several songs already worked out, so I tried to jump in and play along. I struggled. The two guitar styles — Noah's and whatever I was attempting — were so different that I couldn't find the pocket. It wasn't a talent problem. It was a listening problem. I was trying to play *over* when I needed to learn to play *within*.
+
+But something kept pulling me back to Greg.
+
+In every band I'd played in before, my bass was competing with the drums for space. Fighting for the low end. Shoving against each other like two people trying to stand in the same doorway. That was just how it worked. Or how I thought it worked.
+
+Greg made space for the bass. He didn't crowd the low end — he opened it. And once I stopped fighting and started listening, I found the pocket. And once I found the pocket, I could move within it. And when I moved, David instinctually responded with his voice.
+
+That was the moment.
+
+Not when David sang. Before that. The moment I locked in with Greg and realized I could *shape* within these songs. They weren't mine. I hadn't written them. But Greg's playing gave me room to inhabit them — to push, to pull, to breathe inside someone else's structure without breaking it.
 
 And then David started to sing.
 
@@ -60,9 +78,13 @@ And then David started to sing.
 
 Everything clicked.
 
-It was like playing in a band that had a conductor, except the conductor was the drummer, and his baton was his voice. The songs emerged from David's participation — or his lack of it. He would wait for the band to hack away at a formative attempt to make something, and then reward it with vocals. Not on a schedule. Not on cue. When the music earned it.
+It was like playing in a band that had a conductor, except the conductor wasn't the drummer — it was David, and his baton was his voice. Greg held the center. David moved around it. The songs emerged from David's participation — or his lack of it. He would wait for the band to hack away at a formative attempt to make something, and then reward it with vocals. Not on a schedule. Not on cue. When the music earned it.
 
 The experience was unlike anything I had seen. A masterful interplay of flow and moments of clarity that would rise out of noise, hold for a breath, and fall back into dissonance. We would find something beautiful, lose it, chase it, find it again in a different shape.
+
+Greg was the center of gravity. David was the weather. And somewhere between them, I found a way to play that I hadn't known I was looking for.
+
+To be honest, Greg is the reason I came back after that first practice. The forty-five-minute drive to Sandersville. The uncertainty about the sound, the style, the fit. None of that mattered once I felt what it was like to play bass with a drummer who made room instead of competing. That feeling — of being given space and choosing what to do with it — was new. And it was addictive.
 
 This would be the pattern of the band overall. A story I still can't place into a singular spine. A sound that resisted being pinned to a genre or a moment or a meaning. Something that began in a practice room in Sandersville with five people who had no business being in the same band, making music that had no business working.
 
