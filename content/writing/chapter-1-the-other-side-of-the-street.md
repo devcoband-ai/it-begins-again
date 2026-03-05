@@ -1,6 +1,6 @@
 # Chapter 1: The Other Side of the Street
 
-![The Other Side of the Street](../art/chapter-1-the-other-side-of-the-street-v2.png)
+![The Other Side of the Street](../art/chapter-1-the-other-side-of-the-street-v2.jpg)
 
 I first saw David Perry in 1993. I didn't really meet him. I saw him.
 
