@@ -78,7 +78,7 @@ And then David started to sing.
 
 Everything clicked.
 
-It was like playing in a band that had a conductor, except the conductor wasn't the drummer — it was David, and his baton was his voice. Greg held the center. David moved around it. The songs emerged from David's participation — or his lack of it. He would wait for the band to hack away at a formative attempt to make something, and then reward it with vocals. Not on a schedule. Not on cue. When the music earned it.
+It was like playing in a band that had a conductor, except the conductor wasn't the drummer — it was David, and his baton was his voice. Greg held the center. David moved above it — and occasionally descended into it. The songs emerged from David's participation — or his lack of it. He would wait for the band to hack away at a formative attempt to make something, and then reward it with vocals. Not on a schedule. Not on cue. When the music earned it.
 
 The experience was unlike anything I had seen. A masterful interplay of flow and moments of clarity that would rise out of noise, hold for a breath, and fall back into dissonance. We would find something beautiful, lose it, chase it, find it again in a different shape.
 
