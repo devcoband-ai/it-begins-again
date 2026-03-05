@@ -43,9 +43,9 @@ But it doesn't require a lot to start. A simple idea — a phrase, a sketch, a m
 To give you a sense of what's possible, two books created on the DevCo Platform:
 
 - **Tokenize the World** — a serious, structured work about technology and trust. Five parts, twenty-five chapters. This is the straight voice. *(Jeff has sent you a copy.)*
-- **Every Org Has a Gary** — a humorous inversion of that same voice. Satirical, observational, completely different tone from the same platform and process. *(Included in this repo as a PDF sample: `content/writing/every-org-has-a-gary-v2-sample.pdf`)*
+- **Every Org Has a Gary** — started as a humorous, satirical take on organizational dysfunction. Then we refactored it into something more serious — a field guide to invisible forces in organizations. Same raw material, completely different output. *(A five-chapter preview is included in this repo: `content/writing/gary-preview-chapters-1-5.md`)*
 
-Same tools. Same process. Wildly different results. The platform adapts to the voice — your voice.
+Same tools. Same process. The platform adapts to the voice — your voice. And sometimes the voice evolves mid-project.
 
 ## How We'll Work
 
