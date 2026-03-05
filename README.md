@@ -47,6 +47,8 @@ To give you a sense of what's possible, two books created on the DevCo Platform:
 
 Same tools. Same process. The platform adapts to the voice — your voice. And sometimes the voice evolves mid-project.
 
+And there's already a first chapter in progress: **"The Other Side of the Street"** (`content/writing/chapter-1-the-other-side-of-the-street.md`) — Jeff's seed for the story of Ancient Country Wisdom, written as the opening of a novel that follows the band from a practice room in Sandersville to wherever this goes next. This is how the process works: a conversation becomes a draft becomes a chapter becomes a book.
+
 ## How We'll Work
 
 ### Step 1: Gather
