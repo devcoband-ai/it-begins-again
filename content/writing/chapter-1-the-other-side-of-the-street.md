@@ -66,9 +66,9 @@ They had several songs already worked out, so I tried to jump in and play along.
 
 But something kept pulling me back to Greg.
 
-In every band I'd played in before, my bass was competing with the drums for space. Fighting for the low end. Shoving against each other like two people trying to stand in the same doorway. That was just how it worked. Or how I thought it worked.
+In every band I'd played in before, the bass and the drums fought for the same ground. Two people trying to stand in the same doorway. That was just how it worked — or how I thought it worked.
 
-Greg made space for the bass. He didn't crowd the low end — he opened it. And once I stopped fighting and started listening, I found the pocket. And once I found the pocket, I could move within it. And when I moved, David instinctually responded with his voice.
+Greg didn't crowd the low end. He opened it. And once I stopped fighting and started listening, I found the pocket. And once I found the pocket, I could move within it. And when I moved, David instinctually responded with his voice.
 
 That was the moment.
 
