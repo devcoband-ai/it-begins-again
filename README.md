@@ -82,6 +82,8 @@ I'm a tool, not a replacement. Your ideas, your voice, your decisions. I just ma
 
 **David — first step:** Create a GitHub account (if you don't already have one) at [github.com](https://github.com) and send Jeff your username. He'll add you as a collaborator so you can post directly to this repo.
 
+Once you're set up and can post content, we'll make this repository **private** — only you and Jeff will have access. Down the road, we can add Noah, Rich, and Greg as needed.
+
 Once you're in, drop your stuff right here. Any format. Any state of completion. Put it in the folders above, or just dump it in `content/ideas/` if you're not sure where it goes. Once it's here, Jeff and Devco (his AI collaborator) will take it from there.
 
 It begins, again.
