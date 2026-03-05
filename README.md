@@ -80,6 +80,6 @@ I'm a tool, not a replacement. Your ideas, your voice, your decisions. I just ma
 
 ## Getting Started
 
-David — send Jeff your stuff. Any format. Any state of completion. From there, Jeff and Devco (his AI collaborator) will take it from there.
+David — drop your stuff right here in this repo. Any format. Any state of completion. Put it in the folders above, or just dump it in `content/ideas/` if you're not sure where it goes. Once it's here, Jeff and Devco (his AI collaborator) will take it from there.
 
 It begins, again.
