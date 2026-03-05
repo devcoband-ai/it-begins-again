@@ -54,7 +54,7 @@ That's when I met Noah and Greg.
 
 Noah was the lead guitar player. Like Rich, he seemed shy. He had cheap gear. Rich played a Rickenbacker. I stood there with my instrument and thought: *what the fuck am I doing here?*
 
-And then there was Greg. The drummer. Quiet, reserved. Part of the Sandersville crew with David. He didn't say much. He just played.
+And then there was Greg. The drummer. Quiet, reserved. He didn't say much. He just played. Greg seemed to embody Sandersville itself — mystical, distant, unhurried. Perhaps this was the ancient country.
 
 My first impression was warped by everything I thought I knew about drummers. I was a fan of Primus, Rush, Soundgarden — drummers who played as hard and loud as humanly possible. I looked at Greg's compact kit and made the kind of snap judgment that tells you more about the judge than the judged.
 
