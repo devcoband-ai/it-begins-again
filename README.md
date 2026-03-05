@@ -14,15 +14,17 @@ You don't need to know how any of the technology works yet. That's what I'm here
 
 ## What Can the DevCo Platform Do?
 
-The DevCo Platform is a publishing and content engine that can:
+The DevCo Platform is a content preparation engine that can:
 
 - **Organize your work** — articles, stories, chapters, songs, visual art — all in one place with structure and metadata
 - **Assign voices** — each creator gets a distinct voice profile, so your work reads and feels like *you*
 - **Render content** — multiple presentation styles (editorial, cinematic, minimalist) depending on the mood of the piece
 - **Track provenance** — who wrote what, when, and how it evolved over time
-- **Publish** — when something is ready, it goes live with a URL you can share
+- **Prepare for publication** — get your content structured, polished, and ready to go wherever you want to take it
 
 Down the road, the platform can also generate images, convert text to speech, and connect pieces together into larger works (books, albums, collections).
+
+**Everything here is yours.** Your content, your copyright, your decisions about where and how it gets published. We're here to help you get it ready.
 
 ## How We'll Work
 
@@ -38,10 +40,10 @@ Drop everything you've got into the `content/` folder. It doesn't need to be pol
 We'll review what you've gathered, find the threads that connect, and start giving it structure. What's a standalone piece? What's part of something larger? What's the spectrum?
 
 ### Step 3: Stage
-Once something has shape, we'll stage it to the DevCo Platform — give it a voice, a format, and a home. You'll be able to see it rendered and decide if it's ready.
+Once something has shape, we'll stage it to the DevCo Platform — give it a voice, a format, and a home. You'll be able to see it rendered and decide if it feels right.
 
-### Step 4: Publish
-When you say go, it goes live.
+### Step 4: Ready
+When the work is where you want it, it's yours to publish however you choose — your platform, your terms, your copyright.
 
 ## About the AI
 
