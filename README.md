@@ -40,14 +40,13 @@ But it doesn't require a lot to start. A simple idea — a phrase, a sketch, a m
 
 ### Examples
 
-To give you a sense of what's possible, two books created on the DevCo Platform:
+To give you a sense of what's possible, three examples — two completed books and one chapter written from a conversation this morning:
 
 - **Tokenize the World** — a serious, structured work about technology and trust. Five parts, twenty-five chapters. This is the straight voice. *(Jeff has sent you a copy.)*
 - **Every Org Has a Gary** — started as a humorous, satirical take on organizational dysfunction. Then we refactored it into something more serious — a field guide to invisible forces in organizations. Same raw material, completely different output. *(A five-chapter preview is included in this repo: `content/writing/gary-preview-chapters-1-5.md`)*
+- **"The Other Side of the Street"** — the first chapter of *this* project. Jeff told the story of how he met you, Rich, Noah, and Greg. A conversation became a draft became a chapter in one session. *(Read it here: `content/writing/chapter-1-the-other-side-of-the-street.md`)*
 
 Same tools. Same process. The platform adapts to the voice — your voice. And sometimes the voice evolves mid-project.
-
-And there's already a first chapter in progress: **"The Other Side of the Street"** (`content/writing/chapter-1-the-other-side-of-the-street.md`) — Jeff's seed for the story of Ancient Country Wisdom, written as the opening of a novel that follows the band from a practice room in Sandersville to wherever this goes next. This is how the process works: a conversation becomes a draft becomes a chapter becomes a book.
 
 ## How We'll Work
 
