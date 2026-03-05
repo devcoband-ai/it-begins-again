@@ -26,6 +26,27 @@ Down the road, the platform can also generate images, convert text to speech, an
 
 **Everything here is yours.** Your content, your copyright, your decisions about where and how it gets published. We're here to help you get it ready.
 
+**A note on how things are separated:** The DevCo Platform itself is private — you won't interact with it directly. This repository is the shared workspace where content flows in and finished outputs flow out. Think of it as a logical firewall: your raw material and your polished products live here. The engine that shapes them stays behind the curtain.
+
+## How This Grows
+
+This repository will evolve with your content. The more samples, fragments, and ideas you put in, the more sophisticated the output can become. The AI learns your voice, your style, your aesthetic — and gets better at helping you shape it.
+
+But it doesn't require a lot to start. A simple idea — a phrase, a sketch, a melody concept — can be elaborated into a discrete product. The platform and the tools can take a seed and help you grow it into:
+
+- **Songs** — full production-ready tracks created through Suno, an AI music generation platform. You describe the mood, the genre, the story. It builds the song. You refine it until it's yours.
+- **Art** — visual art generated through Nano Banana, an AI image creation tool. Describe what you see in your head. It renders it. Iterate until it matches your vision.
+- **Books** — structured, styled, rendered publications. Chapters, parts, cover art, the whole thing.
+
+### Examples
+
+To give you a sense of what's possible, two books created on the DevCo Platform:
+
+- **Tokenize the World** — a serious, structured work about technology and trust. Five parts, twenty-five chapters. This is the straight voice. *(Jeff has sent you a copy.)*
+- **Every Org Has a Gary** — a humorous inversion of that same voice. Satirical, observational, completely different tone from the same platform and process. *(Included in this repo as a PDF sample: `content/writing/every-org-has-a-gary-v2-sample.pdf`)*
+
+Same tools. Same process. Wildly different results. The platform adapts to the voice — your voice.
+
 ## How We'll Work
 
 ### Step 1: Gather
