@@ -80,6 +80,6 @@ I'm a tool, not a replacement. Your ideas, your voice, your decisions. I just ma
 
 ## Getting Started
 
-Send Jeff your stuff. Any format. Any state of completion. We'll take it from there.
+David — send Jeff your stuff. Any format. Any state of completion. From there, Jeff and Devco (his AI collaborator) will take it from there.
 
 It begins, again.
