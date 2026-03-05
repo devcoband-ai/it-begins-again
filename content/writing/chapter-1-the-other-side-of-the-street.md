@@ -1,5 +1,7 @@
 # Chapter 1: The Other Side of the Street
 
+![The Other Side of the Street](../art/chapter-1-the-other-side-of-the-street-v2.png)
+
 I first saw David Perry in 1993. I didn't really meet him. I saw him.
 
 I was playing a fraternity party — my fraternity, my crowd, my drunk friends shouting requests for songs we'd already butchered twice. We were a cover band with ambitions we hadn't earned yet, and we had the one thing that mattered at a fraternity gig: a room full of people who already loved us before we played a note.
