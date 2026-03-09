@@ -34,7 +34,7 @@ This repository will evolve with your content. The more samples, fragments, and 
 
 But it doesn't require a lot to start. A simple idea — a phrase, a sketch, a melody concept — can be elaborated into a discrete product. The platform and the tools can take a seed and help you grow it into:
 
-- **Songs** — full production-ready tracks created through Suno, an AI music generation platform. You describe the mood, the genre, the story. It builds the song. You refine it until it's yours.
+- **Songs** — full production-ready tracks created through Suno, an AI music generation platform. You describe the mood, the genre, the story. It builds the song. You refine it until it's yours. Jeff has the professional version. Here's a sample playlist to hear what it can do: [Samples](https://suno.com/playlist/0d8339cb-779b-437a-a6d3-d5602a47e77e)
 - **Art** — visual art generated through Nano Banana, an AI image creation tool. Describe what you see in your head. It renders it. Iterate until it matches your vision.
 - **Books** — structured, styled, rendered publications. Chapters, parts, cover art, the whole thing.
 
