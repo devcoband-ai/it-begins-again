@@ -1,5 +1,7 @@
 # Chapter 2: Hey Man
 
+![Hey Man](../art/chapter-2-hey-man.jpg)
+
 Fifteen years is a long time to not talk to someone who changed how you hear music.
 
 I hadn't spoken to David since 2010. Not because of anything dramatic. Not a falling out, not a disagreement, not even a slow fade with a clear cause. Life just did what life does — it moved people to different cities, different careers, different versions of themselves. The band had been over for years by then. The members scattered into lives that looked nothing like Sandersville.
