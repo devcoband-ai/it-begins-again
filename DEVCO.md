@@ -37,6 +37,16 @@ This repo — "It Begins, Again" — is the first time DevCo is being used for a
 
 Your content is yours. DevCo is the infrastructure. You'll never need to touch it directly. Just know that when you drop something in this repo, there's a system behind it that can turn a rough idea into a finished piece — a book, a song, a visual — whenever you're ready.
 
+## Dimension
+
+You might also hear the name "Dimension" — that's the same platform, wearing a different face.
+
+DevCo is the lab. Dimension is how the platform shows up when it steps into a specific medium, genre, or modality. Think of it as a persona layer. When the work is music, Dimension might be the producer. When it's writing, Dimension might be the voice. When it's visual art, Dimension might be the aesthetic.
+
+Same engine underneath. Different name, different energy, depending on what's being made and who it's for.
+
+Why two names? Because a lab and a creative identity serve different purposes. DevCo is where the work gets built. Dimension is how the work gets presented. Keeping them separate means the experimental infrastructure doesn't bleed into the finished creative output — and vice versa.
+
 ## Devco (the AI)
 
 You'll also hear "Devco" used as a name — that's Jeff's AI collaborator. Think of it as the assistant that lives inside the platform. It helps with writing, organizing, generating images, and handling the technical work so you don't have to.
