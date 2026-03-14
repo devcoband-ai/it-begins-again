@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Band as Sacred Geometry</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0e17;
+    color: #e2e8f0;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 0.3rem;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  .tooltip {
+    position: absolute;
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #e2e8f0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    max-width: 280px;
+    line-height: 1.6;
+    z-index: 10;
+  }
+  .tooltip .name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .tooltip .role { font-style: italic; color: #94a3b8; margin-bottom: 8px; }
+  .tooltip .dim { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+  .tooltip .dim span { color: #cbd5e1; }
+  .legend {
+    position: absolute;
+    bottom: 24px;
+    display: flex;
+    gap: 20px;
+    font-size: 11px;
+    color: #64748b;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .legend-swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+</style>
+</head>
+<body>
+
+<h1>The Band as Sacred Geometry</h1>
+<div class="subtitle">Ancient Country Wisdom — five forces, five dimensions, one emergent pattern</div>
+
+<svg id="chart"></svg>
+<div class="tooltip" id="tooltip"></div>
+
+<div class="legend" id="legend"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+
+const width = Math.min(window.innerWidth - 40, 800);
+const height = Math.min(window.innerHeight - 160, 700);
+const outerRadius = Math.min(width, height) / 2 - 60;
+const innerRadius = 40;
+
+const svg = d3.select('#chart')
+  .attr('width', width)
+  .attr('height', height)
+  .append('g')
+  .attr('transform', `translate(${width/2},${height/2})`);
+
+// Dimensions (rings, like antibiotics in Burtin's)
+const dimensions = [
+  { id: 'gravity', name: 'Gravitational Pull', color: '#d4a574', desc: 'How much they anchor the sound' },
+  { id: 'weather', name: 'Volatility', color: '#6b8cae', desc: 'How much they move and shift' },
+  { id: 'resonance', name: 'Resonance', color: '#7a9a7e', desc: 'How deeply they connect to the others' },
+  { id: 'silence', name: 'Comfort with Silence', color: '#a07e9e', desc: 'How much they let space breathe' },
+  { id: 'return', name: 'The Return', color: '#c75c5c', desc: 'Strength of the pull back after 15 years' }
+];
+
+// Members (segments, like bacteria in Burtin's)
+const members = [
+  {
+    name: 'Greg', role: 'Drums — Gravity', color: '#8b7355',
+    desc: 'Center of gravity. Sandersville incarnate. Unhurried, mystical, distant.',
+    gravity: 0.95, weather: 0.15, resonance: 0.80, silence: 0.95, return: 0.60
+  },
+  {
+    name: 'David', role: 'Voice — Weather', color: '#6b8cae',
+    desc: 'Moved above it all. Descended when the music earned it. Sacred geometry student. The one who called.',
+    gravity: 0.40, weather: 0.95, resonance: 0.85, silence: 0.30, return: 0.95
+  },
+  {
+    name: 'Jeff', role: 'Bass — Orbit', color: '#d4a574',
+    desc: 'Found the pocket Greg made. Learned to shape within. The orbit that gave the center meaning.',
+    gravity: 0.70, weather: 0.35, resonance: 0.75, silence: 0.60, return: 0.85
+  },
+  {
+    name: 'Rich', role: 'Guitar — Bridge', color: '#7a9a7e',
+    desc: 'The shy troubadour. Dylan philosopher. The invitation that made the pentagon possible.',
+    gravity: 0.55, weather: 0.25, resonance: 0.90, silence: 0.80, return: 0.50
+  },
+  {
+    name: 'Noah', role: 'Lead Guitar — Tension', color: '#a07e9e',
+    desc: 'Cheap gear, quiet presence. Counterpoint that created tension the music needed to resolve. Working with David now.',
+    gravity: 0.45, weather: 0.60, resonance: 0.65, silence: 0.70, return: 0.75
+  }
+];
+
+const n = members.length;
+const angleSlice = (2 * Math.PI) / n;
+const dimCount = dimensions.length;
+
+// Scales
+const radiusScale = d3.scaleLog()
+  .domain([0.1, 1])
+  .range([innerRadius, outerRadius])
+  .clamp(true);
+
+// Ring backgrounds for each dimension
+const ringWidth = (outerRadius - innerRadius) / dimCount;
+
+dimensions.forEach((dim, di) => {
+  const r0 = innerRadius + di * ringWidth;
+  const r1 = innerRadius + (di + 1) * ringWidth;
+  
+  // Ring band
+  svg.append('circle')
+    .attr('r', r0)
+    .attr('fill', 'none')
+    .attr('stroke', '#1e293b')
+    .attr('stroke-width', 0.5);
+  
+  // Ring label
+  svg.append('text')
+    .attr('x', 4)
+    .attr('y', -r0 - 4)
+    .attr('fill', dim.color)
+    .attr('font-size', '9px')
+    .attr('font-family', 'Georgia')
+    .attr('opacity', 0.6)
+    .text(dim.name);
+});
+
+// Outer ring
+svg.append('circle')
+  .attr('r', outerRadius)
+  .attr('fill', 'none')
+  .attr('stroke', '#1e293b')
+  .attr('stroke-width', 0.5);
+
+// Radial grid lines (one per member)
+members.forEach((m, i) => {
+  const angle = i * angleSlice - Math.PI / 2;
+  svg.append('line')
+    .attr('x1', Math.cos(angle) * innerRadius)
+    .attr('y1', Math.sin(angle) * innerRadius)
+    .attr('x2', Math.cos(angle) * (outerRadius + 20))
+    .attr('y2', Math.sin(angle) * (outerRadius + 20))
+    .attr('stroke', '#1e293b')
+    .attr('stroke-width', 0.5);
+});
+
+// Draw bars for each member × dimension
+const barAngleWidth = angleSlice * 0.75;
+const barGap = angleSlice * 0.05;
+
+const tooltip = document.getElementById('tooltip');
+
+members.forEach((member, mi) => {
+  const startAngle = mi * angleSlice - Math.PI / 2 - barAngleWidth / 2;
+  
+  dimensions.forEach((dim, di) => {
+    const value = member[dim.id];
+    const rInner = innerRadius + di * ringWidth + 2;
+    const rOuter = innerRadius + di * ringWidth + ringWidth * value - 2;
+    
+    const subAngleWidth = barAngleWidth / dimCount;
+    const a0 = startAngle + di * subAngleWidth + barGap;
+    const a1 = startAngle + (di + 1) * subAngleWidth - barGap;
+    
+    // Use full wedge per dimension instead
+    const arc = d3.arc()
+      .innerRadius(rInner)
+      .outerRadius(Math.max(rInner + 2, rOuter))
+      .startAngle(startAngle + Math.PI / 2)
+      .endAngle(startAngle + barAngleWidth + Math.PI / 2);
+    
+    // Actually, let's do it Burtin-style: each dimension gets its own ring,
+    // each member gets a wedge in that ring, sized by value
+    const wedgeArc = d3.arc()
+      .innerRadius(rInner)
+      .outerRadius(rInner + ringWidth * value * 0.85)
+      .startAngle(mi * angleSlice - barAngleWidth / 2 + Math.PI / 2)
+      .endAngle(mi * angleSlice + barAngleWidth / 2 + Math.PI / 2)
+      .cornerRadius(2);
+    
+    svg.append('path')
+      .attr('d', wedgeArc)
+      .attr('fill', dim.color)
+      .attr('opacity', 0.5)
+      .attr('stroke', dim.color)
+      .attr('stroke-width', 0.5)
+      .attr('stroke-opacity', 0.3)
+      .style('cursor', 'pointer')
+      .on('mouseover', (event) => {
+        d3.select(event.target).attr('opacity', 0.8);
+        tooltip.innerHTML = `
+          <div class="name" style="color:${member.color}">${member.name}</div>
+          <div class="role">${member.role}</div>
+          <div class="dim">${dim.name}: <span>${Math.round(value * 100)}%</span></div>
+          <div class="dim" style="margin-top:8px; color:#64748b">${member.desc}</div>
+        `;
+        tooltip.style.left = (event.pageX + 15) + 'px';
+        tooltip.style.top = (event.pageY - 10) + 'px';
+        tooltip.style.opacity = 1;
+      })
+      .on('mouseout', (event) => {
+        d3.select(event.target).attr('opacity', 0.5);
+        tooltip.style.opacity = 0;
+      });
+  });
+});
+
+// Member name labels (outside)
+members.forEach((m, i) => {
+  const angle = i * angleSlice - Math.PI / 2;
+  const labelR = outerRadius + 35;
+  const x = Math.cos(angle) * labelR;
+  const y = Math.sin(angle) * labelR;
+  
+  const g = svg.append('g')
+    .attr('transform', `translate(${x},${y})`);
+  
+  g.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('fill', m.color)
+    .attr('font-size', '14px')
+    .attr('font-weight', '600')
+    .attr('font-family', 'Georgia')
+    .text(m.name);
+  
+  g.append('text')
+    .attr('text-anchor', 'middle')
+    .attr('dy', '1.2em')
+    .attr('fill', '#64748b')
+    .attr('font-size', '10px')
+    .attr('font-style', 'italic')
+    .attr('font-family', 'Georgia')
+    .text(m.role.split('—')[0].trim());
+});
+
+// Center — the emergent pattern
+svg.append('circle')
+  .attr('r', innerRadius - 2)
+  .attr('fill', 'rgba(15, 23, 42, 0.8)')
+  .attr('stroke', '#334155')
+  .attr('stroke-width', 0.5);
+
+svg.append('text')
+  .attr('text-anchor', 'middle')
+  .attr('dy', '-0.3em')
+  .attr('fill', '#94a3b8')
+  .attr('font-size', '10px')
+  .attr('font-family', 'Georgia')
+  .attr('letter-spacing', '0.1em')
+  .text('ANCIENT');
+
+svg.append('text')
+  .attr('text-anchor', 'middle')
+  .attr('dy', '0.9em')
+  .attr('fill', '#94a3b8')
+  .attr('font-size', '10px')
+  .attr('font-family', 'Georgia')
+  .attr('letter-spacing', '0.1em')
+  .text('COUNTRY');
+
+svg.append('text')
+  .attr('text-anchor', 'middle')
+  .attr('dy', '2.1em')
+  .attr('fill', '#94a3b8')
+  .attr('font-size', '10px')
+  .attr('font-family', 'Georgia')
+  .attr('letter-spacing', '0.1em')
+  .text('WISDOM');
+
+// Pentagon overlay — connecting the five points
+const pentagonPoints = members.map((m, i) => {
+  const angle = i * angleSlice - Math.PI / 2;
+  const r = outerRadius * 0.6;
+  return [Math.cos(angle) * r, Math.sin(angle) * r];
+});
+
+// Draw pentagram (star connections)
+for (let i = 0; i < 5; i++) {
+  const j = (i + 2) % 5; // skip one — creates the star
+  svg.append('line')
+    .attr('x1', pentagonPoints[i][0])
+    .attr('y1', pentagonPoints[i][1])
+    .attr('x2', pentagonPoints[j][0])
+    .attr('y2', pentagonPoints[j][1])
+    .attr('stroke', '#d4a574')
+    .attr('stroke-width', 0.5)
+    .attr('stroke-opacity', 0.12)
+    .attr('stroke-dasharray', '4,6');
+}
+
+// Pentagon outline
+svg.append('polygon')
+  .attr('points', pentagonPoints.map(p => p.join(',')).join(' '))
+  .attr('fill', 'none')
+  .attr('stroke', '#334155')
+  .attr('stroke-width', 0.5)
+  .attr('stroke-dasharray', '3,5')
+  .attr('opacity', 0.4);
+
+// Build legend
+const legendEl = document.getElementById('legend');
+dimensions.forEach(dim => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  item.innerHTML = `<div class="legend-swatch" style="background:${dim.color}"></div>${dim.name}`;
+  legendEl.appendChild(item);
+});
+
+// Subtle rotation animation
+let rotation = 0;
+function animateRotation() {
+  rotation += 0.02;
+  svg.selectAll('.pentagram-line')
+    .attr('transform', `rotate(${rotation})`);
+  requestAnimationFrame(animateRotation);
+}
+// Uncomment for slow rotation: animateRotation();
+
+</script>
+</body>
+</html>
