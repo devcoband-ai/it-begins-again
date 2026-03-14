@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>The Pentad — Bennett's Sacred Geometry</title>
+<title>The Pentad — Tree of Life</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -16,54 +16,26 @@
     height: 100vh;
     overflow: hidden;
   }
-  h1 {
-    font-size: 1.4rem;
-    font-weight: 300;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #94a3b8;
-    margin-bottom: 0.3rem;
-  }
-  .subtitle {
-    font-size: 0.85rem;
-    color: #64748b;
-    font-style: italic;
-    margin-bottom: 0.5rem;
-  }
-  .epigraph {
-    font-size: 0.72rem;
-    color: #475569;
-    font-style: italic;
-    margin-bottom: 1.2rem;
-    max-width: 460px;
-    text-align: center;
-    line-height: 1.6;
-  }
   .tooltip {
     position: absolute;
     background: rgba(15, 23, 42, 0.95);
     border: 1px solid #334155;
     border-radius: 8px;
-    padding: 14px 18px;
-    font-size: 13px;
+    padding: 12px 16px;
+    font-size: 12px;
     color: #e2e8f0;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.3s;
-    max-width: 300px;
-    line-height: 1.6;
+    transition: opacity 0.2s;
+    max-width: 260px;
+    line-height: 1.5;
     z-index: 10;
   }
-  .tooltip .name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
-  .tooltip .bennett-role { font-style: italic; color: #94a3b8; margin-bottom: 6px; font-size: 12px; }
-  .tooltip .insight { font-size: 11px; color: #64748b; margin-top: 6px; }
+  .tooltip .name { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .tooltip .sub { font-style: italic; color: #94a3b8; font-size: 11px; }
 </style>
 </head>
 <body>
-
-<h1>The Pentad</h1>
-<div class="subtitle">Five terms, one emergent significance</div>
-<div class="epigraph">"The pentad is the first system in which the unique character of the monad in question comes into view."<br>— J.G. Bennett</div>
 
 <svg id="chart"></svg>
 <div class="tooltip" id="tooltip"></div>
@@ -71,71 +43,197 @@
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
 
-const width = Math.min(window.innerWidth - 20, 860);
-const height = Math.min(window.innerHeight - 170, 680);
-const radius = Math.min(width, height) / 2 - 10;
+const width = window.innerWidth;
+const height = window.innerHeight;
+const radius = Math.min(width, height) / 2 - 30;
 
 const memberColors = {
-  'Greg': '#8b7355',
-  'David': '#6b8cae',
-  'Jeff': '#d4a574',
-  'Rich': '#7a9a7e',
-  'Noah': '#a07e9e'
+  'Greg': '#8b7355', 'David': '#6b8cae', 'Jeff': '#d4a574',
+  'Rich': '#7a9a7e', 'Noah': '#a07e9e'
 };
 
-const memberMeta = {
-  'Greg':  { term: 'Ground', desc: 'The foundation. Sandersville incarnate. The ground doesn\'t need to move.', insight: 'Every hit meant something. He made space for everything else to exist.' },
-  'David': { term: 'Goal', desc: 'The aim toward which the system moves. Purpose made audible.', insight: 'Called after fifteen years. The goal doesn\'t disappear. It waits.' },
-  'Jeff':  { term: 'Instrument', desc: 'The means by which ground reaches goal. The channel, not the source.', insight: 'Found the pocket Greg made. The instrument shapes. It doesn\'t create.' },
-  'Rich':  { term: 'Limit', desc: 'The constraint that gives the system form. Without limit, potential dissipates.', insight: 'The invitation that made the pentagon possible. Limit is not restriction. It is shape.' },
-  'Noah':  { term: 'Direction', desc: 'The orienting force. Tension that tells the system which way to resolve.', insight: 'Counterpoint requires knowing where the melody is going. Direction is knowing.' }
-};
+function getColor(d) {
+  let node = d;
+  while (node) {
+    if (memberColors[node.data.name]) return memberColors[node.data.name];
+    node = node.parent;
+  }
+  return '#334155';
+}
 
-const levelColors = {
-  'Significance': '#a07e9e',
-  'Activity': '#6b8cae',
-  'Relationship': '#7a9a7e',
-  'Polarity': '#d4a574',
-  'Wholeness': '#c75c5c'
-};
-
-// Hierarchical data — Bennett's levels branching to members
+// The full tree — Bennett's hierarchy, members, qualities, moments, places
 const data = {
-  name: "Significance",
-  bennettNumber: "Pentad",
-  desc: "The emergent meaning. Only possible when all five terms are present.",
+  name: "Ancient Country Wisdom",
   children: [
     {
-      name: "Activity",
-      bennettNumber: "Tetrad",
-      desc: "Directed energy. The capacity for purposeful motion.",
+      name: "Greg", desc: "Ground — the foundation upon which the system rests",
       children: [
-        {
-          name: "Relationship",
-          bennettNumber: "Triad",
-          desc: "Active connection. The quality that binds.",
+        { name: "Gravity", desc: "The force that holds everything in place",
           children: [
-            {
-              name: "Polarity",
-              bennettNumber: "Dyad",
-              desc: "Complementarity. What you are and what you are not.",
-              children: [
-                { name: "Greg", bennettNumber: "Monad", desc: "Wholeness. Complete in himself." },
-                { name: "Rich", bennettNumber: "Monad", desc: "Wholeness. The quiet center of invitation." }
-              ]
-            },
-            {
-              name: "Polarity",
-              bennettNumber: "Dyad",
-              desc: "Complementarity. Tension and resolution.",
-              children: [
-                { name: "Noah", bennettNumber: "Monad", desc: "Wholeness. Counterpoint as presence." },
-                { name: "Jeff", bennettNumber: "Monad", desc: "Wholeness. The orbit that found its pocket." }
-              ]
-            }
+            { name: "Stillness", desc: "The ability to not fill space" },
+            { name: "Patience", desc: "Unhurried. Perhaps this was the ancient country." },
+            { name: "Weight", desc: "Every hit meant something" }
           ]
         },
-        { name: "David", bennettNumber: "Monad", desc: "Wholeness. The voice that descends when the music earns it." }
+        { name: "Sandersville", desc: "The place that made the sound",
+          children: [
+            { name: "Red Clay", desc: "Forty-five minutes from the college town" },
+            { name: "Tobacco Barns", desc: "The landscape the drums came from" },
+            { name: "Distance", desc: "Mystical, distant, unhurried" },
+            { name: "The Drive", desc: "The pilgrimage to rehearsal" }
+          ]
+        },
+        { name: "Wholeness", desc: "Bennett's Monad — complete in himself",
+          children: [
+            { name: "Self-Contained", desc: "Needed nothing from the audience" },
+            { name: "Present", desc: "Never performed. Simply was." },
+            { name: "Center", desc: "Everything orbited Greg" }
+          ]
+        },
+        { name: "Space", desc: "What Greg gave the bass",
+          children: [
+            { name: "The Pocket", desc: "Greg made it. Jeff found it." },
+            { name: "Permission", desc: "The space to shape within" },
+            { name: "Restraint", desc: "What wasn't played" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "David", desc: "Goal — the aim toward which the system moves",
+      children: [
+        { name: "Weather", desc: "The volatile force — always moving",
+          children: [
+            { name: "Descent", desc: "Came down into the music when it earned it" },
+            { name: "Elevation", desc: "Moved above the band, conducting" },
+            { name: "Storms", desc: "Moments of full-throated arrival" },
+            { name: "Calm", desc: "The silence between movements" }
+          ]
+        },
+        { name: "Sacred Geometry", desc: "Bennett. The study that called him back.",
+          children: [
+            { name: "Bennett", desc: "J.G. Bennett's systematics — the framework" },
+            { name: "The Pentad", desc: "Five terms, one emergent significance" },
+            { name: "Convergence", desc: "The pattern that connects all five" },
+            { name: "The Call", desc: "March 4th. Hey man." }
+          ]
+        },
+        { name: "The Return", desc: "Fifteen years of silence. Then a phone call.",
+          children: [
+            { name: "The Gap", desc: "1993 to now. The silence IS the story." },
+            { name: "Recognition", desc: "Knowing it was still there" },
+            { name: "Noah", desc: "Working with Noah on something new" },
+            { name: "The Sister", desc: "\"I'm not crying, you're crying\"" }
+          ]
+        },
+        { name: "Voice", desc: "Not just singing. Conducting.",
+          children: [
+            { name: "Instrument", desc: "The voice as baton" },
+            { name: "Language", desc: "Words that rewarded the music" },
+            { name: "Art", desc: "Twenty years of analog press" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Jeff", desc: "Instrument — the means by which ground reaches goal",
+      children: [
+        { name: "Orbit", desc: "The path around the center",
+          children: [
+            { name: "The Pocket", desc: "Found it. Learned to stay in it." },
+            { name: "Restraint", desc: "Learned to shape within instead of play over" },
+            { name: "Service", desc: "The bass serves the song, not itself" }
+          ]
+        },
+        { name: "Before", desc: "The life that dissolved",
+          children: [
+            { name: "Heavy Band", desc: "The covers band. Loud. Post-graduation." },
+            { name: "The Brick", desc: "Working the kitchen. Drifting." },
+            { name: "Grad School", desc: "The structure that wasn't enough" },
+            { name: "Dissolution", desc: "The old band fell apart" }
+          ]
+        },
+        { name: "Bridge", desc: "Between ground and goal",
+          children: [
+            { name: "Technology", desc: "Thirty years building systems" },
+            { name: "DevCo", desc: "The platform that remembers" },
+            { name: "Provenance", desc: "The record of what happened" },
+            { name: "This Project", desc: "It begins, again" }
+          ]
+        },
+        { name: "Arrival", desc: "Rich's invitation changed everything",
+          children: [
+            { name: "The Invitation", desc: "Rich asked. Jeff showed up." },
+            { name: "First Rehearsal", desc: "Sandersville. The barn. The sound." },
+            { name: "Fifth Point", desc: "The pentagon completed" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Rich", desc: "Limit — the constraint that gives the system form",
+      children: [
+        { name: "The Bridge", desc: "Between worlds",
+          children: [
+            { name: "Rickenbacker", desc: "The guitar that sounded like an invitation" },
+            { name: "Dylan", desc: "The philosopher's instrument" },
+            { name: "Shy Troubadour", desc: "Quiet presence, enormous influence" }
+          ]
+        },
+        { name: "Invitation", desc: "The act that made the pentagon",
+          children: [
+            { name: "The Ask", desc: "Come play with us" },
+            { name: "Inclusion", desc: "Making space for the fifth" },
+            { name: "Generosity", desc: "Sharing what he'd found" }
+          ]
+        },
+        { name: "Form", desc: "Bennett's Limit — constraint as gift",
+          children: [
+            { name: "Shape", desc: "The limit is not a restriction. It is a shape." },
+            { name: "Boundary", desc: "Where the sound ended and silence began" },
+            { name: "Definition", desc: "What made ACW different from noise" }
+          ]
+        },
+        { name: "Connection", desc: "The deepest resonance of all five",
+          children: [
+            { name: "Brewers", desc: "The coffee shop side" },
+            { name: "Quiet", desc: "Connection through understatement" },
+            { name: "Loyalty", desc: "Still here. Still playing." }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Noah", desc: "Direction — the orienting force",
+      children: [
+        { name: "Tension", desc: "The counterpoint the music needed",
+          children: [
+            { name: "Cheap Gear", desc: "The sound that shouldn't have worked" },
+            { name: "Friction", desc: "Productive dissonance" },
+            { name: "Resolution", desc: "The tension always resolved. Eventually." }
+          ]
+        },
+        { name: "Counterpoint", desc: "The second melody",
+          children: [
+            { name: "Lead", desc: "Against the voice, not under it" },
+            { name: "Surprise", desc: "The note you didn't expect" },
+            { name: "Space", desc: "Knowing when not to play" }
+          ]
+        },
+        { name: "Quiet Presence", desc: "There without announcing it",
+          children: [
+            { name: "Observation", desc: "Watching before playing" },
+            { name: "Patience", desc: "Waiting for the right moment" },
+            { name: "Trust", desc: "Trusting the structure to hold" }
+          ]
+        },
+        { name: "Now", desc: "Working with David on something new",
+          children: [
+            { name: "Reconnection", desc: "The direction points forward" },
+            { name: "Ideas", desc: "What Noah and David are building" },
+            { name: "Continuation", desc: "The music didn't stop. It waited." }
+          ]
+        }
       ]
     }
   ]
@@ -147,227 +245,154 @@ const svg = d3.select('#chart')
   .append('g')
   .attr('transform', `translate(${width/2},${height/2})`);
 
-// Create cluster layout — radial dendrogram
-const tree = d3.cluster()
-  .size([360, radius * 0.75])
-  .separation((a, b) => (a.parent === b.parent ? 1 : 1.5));
+const root = d3.hierarchy(data)
+  .sort((a, b) => d3.ascending(a.data.name, b.data.name));
 
-const root = d3.hierarchy(data);
-tree(root);
+const cluster = d3.cluster()
+  .size([360, radius])
+  .separation((a, b) => 1);
+
+cluster(root);
 
 const tooltip = document.getElementById('tooltip');
 
-// Draw links — organic curved connections
+// Links — smooth radial curves
 svg.selectAll('.link')
   .data(root.links())
   .enter().append('path')
-  .attr('class', 'link')
   .attr('fill', 'none')
   .attr('stroke', d => {
-    const targetName = d.target.data.name;
-    if (memberColors[targetName]) return memberColors[targetName];
-    if (levelColors[targetName]) return levelColors[targetName];
-    return '#334155';
+    const c = getColor(d.target);
+    return c;
+  })
+  .attr('stroke-opacity', d => {
+    return 0.08 + (1 - d.target.depth / 4) * 0.12;
   })
   .attr('stroke-width', d => {
-    // Thicker near root, thinner at leaves
-    return Math.max(0.5, 3 - d.target.depth * 0.6);
+    return Math.max(0.3, 2.5 - d.target.depth * 0.5);
   })
-  .attr('stroke-opacity', d => 0.25 + (1 - d.target.depth / 4) * 0.25)
   .attr('d', d => {
-    const sourceAngle = (d.source.x - 90) * Math.PI / 180;
-    const targetAngle = (d.target.x - 90) * Math.PI / 180;
-    const sourceRadius = d.source.y;
-    const targetRadius = d.target.y;
+    // Radial diagonal link
+    const startAngle = (d.source.x - 90) * Math.PI / 180;
+    const endAngle = (d.target.x - 90) * Math.PI / 180;
+    const startRadius = d.source.y;
+    const endRadius = d.target.y;
     
-    const sx = Math.cos(sourceAngle) * sourceRadius;
-    const sy = Math.sin(sourceAngle) * sourceRadius;
-    const tx = Math.cos(targetAngle) * targetRadius;
-    const ty = Math.sin(targetAngle) * targetRadius;
-    
-    // Curved link
-    const midR = (sourceRadius + targetRadius) / 2;
-    const midAngle = (sourceAngle + targetAngle) / 2;
-    const mx = Math.cos(midAngle) * midR;
-    const my = Math.sin(midAngle) * midR;
-    
-    return `M${sx},${sy} Q${mx},${my} ${tx},${ty}`;
+    return `M${startRadius * Math.cos(startAngle)},${startRadius * Math.sin(startAngle)}`
+      + `C${startRadius * Math.cos(endAngle)},${startRadius * Math.sin(endAngle)}`
+      + ` ${endRadius * Math.cos(endAngle)},${endRadius * Math.sin(endAngle)}`
+      + ` ${endRadius * Math.cos(endAngle)},${endRadius * Math.sin(endAngle)}`;
   });
 
-// Draw nodes
+// Nodes
 const nodes = svg.selectAll('.node')
   .data(root.descendants())
   .enter().append('g')
-  .attr('class', 'node')
-  .attr('transform', d => {
-    const angle = (d.x - 90) * Math.PI / 180;
-    const x = Math.cos(angle) * d.y;
-    const y = Math.sin(angle) * d.y;
-    return `translate(${x},${y})`;
-  });
-
-// Node circles
-nodes.append('circle')
-  .attr('r', d => {
-    if (d.depth === 0) return 12; // Root — significance
-    if (memberColors[d.data.name]) return 8; // Members
-    return 5; // Bennett levels
-  })
-  .attr('fill', d => {
-    if (memberColors[d.data.name]) return memberColors[d.data.name];
-    if (levelColors[d.data.name]) return levelColors[d.data.name];
-    return '#334155';
-  })
-  .attr('opacity', d => d.depth === 0 ? 0.9 : 0.7)
-  .attr('stroke', d => {
-    if (d.depth === 0) return '#a07e9e';
-    return 'none';
-  })
-  .attr('stroke-width', d => d.depth === 0 ? 1.5 : 0)
-  .attr('stroke-opacity', 0.4)
+  .attr('transform', d => `rotate(${d.x - 90}) translate(${d.y},0)`)
   .style('cursor', 'pointer');
 
-// Glow on member nodes
-nodes.filter(d => memberColors[d.data.name])
-  .insert('circle', ':first-child')
-  .attr('r', 20)
-  .attr('fill', d => memberColors[d.data.name])
-  .attr('opacity', 0.08);
+nodes.append('circle')
+  .attr('r', d => {
+    if (d.depth === 0) return 6;
+    if (d.depth === 1) return 4;
+    if (d.children) return 2.5;
+    return 1.5;
+  })
+  .attr('fill', d => {
+    if (d.depth === 0) return '#94a3b8';
+    return getColor(d);
+  })
+  .attr('opacity', d => d.depth === 0 ? 0.9 : 0.6);
 
-// Labels
+// Labels — only for depth 0 and 1, and leaves
 nodes.append('text')
   .attr('font-family', 'Georgia')
   .attr('font-size', d => {
-    if (d.depth === 0) return '0px'; // handled separately
-    if (memberColors[d.data.name]) return '13px';
-    return '9px';
+    if (d.depth === 0) return '0'; // center handled separately
+    if (d.depth === 1) return '11px';
+    if (d.depth === 2) return '9px';
+    return '7.5px';
   })
   .attr('fill', d => {
-    if (memberColors[d.data.name]) return memberColors[d.data.name];
-    if (levelColors[d.data.name]) return levelColors[d.data.name];
+    if (d.depth === 1) return getColor(d);
+    if (d.depth === 2) return d3.color(getColor(d)).brighter(0.3);
     return '#64748b';
   })
-  .attr('font-weight', d => memberColors[d.data.name] ? '600' : '400')
-  .attr('font-style', d => memberColors[d.data.name] ? 'normal' : 'italic')
+  .attr('font-weight', d => d.depth === 1 ? '600' : '400')
+  .attr('font-style', d => d.depth > 2 ? 'italic' : 'normal')
+  .attr('dy', '0.31em')
+  .attr('transform', d => d.x >= 180 ? 'rotate(180)' : null)
   .attr('text-anchor', d => {
-    const angle = d.x;
-    return angle > 180 ? 'end' : 'start';
+    if (d.depth === 0) return 'middle';
+    return d.x < 180 ? 'start' : 'end';
   })
   .attr('dx', d => {
     if (d.depth === 0) return 0;
-    const angle = d.x;
-    const offset = memberColors[d.data.name] ? 14 : 10;
-    return angle > 180 ? -offset : offset;
-  })
-  .attr('dy', '0.35em')
-  .attr('transform', d => {
-    if (d.depth === 0) return '';
-    const angle = d.x;
-    return angle > 180 ? `rotate(${d.x - 270})` : `rotate(${d.x - 90})`;
+    const offset = d.depth === 1 ? 8 : (d.children ? 6 : 5);
+    return d.x < 180 ? offset : -offset;
   })
   .text(d => {
     if (d.depth === 0) return '';
-    if (memberColors[d.data.name]) {
-      const meta = memberMeta[d.data.name];
-      return `${d.data.name} — ${meta.term}`;
-    }
     return d.data.name;
   });
 
-// Bennett term sublabels for members
-nodes.filter(d => memberColors[d.data.name])
-  .append('text')
-  .attr('font-family', 'Georgia')
-  .attr('font-size', '9px')
-  .attr('fill', '#475569')
-  .attr('font-style', 'italic')
-  .attr('text-anchor', d => d.x > 180 ? 'end' : 'start')
-  .attr('dx', d => {
-    const offset = 14;
-    return d.x > 180 ? -offset : offset;
-  })
-  .attr('dy', '1.8em')
-  .attr('transform', d => d.x > 180 ? `rotate(${d.x - 270})` : `rotate(${d.x - 90})`)
-  .text(d => memberMeta[d.data.name].desc.split('.')[0]);
+// Tooltips
+nodes.on('mouseover', (event, d) => {
+  const name = d.data.name;
+  const desc = d.data.desc || '';
+  const color = d.depth <= 1 ? (memberColors[name] || '#94a3b8') : getColor(d);
+  
+  tooltip.innerHTML = `
+    <div class="name" style="color:${color}">${name}</div>
+    ${desc ? `<div class="sub">${desc}</div>` : ''}
+  `;
+  tooltip.style.left = (event.pageX + 12) + 'px';
+  tooltip.style.top = (event.pageY - 8) + 'px';
+  tooltip.style.opacity = 1;
+  
+  // Highlight branch
+  const ancestors = d.ancestors();
+  svg.selectAll('path')
+    .attr('stroke-opacity', function(l) {
+      if (ancestors.includes(l.source) || ancestors.includes(l.target)) return 0.5;
+      return 0.04;
+    });
+  svg.selectAll('.node circle')
+    .attr('opacity', function(n) {
+      if (ancestors.includes(n)) return 1;
+      return 0.15;
+    });
+})
+.on('mouseout', () => {
+  tooltip.style.opacity = 0;
+  svg.selectAll('path')
+    .attr('stroke-opacity', function(d) {
+      return 0.08 + (1 - d.target.depth / 4) * 0.12;
+    });
+  svg.selectAll('.node circle')
+    .attr('opacity', function(d) {
+      return d.depth === 0 ? 0.9 : 0.6;
+    });
+});
 
-// Tooltip on hover
-nodes
-  .on('mouseover', (event, d) => {
-    const meta = memberMeta[d.data.name];
-    if (meta) {
-      tooltip.innerHTML = `
-        <div class="name" style="color:${memberColors[d.data.name]}">${d.data.name}</div>
-        <div class="bennett-role">${meta.term} — ${meta.desc}</div>
-        <div class="insight">${meta.insight}</div>
-      `;
-    } else {
-      tooltip.innerHTML = `
-        <div class="name" style="color:${levelColors[d.data.name] || '#94a3b8'}">${d.data.name}</div>
-        <div class="bennett-role">${d.data.bennettNumber}</div>
-        <div class="insight">${d.data.desc}</div>
-      `;
-    }
-    tooltip.style.left = (event.pageX + 15) + 'px';
-    tooltip.style.top = (event.pageY - 10) + 'px';
-    tooltip.style.opacity = 1;
-  })
-  .on('mouseout', () => {
-    tooltip.style.opacity = 0;
-  });
-
-// Center label — root
+// Center text
 svg.append('text')
   .attr('text-anchor', 'middle')
-  .attr('dy', '-0.5em')
+  .attr('dy', '-0.6em')
   .attr('fill', '#94a3b8')
-  .attr('font-size', '11px')
+  .attr('font-size', '9px')
   .attr('font-family', 'Georgia')
-  .attr('letter-spacing', '0.12em')
-  .attr('font-weight', '600')
-  .text('SIGNIFICANCE');
+  .attr('letter-spacing', '0.15em')
+  .text('ANCIENT COUNTRY');
 
 svg.append('text')
   .attr('text-anchor', 'middle')
-  .attr('dy', '1em')
-  .attr('fill', '#475569')
-  .attr('font-size', '8px')
+  .attr('dy', '0.8em')
+  .attr('fill', '#94a3b8')
+  .attr('font-size', '9px')
   .attr('font-family', 'Georgia')
-  .attr('font-style', 'italic')
-  .text('the emergent property');
-
-// Subtle pulse
-const pulse = svg.append('circle')
-  .attr('r', 12)
-  .attr('fill', 'none')
-  .attr('stroke', '#a07e9e')
-  .attr('stroke-width', 0.5)
-  .attr('opacity', 0);
-
-function doPulse() {
-  pulse
-    .attr('r', 12)
-    .attr('opacity', 0.3)
-    .transition()
-    .duration(4000)
-    .ease(d3.easeCubicOut)
-    .attr('r', radius * 0.3)
-    .attr('opacity', 0)
-    .on('end', () => setTimeout(doPulse, 3000));
-}
-doPulse();
-
-// Draw faint sacred geometry — phi spiral suggestion
-const goldenAngle = Math.PI * (3 - Math.sqrt(5));
-for (let i = 0; i < 60; i++) {
-  const angle = i * goldenAngle;
-  const r = Math.sqrt(i) * (radius / Math.sqrt(60)) * 0.4;
-  svg.append('circle')
-    .attr('cx', Math.cos(angle) * r)
-    .attr('cy', Math.sin(angle) * r)
-    .attr('r', 0.8)
-    .attr('fill', '#1e293b')
-    .attr('opacity', 0.3);
-}
+  .attr('letter-spacing', '0.15em')
+  .text('WISDOM');
 
 </script>
 </body>
