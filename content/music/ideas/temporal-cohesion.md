@@ -2,10 +2,10 @@
 
 ## Suno Prompt
 
-Genre: minimal, dry, mid-tempo groove, trip-hop bones with acoustic guitar texture
+Genre: minimal, dry, mid-tempo groove, dream-pop bones with acoustic shoegaze guitar texture
 Tempo: 80 BPM, steady, unshifting
-Mood: observational, almost scientific — documenting a phenomenon
-Vocal: male, conversational, low register, zero performance — reporting not confessing
+Mood: two people finishing each other's sentences after years of nothing
+Vocal: male, conversational, low register, zero performance — talking not singing
 
 ## Lyrics
 
