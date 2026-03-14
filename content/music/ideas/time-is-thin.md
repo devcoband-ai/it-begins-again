@@ -1,4 +1,4 @@
-# Temporal Cohesion
+# Time Is Thin
 
 ## Suno Prompt
 
