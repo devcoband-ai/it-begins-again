@@ -1,45 +1,44 @@
 # What Is DevCo?
 
-Fair question.
+## The Origin
 
-## The Short Version
+DevCo is short for "Development Community." It started as Jeff's personal lab — a place to experiment with publishing, copyright, and brand concepts without the constraints of a corporate environment or a client engagement.
 
-DevCo is Jeff's AI-powered creative platform. It takes raw material — writing, music ideas, art concepts, fragments of things — and turns them into finished, polished work. Books, articles, albums, visual art, interactive pieces.
+The "band" — DevCo Band — is a fictional band. It doesn't play shows. It doesn't have a record deal. It exists as a creative vehicle for experimentation. Need to test how copyright works when AI generates music? The band releases a track. Need to explore how a book gets structured, rendered, and distributed across platforms? The band publishes one. Need to understand how brand identity scales across media types? The band has a logo, a voice, a catalog.
 
-You never need to touch DevCo directly. It runs in the background. You put your stuff in this repo, and DevCo is the engine that can shape it into something publishable.
+It's a sandbox that looks like a band. And because it looks like a band, it can touch every part of the creative stack — music, writing, visual art, publishing, distribution — without being limited to any one domain.
 
-## How It Works
+## The Platform
 
-Think of it in three layers:
+Behind the band is the DevCo Platform — a Rails application that Jeff built to manage the full lifecycle of creative content:
 
-1. **This repo** — the studio. Where raw material lives. Your drafts, ideas, recordings, scans. This is where you work.
+- **Books** — structured in parts and chapters, rendered in multiple styles (Tufte, cinematic, lo-fi, modern), each with its own voice
+- **Articles** — written, staged, and published with metadata, images, and voice profiles
+- **Music** — cataloged and connected to the projects that produced it
+- **Art** — generated, iterated, and tracked alongside the content it supports
+- **Ontologies** — formal conceptual models of the ideas inside the work (yes, really)
 
-2. **DevCo Platform** — the engine. It takes what's in the studio and gives it structure, voice, and presentation. It can render a chapter in different styles, assign a voice to a writer, organize pieces into a book, generate cover art. You don't see it. You don't need to.
+The platform isn't public. It's a private engine. Raw material goes in, finished products come out. The repo you're looking at right now is the studio — the place where content enters the system.
 
-3. **The output** — the finished product. A PDF. A rendered book. An album. Whatever form the work takes when it's ready to leave the studio.
+## What It's For
 
-## What DevCo Can Do
+Jeff uses DevCo to learn by building. The platform is a living experiment in:
 
-- **Organize** — take a pile of fragments and find the threads that connect them
-- **Voice** — each person gets their own voice profile, so your work sounds like you, not like everyone else
-- **Render** — multiple presentation styles (editorial, cinematic, minimalist, lo-fi) depending on the mood
-- **Generate** — images from descriptions, music from vibes, drafts from conversations
-- **Track** — who wrote what, when, and how it evolved
+- **How AI changes creative production** — from idea to finished artifact, how much of the process can AI accelerate without replacing human judgment?
+- **How publishing works at every layer** — structure, rendering, voice, distribution, copyright, licensing
+- **How content scales** — one book became four. One article format became dozens. One voice profile became a system that supports multiple writers with distinct styles.
+- **How provenance works** — who wrote what, when, how it evolved, and how you prove it
 
-## What DevCo Is Not
+The books are real. The articles are real. The music is real. The band is fictional. The learning is the point.
 
-- It's not a publishing platform. It prepares work. Where it goes after that is your call.
-- It's not public. Nobody sees the engine. Only the outputs cross the line when you say so.
-- It's not making decisions for you. It's a tool. You drive.
+## Why It Matters Here
+
+This repo — "It Begins, Again" — is the first time DevCo is being used for a collaboration that isn't Jeff working alone. The band members contributing here are real people with real creative work. The platform serves the same purpose it always has — organize, shape, render, publish — but now it's pointed at something that matters beyond the experiment.
+
+Your content is yours. DevCo is the infrastructure. You'll never need to touch it directly. Just know that when you drop something in this repo, there's a system behind it that can turn a rough idea into a finished piece — a book, a song, a visual — whenever you're ready.
 
 ## Devco (the AI)
 
-You'll also hear "Devco" used as a name — that's Jeff's AI collaborator. Think of it as the assistant that runs inside the platform. It can help with writing, organizing, generating images, and handling all the technical parts so you don't have to.
+You'll also hear "Devco" used as a name — that's Jeff's AI collaborator. Think of it as the assistant that lives inside the platform. It helps with writing, organizing, generating images, and handling the technical work so you don't have to.
 
-When Jeff says "Devco did this" or "I'll have Devco handle it" — that's the AI working inside the platform on your behalf.
-
-## Why Should I Care?
-
-You probably shouldn't, yet. Just know that when you drop a rough draft or a voice memo into this repo, there's an engine behind it that can turn that raw material into something polished — whenever you're ready.
-
-For now, focus on the work. The infrastructure is handled.
+When Jeff says "Devco did this" or "I'll have Devco handle it" — that's the AI working on your behalf.
