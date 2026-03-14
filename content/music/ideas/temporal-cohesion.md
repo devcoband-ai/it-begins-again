@@ -2,10 +2,10 @@
 
 ## Suno Prompt
 
-Genre: minimal, dry, mid-tempo groove, dream-pop bones with acoustic shoegaze guitar texture
-Tempo: 80 BPM, steady, unshifting
+Genre: Early 90s Madchester sound with jangly Rickenbacker-style guitars, swirling Hammond organ, funky breakbeat drums, and a warm melodic bassline with a dubby bounce. Mid-tempo groove with a loose psychedelic feel. Drum pattern has a baggy shuffle, layered with tambourines and roomy reverb. Vocals slightly buried in the mix, dreamy and nonchalant, with psychedelic effects (slap delay, phaser). Influenced by 60s garage rock and Northern soul filtered through a late 80s club aesthetic. Channel the energy of a warehouse rave bleeding into Britpop melancholy. All instruments should feel live and analog, with a slight tape warble.
+Tempo: 95 BPM, baggy shuffle
 Mood: two people finishing each other's sentences after years of nothing
-Vocal: male, conversational, low register, zero performance — talking not singing
+Vocal: male, dreamy, nonchalant, slightly buried — talking through a haze
 
 ## Lyrics
 
