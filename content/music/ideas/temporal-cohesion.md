@@ -4,20 +4,21 @@
 
 Genre: minimal, dry, mid-tempo groove, trip-hop bones with acoustic guitar texture
 Tempo: 80 BPM, steady, unshifting
-Mood: two people finishing each other's sentences after years of nothing
-Vocal: male, conversational, low register, zero performance — talking not singing
+Mood: observational, almost scientific — documenting a phenomenon
+Vocal: male, conversational, low register, zero performance — reporting not confessing
 
 ## Lyrics
 
 [Verse 1]
-You started a sentence
-I already knew the end of
-Not because I'm clever
-Because we think in the same shape
+Some frequencies don't decay
+They just go quiet
+Drop below the threshold
+Still running underneath the noise
 
-Picked up the phone like setting down a glass
-Right where I left it
-Still cold
+A decade is a unit of measurement
+Not a distance
+Nothing moved
+The signal was just below the floor
 
 [Chorus]
 Time is thin
@@ -26,14 +27,15 @@ Peel it back
 Same room
 
 [Verse 2]
-Everyone I know
-has to catch me up or slow me down
-You just walk in pace
-Like we left from the same door
+There's a kind of resonance
+that doesn't require proximity
+Two systems tuned to the same interval
+Don't need to be in the same building
 
-I don't explain myself to you
-Not because I won't
-Because there's nothing to translate
+The interference pattern holds
+whether you're watching it or not
+That's not faith
+That's physics
 
 [Chorus]
 Time is thin
@@ -42,17 +44,18 @@ Peel it back
 Same room
 
 [Bridge]
-I don't miss people like this
-I forget they were gone
-Which is worse
-or better
-I still can't tell
+Coherence doesn't mean agreement
+It means the waves arrive in phase
+Independent of when they left
+Independent of what they passed through
 
 [Verse 3]
-You said something last week
-that finished a thought I had in 2009
-I didn't tell you that
-You wouldn't find it strange
+Most connections attenuate
+Lose amplitude over distance
+This one doesn't
+Which means it's not a connection
+
+It's a property
 
 [Outro]
 Same room
