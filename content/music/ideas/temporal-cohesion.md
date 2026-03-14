@@ -2,68 +2,59 @@
 
 ## Suno Prompt
 
-Genre: ambient folk, minimal electronic undertow, spoken-word verses, dry vocal delivery
-Tempo: shifts — 72 BPM verses, 84 BPM chorus, returns to 72
-Mood: two people in a kitchen at 2am solving something nobody asked them to solve
-Instruments: acoustic guitar (sparse, fingerpicked), subtle synth pad, bass (low, felt not heard), brushed snare, piano (single notes, not chords)
+Genre: minimal, dry, mid-tempo groove, trip-hop bones with acoustic guitar texture
+Tempo: 80 BPM, steady, unshifting
+Mood: two people finishing each other's sentences after years of nothing
+Vocal: male, conversational, low register, zero performance — talking not singing
 
 ## Lyrics
 
 [Verse 1]
-You ever notice how a barn
-holds sound different when it's empty
-Like the walls remember what was played there
-but they're done performing
+You started a sentence
+I already knew the end of
+Not because I'm clever
+Because we think in the same shape
 
-I drove past one last Tuesday
-Looked exactly the same
-Which is the whole problem with buildings
-They don't know what year it is
+Picked up the phone like setting down a glass
+Right where I left it
+Still cold
 
 [Chorus]
-We keep arriving at the same conclusion
-from completely different directions
-That's not agreement
-That's geometry
+Time is thin
+Time is paint on a wall
+Peel it back
+Same room
 
 [Verse 2]
-I've been reading about systems
-where the parts don't know they're connected
-They just do what they do
-and the pattern shows up anyway
+Everyone I know
+has to catch me up or slow me down
+You just walk in pace
+Like we left from the same door
 
-Bennett called it significance
-The thing that only exists
-when all five terms are present
-Remove one and it's just math
+I don't explain myself to you
+Not because I won't
+Because there's nothing to translate
 
 [Chorus]
-We keep arriving at the same conclusion
-from completely different directions
-That's not agreement
-That's geometry
+Time is thin
+Time is paint on a wall
+Peel it back
+Same room
 
 [Bridge]
-(spoken, dry, almost offhand)
-I forgot we hadn't talked
-Which is different from forgetting you
-More like forgetting that forgetting
-was something that had happened
+I don't miss people like this
+I forget they were gone
+Which is worse
+or better
+I still can't tell
 
 [Verse 3]
-Noah says you've been drawing circles
-inside circles inside circles
-I said yeah that sounds right
-He said no — they're the same circle
-
-The scale changes
-The center doesn't
-That's the part most people miss
-They think the circle got bigger
+You said something last week
+that finished a thought I had in 2009
+I didn't tell you that
+You wouldn't find it strange
 
 [Outro]
-(quiet, almost to himself)
-What year is it
-Does it matter
 Same room
 Different paint
+Same room
