@@ -1,5 +1,7 @@
 # Time Is Thin
 
+**Listen:** [https://suno.com/s/SIcWgbXpuuXjzDkv](https://suno.com/s/SIcWgbXpuuXjzDkv)
+
 ## Suno Prompt
 
 Genre: Early 90s Madchester sound with jangly Rickenbacker-style guitars, swirling Hammond organ, funky breakbeat drums, and a warm melodic bassline with a dubby bounce. Mid-tempo groove with a loose psychedelic feel. Drum pattern has a baggy shuffle, layered with tambourines and roomy reverb. Vocals slightly buried in the mix, dreamy and nonchalant, with psychedelic effects (slap delay, phaser). Influenced by 60s garage rock and Northern soul filtered through a late 80s club aesthetic. Channel the energy of a warehouse rave bleeding into Britpop melancholy. All instruments should feel live and analog, with a slight tape warble.
