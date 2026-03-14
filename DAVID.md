@@ -41,14 +41,66 @@ GitHub solves that. Every change is tracked. Every version is saved. You can go 
 
 Think of it like this: your analog press work has editions. Each print run is a version. GitHub does the same thing for digital work — every save is an edition, and you never lose a previous one.
 
-### What to Learn First
+### Your First Workflow
 
-1. **Uploading files** — drag and drop through the web interface (github.com)
-2. **Commit messages** — a short note about what you changed and why ("added first draft of barn poem", "replaced scan with higher res version")
-3. **Viewing history** — seeing what changed, when, and going back if needed
-4. **Branches** — working on something experimental without affecting the main version (this comes later)
+This is the core loop. Once you can do this, you can do everything else.
 
-Jeff will walk you through each of these. No rush. But this is the skill that makes everything else manageable.
+**One-time setup** (you only do this once):
+
+```bash
+# Open Terminal on your Mac (it's in Applications → Utilities)
+
+# Clone the repo — this downloads the entire project to your computer
+git clone https://github.com/devcoband-ai/it-begins-again.git
+
+# Move into the project folder
+cd it-begins-again
+```
+
+Now you have the whole project on your machine.
+
+**Every time you want to add something:**
+
+```bash
+# Step 1: Pull the latest changes (in case Jeff added something)
+git pull
+
+# Step 2: Add your files to the ideas folder
+# Just drag your files into the content/ideas/ folder using Finder
+# Or copy them from the command line:
+cp ~/Desktop/my-sketch.jpg content/ideas/
+
+# Step 3: Stage your changes (tell git what you're adding)
+git add .
+
+# Step 4: Commit with a message (describe what you added)
+git commit -m "Added barn sketch from 1994 - David"
+
+# Step 5: Push it up (sends your changes to GitHub)
+git push
+```
+
+That's it. Five commands. Pull, add, stage, commit, push.
+
+**Tag Jeff as a co-author** on any commit by adding this to the end of your commit message:
+
+```bash
+git commit -m "Added new poem draft - David
+
+Co-authored-by: Jeff Highman <jhighman@gmail.com>"
+```
+
+The blank line before `Co-authored-by` matters — keep it there.
+
+### What to Learn Next
+
+Once you're comfortable with the basic loop:
+
+1. **Commit messages** — think of these as edition notes. "First draft of barn poem" is better than "added stuff"
+2. **Viewing history** — `git log` shows everything that's happened, who did it, when
+3. **Branches** — working on something experimental without affecting the main version (this comes later)
+
+Jeff will walk you through each step. No rush. But the pull-add-commit-push loop is the one thing to get comfortable with first.
 
 ### Why It Matters for Artists
 
