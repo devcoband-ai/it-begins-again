@@ -31,6 +31,33 @@ That's it. No command line. No special tools.
 - **Music:** MP3, WAV, or even a voice memo from your phone. Rough is fine.
 - **Naming:** Descriptive names help. `sandersville-barn-1994.jpg` beats `IMG_4032.jpg`. But don't stress about it — we can rename later.
 
+## The Most Important Thing: GitHub
+
+Before AI tools, before Claude, before anything else — learn GitHub. This is the foundation.
+
+Here's why: once you start creating with AI, the volume of work gets big fast. Drafts, revisions, images, variations, experiments. Without source control, you'll end up with a folder full of `final_v2_REAL_final_march14.doc` and no idea which version is the right one or what changed between them.
+
+GitHub solves that. Every change is tracked. Every version is saved. You can go back to any point in time and see exactly what something looked like. You can experiment without fear of losing what worked.
+
+Think of it like this: your analog press work has editions. Each print run is a version. GitHub does the same thing for digital work — every save is an edition, and you never lose a previous one.
+
+### What to Learn First
+
+1. **Uploading files** — drag and drop through the web interface (github.com)
+2. **Commit messages** — a short note about what you changed and why ("added first draft of barn poem", "replaced scan with higher res version")
+3. **Viewing history** — seeing what changed, when, and going back if needed
+4. **Branches** — working on something experimental without affecting the main version (this comes later)
+
+Jeff will walk you through each of these. No rush. But this is the skill that makes everything else manageable.
+
+### Why It Matters for Artists
+
+You're going to produce a lot of work. AI accelerates creation — what used to take weeks can happen in a day. The artists who thrive with these tools aren't the ones who generate the most. They're the ones who can organize, curate, and find their own work six months later.
+
+GitHub is how you stay in control of your own output.
+
+---
+
 ## Claude — Your AI Collaborator
 
 You already have a Claude subscription. Here's how to think about the two ways to use it:
