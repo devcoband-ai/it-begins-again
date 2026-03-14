@@ -49,6 +49,8 @@ Why the separation? It's practical. Jeff works as a CTO — his professional wor
 
 This isn't just organizational hygiene — it's an IP firewall. The creative work that happens here is Jeff's. The professional work stays where it belongs. The two never cross.
 
+For this reason, you won't see Jeff's name in the commit history or anywhere in the repo. Contributions show up under the DevCo identity. Same person, different hat. The brand layer is the boundary.
+
 ## Devco (the AI)
 
 You'll also hear "Devco" used as a name — that's Jeff's AI collaborator. Think of it as the assistant that lives inside the platform. It helps with writing, organizing, generating images, and handling the technical work so you don't have to.
