@@ -45,7 +45,9 @@ DevCo is the lab. Dimension is how the platform shows up when it steps into a sp
 
 Same engine underneath. Different name, different energy, depending on what's being made and who it's for.
 
-Why two names? Because a lab and a creative identity serve different purposes. DevCo is where the work gets built. Dimension is how the work gets presented. Keeping them separate means the experimental infrastructure doesn't bleed into the finished creative output — and vice versa.
+Why the separation? It's practical. Jeff works as a CTO — his professional work and the intellectual property he produces in that role belong to his employer. DevCo and Dimension provide a clean brand abstraction layer that separates personal creative work from professional output. Nothing built under DevCo or Dimension has any connection to his day job. Different brand, different identity, different body of work.
+
+This isn't just organizational hygiene — it's an IP firewall. The creative work that happens here is Jeff's. The professional work stays where it belongs. The two never cross.
 
 ## Devco (the AI)
 
