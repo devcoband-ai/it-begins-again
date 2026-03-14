@@ -115,10 +115,46 @@ The goal is to get you comfortable at the command line over time. Not all at onc
 When you're ready (Jeff will help with setup):
 
 1. Open Terminal on your Mac
-2. Type `claude` and hit enter
-3. You're in. Just talk to it. Ask it to read a file, write something, organize your folder, whatever you need.
+2. Navigate to your local copy of the repo: `cd it-begins-again`
+3. Type `claude` and hit enter
+4. You're in. Just talk to it.
 
-That's it. No special syntax. No programming. Just a conversation — but one where Claude can actually touch your files.
+That's it. No special syntax. No programming. Just a conversation — but one where Claude can see everything in the project.
+
+### Using Claude to Navigate the Repo
+
+Once Claude is running inside the project folder, it can see all the files. Try things like:
+
+- "Show me the folder structure" — Claude will map out where everything lives
+- "Read the music README" — Claude will show you what goes where
+- "What's in the ideas folder?" — Claude will list what's there
+- "Read IDEAS.md in the music folder" — Claude will show you the templates
+
+When you want to add content, just tell Claude what you have:
+
+- "I have a lyric fragment about driving through Sandersville at night. Put it in my music ideas."
+- "Here's a poem I wrote. Save it to the writing folder as 'barn-poem.md'."
+- "I want to describe an art piece — a lithograph of a tobacco barn. Help me fill out an idea template for it."
+
+Claude will create the file, put it in the right place, and you can review it before pushing to GitHub.
+
+### The Full Loop: Claude + Git
+
+This is where it all comes together:
+
+1. Open Terminal, go to your project: `cd it-begins-again`
+2. Pull the latest: `git pull`
+3. Start Claude: `claude`
+4. Work with Claude — create files, write drafts, organize ideas
+5. When you're done, exit Claude (type `/exit`) and push your work:
+
+```bash
+git add .
+git commit -m "Added lyric sketch and barn poem - David"
+git push
+```
+
+That's the workflow. Claude helps you create. Git keeps track of everything. GitHub makes it available to the band.
 
 ### Why the Command Line Matters
 
