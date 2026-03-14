@@ -15,7 +15,7 @@ They just go quiet
 Drop below the threshold
 Still running underneath the noise
 
-A decade is a unit of measurement
+Ten years is a number
 Not a distance
 Nothing moved
 The signal was just below the floor
