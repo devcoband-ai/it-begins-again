@@ -82,16 +82,6 @@ git push
 
 That's it. Five commands. Pull, add, stage, commit, push.
 
-**Tag Jeff as a co-author** on any commit by adding this to the end of your commit message:
-
-```bash
-git commit -m "Added new poem draft - David
-
-Co-authored-by: Jeff Highman <jhighman@gmail.com>"
-```
-
-The blank line before `Co-authored-by` matters — keep it there.
-
 ### What to Learn Next
 
 Once you're comfortable with the basic loop:
