@@ -2,9 +2,29 @@
 
 Rich sensory details bring your settings to life and immerse readers in your story world. In **Silence**, sensory experience is not decoration — it is the control mechanism itself. The vibration operates through what people hear, see, touch, and feel. Every sensory detail is either part of the system or evidence of its absence.
 
+### Cosmological Foundation (from *The New Way*)
+
+The world of Silence rests on a specific metaphysics:
+
+- **Form is condensed time.** Every object, space, and structure is time frozen into matter. Destiny is embedded in that frozen pattern. The vibration exploits this — it shapes the forms people inhabit so that the condensed time within those forms directs consciousness toward dispersion, never coherence. *(ref: condensation-of-time.md)*
+
+- **Every form contains a truth-seed (bija).** The inner essence that precedes manifestation. In the world of Silence, the truth-seed has been buried — not destroyed — beneath layers of vibrational distortion. The seed persists. The veils are acquired, not inherent. *(ref: chambers-zero-point.md)*
+
+- **The system operates through corrupted sacred geometry.** The same geometric principles that express cosmic order (zodiac divisions, harmonic ratios, the 12-segment time wheel) have been reverse-engineered as instruments of control. Architecture, interfaces, urban grids — all encode geometric patterns that feel resonant but prevent coherence. The geometry connects but does not cohere. *(ref: cosmic-map.md)*
+
+- **Silence is the zero point.** The primordial state before distortion. Not emptiness — the pre-vibrational condition where the truth-seed exists in its pure form. Achieving silence is not escape from the world. It is return to the origin of form. *(ref: chambers-zero-point.md)*
+
+- **The Riddle Sleep.** The population lives inside a collective riddle sleep — consciousness that has descended into density and forgotten itself. The shadow (the distorted image thrown up at the moment of manifestation) is mistaken for reality. Awakening requires confronting the shadow, not fleeing it. *(ref: riddle-sleep.md)*
+
+- **Cosmic time vs. personal time.** Ancient civilizations lived inside cosmic time — thousands of years, cyclical, connected to planetary rhythm. The vibration has contracted human consciousness to personal time: 70-80 years, linear, fearful. This contraction is the deepest form of control. *(ref: new-language-of-form.md)*
+
+When filling out sensory details for any location, ask: **How does this place express or suppress the truth-seed? What geometry is encoded here? Is the condensed time within this form directing consciousness toward coherence or dispersion?**
+
+---
+
 This worksheet should be completed for each significant location. Two writers will draw from it differently:
-- **David** uses sensory detail as the primary medium — the reader enters through sensation, not explanation.
-- **Jeff** uses sensory detail as evidence — grounded, specific, anchoring the architecture of the world.
+- **David** uses sensory detail as the primary medium — the reader enters through sensation, not explanation. He writes from inside the cosmology — the bija, the geometry, the felt experience of time condensing or releasing.
+- **Jeff** uses sensory detail as evidence — grounded, specific, anchoring the architecture of the world. He writes the infrastructure that implements the cosmology — the systems, the geography, the mechanics.
 
 ---
 
@@ -12,11 +32,17 @@ This worksheet should be completed for each significant location. Two writers wi
 _Name or working description_
 
 ## Vibrational Classification
-- [ ] **Saturated** — full signal coverage, all modalities active
-- [ ] **Attenuated** — partial signal, some modalities weaker
-- [ ] **Edge zone** — signal inconsistent, flickers of silence break through
-- [ ] **Dead zone** — signal absent, silence dominant
-- [ ] **Contested** — signal and silence coexist, unstable
+- [ ] **Saturated** — full signal coverage, all modalities active, truth-seed deeply buried
+- [ ] **Attenuated** — partial signal, some modalities weaker, seed occasionally pulses
+- [ ] **Edge zone** — signal inconsistent, flickers of silence break through, geometry fractures
+- [ ] **Dead zone** — signal absent, silence dominant, truth-seed accessible
+- [ ] **Contested** — signal and silence coexist, unstable, the shadow and the seed both visible
+
+## Cosmological Profile
+- **Geometry encoded:** _What sacred geometric patterns are present? (Grids? Spirals? Pentagons? Twelve-fold divisions? Corrupted or pure?)_
+- **Time signature:** _What kind of time does this place produce? (Personal/contracted? Cosmic/expanded? Cyclical? Frozen?)_
+- **Truth-seed status:** _Is the bija of this place accessible, buried, or actively suppressed?_
+- **Shadow presence:** _Is the distorted image visible here? Does the place mistake its shadow for its essence?_
 
 ---
 
@@ -33,10 +59,12 @@ _Name or working description_
 ### Shapes and Geometry
 - **Dominant shapes:** _What geometry defines this place? (Curves? Grids? Fractals? Spirals? Sacred forms?)_
 - **Is the geometry deliberate?** _Does the architecture encode vibrational patterns? Would David recognize Bennett's forms?_
+- **Corrupted vs. pure geometry:** _Are the sacred forms here (twelve-fold divisions, pentagrams, golden ratios) used to connect-without-cohering? Or do any express the truth-seed undistorted?_
+- **The 12-segment structure:** _Does this place reflect the cosmic clock face — zodiac divisions mapped onto space? Twelve zones, twelve hours, twelve corridors? Is it conscious design or buried inheritance?_
 - **Textures visible:** _Smooth? Rough? Layered? Eroded?_
-- **Patterns:** _Repeating motifs? Mathematical progressions? Visual noise?_
-- **Order vs. chaos:** _Is the visual field organized or overwhelmed?_
-- **Symmetry vs. asymmetry:** _What's balanced? What's broken?_
+- **Patterns:** _Repeating motifs? Mathematical progressions? Visual noise? Do patterns resolve or infinitely regress?_
+- **Order vs. chaos:** _Is the visual field organized or overwhelmed? Does the order itself produce dispersion?_
+- **Symmetry vs. asymmetry:** _What's balanced? What's broken? Where does a crack in the geometry let the seed show through?_
 
 ### Movement and Stillness
 - **What moves:** _Screens? People? Data visualizations? Air? Nothing?_
@@ -63,9 +91,11 @@ _Name or working description_
 
 ### The Vibration Here
 - **Base frequency:** _What is the ambient hum? Pitch? Character? (Warm drone? Cold whine? Layered harmonics?)_
-- **Source:** _Can you locate it? Or is it sourceless — emerging from the architecture itself?_
-- **Constancy:** _Is it steady, pulsing, or shifting?_
-- **What the vibration masks:** _What sounds can't be heard beneath it?_
+- **Harmonic structure:** _Does the frequency relate to sacred ratios (octaves, fifths, golden mean)? Is it a corrupted harmonic — close enough to resonate, distorted enough to scatter?_
+- **Source:** _Can you locate it? Or is it sourceless — emerging from the architecture itself? Is the geometry of the space generating the sound?_
+- **Constancy:** _Is it steady, pulsing, or shifting? Does it follow a cycle? (12-hour? Seasonal? Something longer?)_
+- **What the vibration masks:** _What sounds can't be heard beneath it? What would the truth-seed of this place sound like if the vibration stopped?_
+- **Time-condensation through sound:** _Does the frequency compress the listener's sense of time? Make hours feel like minutes? Contract awareness to the immediate?_
 
 ### Natural Sounds (Present or Absent)
 - **Weather:** _Rain, wind, thunder — do they exist here? Can they be heard over the signal?_
@@ -178,14 +208,22 @@ _This category is unique to Silence. The vibration operates below the five sense
 
 ### Coherence and Dispersion
 - **Coherence level:** _On a spectrum from fully dispersed to fully coherent, where is this place?_
-- **What pushes toward dispersion?** _What specific stimuli scatter attention?_
-- **What allows coherence?** _Are there accidental gaps? Architectural flaws? Times of day?_
-- **What does the edge of coherence feel like?** _The moment just before you almost see clearly — what's that like?_
+- **What pushes toward dispersion?** _What specific stimuli scatter attention? Which modalities (linguistic, mathematical, geometric, metaphysical) are active?_
+- **What allows coherence?** _Are there accidental gaps? Architectural flaws? Times of day? Cracks where the truth-seed pulses through?_
+- **What does the edge of coherence feel like?** _The moment just before you almost see clearly — what's that like? Is it the confrontation with the shadow (Riddle Sleep) or the approach to the zero point (Chamber)?_
+- **Connection vs. coherence:** _This is the core mechanism. How does this place offer the sensation of connection (pattern, meaning, resonance) while preventing coherence (integration, stillness, knowing)?_
+
+### Time Experience
+- **What kind of time lives here?** _Personal time (contracted, fearful, 70-year horizon)? Or does cosmic time leak through (cyclical, vast, connected to something larger)?_
+- **Time perception:** _Does time feel fast? Slow? Absent? Does the vibration distort time-sense?_
+- **Memory:** _Can people here remember in long arcs? Or only in fragments? Is the past accessible or compressed?_
+- **Destiny:** _Can anyone here sense their own destiny — the completed expression of their seed? Or is that sense entirely suppressed?_
 
 ### Silence Proximity
-- **How close is this place to silence?**
+- **How close is this place to silence?** _Silence = the zero point, the pre-vibrational state where the truth-seed exists undistorted._
 - **What would it take to achieve silence here?**
 - **Has anyone achieved it? What happened to them?**
+- **Is the Riddle Sleep breakable here?** _Could someone confront their shadow in this place?_
 
 ---
 
