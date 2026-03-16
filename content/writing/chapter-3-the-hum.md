@@ -1,5 +1,7 @@
 # Chapter 3: The Hum
 
+![The Hum](../art/chapter-3-the-hum.jpg)
+
 David called again three days later. This time he didn't start with Bennett.
 
 He started with cloud seeding.
