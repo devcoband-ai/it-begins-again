@@ -327,3 +327,7 @@ _Memories, contradictions, things you're not sure about, things you need to ask 
 **Key insight from Telegram session (Mar 19):** The strip was BUILT by Jeff's generation. In 1989, it was DoDo's world — two rooms, one owner. By 1994, five venues. The people who would eventually be in the audience and on the stage also built the physical infrastructure. The stages, the bars, the rooms. That's the arc.
 
 **Chapter 5 voice:** Present-day nostalgia. A man looking back. Written in present day, not from inside 1989. The sensory details are memory — filtered through thirty-five years of distance.
+
+**Chapter 5 tone:** Bob Dylan. Mike Watt. Plain, grounded, working-class storytelling. No frameworks, no sacred geometry, no cosmic architecture. This chapter OFFSETS the complexity of David's ideation in chapters 2-4. Hot dogs and snooker balls, not truth-seeds and bodygraphs. The meaning is in the selection, not the explanation. Put the reader there. Don't tell them why it matters.
+
+**ACW connection:** The tension between David's complexity and Jeff's ground IS the band. Chapter 5 establishes Jeff's origin note — the opposite of everything David brings. The pool hall is the counterweight that makes the cosmic stuff land instead of float away. Ancient Country Wisdom needs both sensibilities, and this chapter plants Jeff's half without naming it.
