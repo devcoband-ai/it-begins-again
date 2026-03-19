@@ -47,16 +47,23 @@ The strip didn't appear all at once. It was built across five years by one gener
 ## II. The Power Structure
 
 ### DoDo — The Town Boss
-- **Real name: Ed Hollis**
+- **Real name: James E. Hollis** (Yelp review says "Ed Hollis" — possibly went by both)
 - Owned the Pool Hall (128 W Hancock) AND the Opera House (124 W Hancock) AND package shop (liquor store)
 - The two venues were **adjacent buildings** — literally next door to each other
 - Controlled both the rooms where people gathered AND the supply chain (what they drank)
 - In a town with two colleges and one strip, that's not a business — it's an ecosystem
-- **Won the Georgia Lottery years later.** Meanwhile, Roger — the kid behind DoDo's bar — was trying to beat the lottery with algorithms in 1989. The boss won the thing the mathematician was trying to solve. Without the math.
-- _Is DoDo a character in the story, or more of an invisible force?_
-- _How old was he in 1989? Did he interact with the college kids or stay behind the scenes?_
-- _What year did he win the lottery? How much?_
-- _What happened after the win? Did the venues change?_
+- Owned the pool hall **since about 1989** — the same year Jeff arrived
+- **Won the Georgia Lottery** (~2003–2008, per Jeff's memory). Meanwhile, Roger — the kid behind DoDo's bar — was trying to beat the lottery with algorithms in 1989. The boss won the thing the mathematician was trying to solve. Without the math.
+- **Died ~2016.** Left the pool hall to his fiancée, who sold everything (the hall, his house, lake property).
+- Both buildings (pool hall + adjacent former Opera House) sold to **Frank Pendergast** (who also owns The Brick and BirdCat BBQ). The strip's infrastructure consolidated under new ownership.
+- **Danny Snow** — DoDo's business partner and friend. Quoted in Union-Recorder article about the sale.
+- The Opera House building had become "Asian Bistro & Grill" by the time of the sale.
+- The pool hall building became **Black Sheep Barcade**.
+- The buildings have "big windows with arching glass" — original façade.
+- _How old was DoDo in 1989? Did he interact with the college kids or stay behind the scenes?_
+- _What was the lottery win amount?_
+- _Did the win change anything on the strip?_
+- _What was DoDo like as a person? What did he look like?_
 
 ---
 
