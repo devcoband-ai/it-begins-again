@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milledgeville, 1994 — The Strip</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a12;
+    color: #e8dcc8;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+  h1 {
+    font-size: 1.8em;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    color: #d4a853;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-size: 0.9em;
+    color: #8a7e6a;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+  }
+  .map-container {
+    position: relative;
+    width: 900px;
+    max-width: 95vw;
+    height: 600px;
+  }
+  /* Hancock Street */
+  .hancock {
+    position: absolute;
+    top: 280px;
+    left: 50px;
+    right: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #d4a853 10%, #d4a853 90%, transparent);
+    border-radius: 2px;
+  }
+  .hancock-label {
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.75em;
+    letter-spacing: 0.3em;
+    color: #d4a853;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .hancock-arrow-left, .hancock-arrow-right {
+    position: absolute;
+    top: 275px;
+    color: #d4a853;
+    font-size: 0.7em;
+    opacity: 0.5;
+  }
+  .hancock-arrow-left { left: 20px; }
+  .hancock-arrow-right { right: 20px; }
+
+  /* Venue markers */
+  .venue {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .venue:hover { transform: scale(1.08); }
+  .venue:hover .venue-glow { opacity: 1; }
+  .venue:hover .venue-desc { opacity: 1; max-height: 80px; }
+
+  .venue-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+  }
+  .venue-glow {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    filter: blur(15px);
+  }
+  .venue-line {
+    width: 2px;
+    height: 30px;
+    opacity: 0.4;
+  }
+  .venue-name {
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    margin-top: 6px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .venue-code {
+    font-size: 0.65em;
+    opacity: 0.5;
+    margin-top: 2px;
+    letter-spacing: 0.1em;
+  }
+  .venue-desc {
+    font-size: 0.7em;
+    color: #8a7e6a;
+    text-align: center;
+    max-width: 120px;
+    margin-top: 4px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    line-height: 1.4;
+  }
+
+  /* South side venues (below street) */
+  .south .venue-line { background: linear-gradient(to bottom, #d4a853, transparent); }
+  .south { top: 300px; }
+
+  /* North side venues (above street) */
+  .north .venue-line { background: linear-gradient(to top, #d4a853, transparent); }
+  .north { flex-direction: column-reverse; bottom: auto; }
+
+  /* Individual venue colors */
+  .brewers .venue-dot { background: #c17f3e; }
+  .brewers .venue-glow { background: #c17f3e; }
+  .brewers .venue-name { color: #c17f3e; }
+
+  .poolhall .venue-dot { background: #2a9d6e; }
+  .poolhall .venue-glow { background: #2a9d6e; }
+  .poolhall .venue-name { color: #2a9d6e; }
+
+  .operahouse .venue-dot { background: #b85c8a; }
+  .operahouse .venue-glow { background: #b85c8a; }
+  .operahouse .venue-name { color: #b85c8a; }
+
+  .brick .venue-dot { background: #a65233; }
+  .brick .venue-glow { background: #a65233; }
+  .brick .venue-name { color: #a65233; }
+
+  .camerons .venue-dot { background: #5b8cbf; }
+  .camerons .venue-glow { background: #5b8cbf; }
+  .camerons .venue-name { color: #5b8cbf; }
+
+  /* Side labels */
+  .side-label {
+    position: absolute;
+    font-size: 0.6em;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.3;
+    writing-mode: vertical-rl;
+  }
+  .south-label { top: 380px; left: 10px; color: #d4a853; }
+  .north-label { top: 120px; left: 10px; color: #5b8cbf; }
+
+  /* College labels */
+  .college {
+    position: absolute;
+    font-size: 0.6em;
+    letter-spacing: 0.15em;
+    color: #4a4a5a;
+    text-transform: uppercase;
+  }
+  .gcsu { top: 40px; right: 60px; text-align: right; }
+  .gmc { bottom: 40px; left: 60px; }
+  .college-arrow {
+    font-size: 1.2em;
+    opacity: 0.3;
+  }
+
+  /* Connection line between Cameron's and the south side */
+  .crossing {
+    position: absolute;
+    top: 200px;
+    left: 420px;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(to bottom, #5b8cbf 0%, transparent 30%, transparent 70%, #d4a853 100%);
+    opacity: 0.15;
+  }
+  .crossing-label {
+    position: absolute;
+    top: 235px;
+    left: 432px;
+    font-size: 0.55em;
+    color: #4a4a5a;
+    font-style: italic;
+  }
+
+  /* Legend */
+  .legend {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.7em;
+    color: #6a6a7a;
+  }
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  /* Animated pulse on dots */
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+  .venue-glow { animation: pulse 3s ease-in-out infinite; }
+  .brewers .venue-glow { animation-delay: 0s; }
+  .poolhall .venue-glow { animation-delay: 0.5s; }
+  .operahouse .venue-glow { animation-delay: 1s; }
+  .brick .venue-glow { animation-delay: 1.5s; }
+  .camerons .venue-glow { animation-delay: 2s; }
+</style>
+</head>
+<body>
+
+<h1>Milledgeville</h1>
+<div class="subtitle">The Strip — Hancock Street, 1994</div>
+
+<div class="map-container">
+
+  <!-- Hancock Street -->
+  <div class="hancock"></div>
+  <div class="hancock-label">— Hancock Street —</div>
+  <div class="hancock-arrow-left">◄ West</div>
+  <div class="hancock-arrow-right">East ►</div>
+
+  <!-- Side labels -->
+  <div class="side-label south-label">South Side (Ours)</div>
+  <div class="side-label north-label">North Side</div>
+
+  <!-- Crossing line -->
+  <div class="crossing"></div>
+  <div class="crossing-label">crossing ↕</div>
+
+  <!-- College labels -->
+  <div class="college gcsu">
+    <div class="college-arrow">↗</div>
+    Georgia College<br>& State University
+  </div>
+  <div class="college gmc">
+    <div class="college-arrow">↙</div>
+    Georgia Military College
+  </div>
+
+  <!-- SOUTH SIDE VENUES -->
+
+  <!-- Brewers — C10 -->
+  <div class="venue south brewers" style="left: 160px;">
+    <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+      <div class="venue-glow"></div>
+      <div class="venue-dot"></div>
+    </div>
+    <div class="venue-line"></div>
+    <div class="venue-name">Brewers</div>
+    <div class="venue-code">C10</div>
+    <div class="venue-desc">First stop on the strip</div>
+  </div>
+
+  <!-- Pool Hall — C12 -->
+  <div class="venue south poolhall" style="left: 330px;">
+    <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+      <div class="venue-glow"></div>
+      <div class="venue-dot"></div>
+    </div>
+    <div class="venue-line"></div>
+    <div class="venue-name">The Pool Hall</div>
+    <div class="venue-code">C12 — DoDos</div>
+    <div class="venue-desc">Green felt, neon, cave-dark</div>
+  </div>
+
+  <!-- Opera House — C13 -->
+  <div class="venue south operahouse" style="left: 510px;">
+    <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+      <div class="venue-glow"></div>
+      <div class="venue-dot"></div>
+    </div>
+    <div class="venue-line"></div>
+    <div class="venue-name">The Opera House</div>
+    <div class="venue-code">C13</div>
+    <div class="venue-desc">Where the music lived</div>
+  </div>
+
+  <!-- The Brick — C14 -->
+  <div class="venue south brick" style="left: 690px;">
+    <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+      <div class="venue-glow"></div>
+      <div class="venue-dot"></div>
+    </div>
+    <div class="venue-line"></div>
+    <div class="venue-name">The Brick</div>
+    <div class="venue-code">C14</div>
+    <div class="venue-desc">End of the line</div>
+  </div>
+
+  <!-- NORTH SIDE -->
+
+  <!-- Cameron's — J5 -->
+  <div class="venue north camerons" style="left: 400px; top: 120px;">
+    <div class="venue-name">Cameron's</div>
+    <div class="venue-code">J5</div>
+    <div class="venue-desc">Where I first saw David's band</div>
+    <div class="venue-line"></div>
+    <div style="position:relative; display:flex; align-items:center; justify-content:center;">
+      <div class="venue-glow"></div>
+      <div class="venue-dot"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#c17f3e"></div>Brewers</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2a9d6e"></div>The Pool Hall</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#b85c8a"></div>The Opera House</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#a65233"></div>The Brick</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#5b8cbf"></div>Cameron's</div>
+</div>
+
+</body>
+</html>
