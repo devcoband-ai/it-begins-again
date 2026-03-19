@@ -18,13 +18,14 @@ The strip didn't appear all at once. It was built across five years by one gener
 
 ### Geography
 - **Hancock Street** is the spine. Everything that matters happens on a two-block stretch.
-- **South side (our side):**
-  - C10 — Brewers _(opened ~early '90s by someone Jeff didn't know well)_
-  - C12 — The Pool Hall (DoDos) _(the original, pre-strip)_
-  - C13 — The Opera House _(the original, pre-strip — owned by DoDo)_
-  - C14 — The Brick _(opened ~early '90s by Mitch Brooks)_
-- **North side (across the street):**
-  - J5 — Cameron's _(opened ~early '90s by Scott Cameron)_
+- **South side (even numbers, our side), west to east:**
+  - **136 W Hancock** — The Brick _(opened 1993 by Mitch Brooks — still open today)_
+  - **128 W Hancock** — DoDo's Pool Room _(the original, pre-strip — now Black Sheep Barcade)_
+  - **124 W Hancock** — DoDo's Opera House _(the original, pre-strip — CLOSED)_
+  - **??? W Hancock** — Brewers _(opened ~early '90s — address unknown, may be gone)_
+- **North side (odd numbers, across the street):**
+  - **??? W Hancock** — Cameron's _(opened ~early '90s by Scott Cameron — address unknown, may be gone)_
+- **Note:** DoDo's Pool Room and Opera House were **adjacent buildings** — ten steps apart.
 - **Georgia College** — up the hill to the northwest
 - **Georgia Military College** — down at the bottom
 - Two colleges. One strip. Everybody funnels through the same four blocks.
@@ -46,13 +47,16 @@ The strip didn't appear all at once. It was built across five years by one gener
 ## II. The Power Structure
 
 ### DoDo — The Town Boss
-- Owned the Pool Hall (C12) AND the Opera House (C13) AND liquor stores
+- **Real name: Ed Hollis**
+- Owned the Pool Hall (128 W Hancock) AND the Opera House (124 W Hancock) AND package shop (liquor store)
+- The two venues were **adjacent buildings** — literally next door to each other
 - Controlled both the rooms where people gathered AND the supply chain (what they drank)
 - In a town with two colleges and one strip, that's not a business — it's an ecosystem
+- **Won the Georgia Lottery years later.** Meanwhile, Roger — the kid behind DoDo's bar — was trying to beat the lottery with algorithms in 1989. The boss won the thing the mathematician was trying to solve. Without the math.
 - _Is DoDo a character in the story, or more of an invisible force?_
-- _What was his real name? How old was he?_
-- _Did he interact with the college kids or stay behind the scenes?_
-- _What happened to him?_
+- _How old was he in 1989? Did he interact with the college kids or stay behind the scenes?_
+- _What year did he win the lottery? How much?_
+- _What happened after the win? Did the venues change?_
 
 ---
 
