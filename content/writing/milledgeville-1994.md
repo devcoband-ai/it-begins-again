@@ -1,4 +1,16 @@
-# World Building — Milledgeville, Georgia, 1994
+# World Building — Milledgeville, Georgia
+
+---
+
+## Timeline
+
+The strip didn't appear all at once. It was built across five years by one generation.
+
+| Year | What Existed | What Changed |
+|------|-------------|--------------|
+| **1989** | Pool hall (DoDos) + Opera House. That's it. Both owned by DoDo. | Jeff arrives, summer session. Knows nobody. |
+| **~1990–93** | Strip expands | Scott Cameron opens Cameron's (J5, north side). Mitch Brooks opens The Brick (C14). Someone opens Brewers (C10). All built by people Jeff's age. |
+| **1994** | Full strip: 5 venues across two blocks | The scene exists. David's band Hero plays Cameron's. Jeff walks across the street. Chapter 1. |
 
 ---
 
@@ -7,12 +19,12 @@
 ### Geography
 - **Hancock Street** is the spine. Everything that matters happens on a two-block stretch.
 - **South side (our side):**
-  - C10 — Brewers
-  - C12 — The Pool Hall (DoDos)
-  - C13 — The Opera House
-  - C14 — The Brick
+  - C10 — Brewers _(opened ~early '90s by someone Jeff didn't know well)_
+  - C12 — The Pool Hall (DoDos) _(the original, pre-strip)_
+  - C13 — The Opera House _(the original, pre-strip — owned by DoDo)_
+  - C14 — The Brick _(opened ~early '90s by Mitch Brooks)_
 - **North side (across the street):**
-  - J5 — Cameron's
+  - J5 — Cameron's _(opened ~early '90s by Scott Cameron)_
 - **Georgia College** — up the hill to the northwest
 - **Georgia Military College** — down at the bottom
 - Two colleges. One strip. Everybody funnels through the same four blocks.
@@ -31,82 +43,166 @@
 
 ---
 
-## II. The Strip — Hancock Street
+## II. The Power Structure
 
-### C10 — Brewers
-- _What was this place?_
-- _Who went there?_
-- _What was the vibe — rowdy? Mellow? Dark? Bright?_
-- _What did it smell like? Sound like?_
-- _What happened here that couldn't happen at the other places?_
-- _What time of night did Brewers peak?_
+### DoDo — The Town Boss
+- Owned the Pool Hall (C12) AND the Opera House (C13) AND liquor stores
+- Controlled both the rooms where people gathered AND the supply chain (what they drank)
+- In a town with two colleges and one strip, that's not a business — it's an ecosystem
+- _Is DoDo a character in the story, or more of an invisible force?_
+- _What was his real name? How old was he?_
+- _Did he interact with the college kids or stay behind the scenes?_
+- _What happened to him?_
 
-### C12 — The Pool Hall (DoDos)
-- _The green felt under hanging billiard lamps. Neon beer signs. Cave-dark._
-- _Who went there? The same crowd as Brewers, or different?_
-- _Was this a place for conversation, competition, or just killing time?_
-- _What was the soundtrack? Jukebox? Silence? TV?_
-- _What did you learn about someone by how they played pool?_
-- _Did the band hang out here? Was this neutral ground?_
+---
+
+## III. The Strip — Hancock Street
+
+### C12 — The Pool Hall (DoDos) ⭐ CHAPTER 5 VENUE
+
+**Physical space (confirmed):**
+- Wood floors with decades of patina
+- Brick walls
+- Professional-grade snooker tables (not bar-size pool tables — serious equipment)
+- Antique fixtures, retro without trying
+- A bar/lunch counter along one wall with a hot dog warmer
+- No fluorescents. Hanging billiard lamps over the tables.
+- Felt like the 1950s. A time capsule.
+
+**The crowd:**
+- All men. No women.
+- Gruff local men from Milledgeville — not college kids. They could give a fuck about the college.
+- The old guys played snooker seriously. This was their craft.
+- Not a college hangout — an old-fashioned place to hang that felt somewhere between the '50s and '60s.
+
+**Roger — The Oracle:**
+- Worked the bar during the day
+- 22 years old. Math and computer science student at the college.
+- Served hot dogs for a buck and made conversation with anyone who sat at the bar
+- Side project: trying to beat the lottery with algorithms. In 1989. Before data science was a word.
+- "Smarter than the bar he was standing behind"
+- Narrow character in the story, but serves as an Oracle — the first person Jeff meets
+
+**Jeff's arrival (summer 1989):**
+- 19, freshman starting summer session, knows absolutely nobody
+- _(Eventually the story will explain why he knew nobody, but not in this chapter)_
+- The pool hall was the first place he visited in Milledgeville
+- Sat at the bar, not at the tables. Ate a hot dog. Talked to Roger.
+
+**Open questions:**
+- _What was the soundtrack? Jukebox? Silence? TV? Just the crack of snooker balls?_
+- _Did the pool hall change at night? Different crowd after dark?_
+- _Did the band ever hang out here later, or was this always the locals' space?_
+- _How long did Jeff keep going back? Was it a phase or a constant?_
+- _What did a hot dog cost? (Confirmed: a buck)_
+- _What happened to the pool hall? (Now called "Black Sheep" — Jeff sent photo)_
 
 ### C13 — The Opera House
-- _What was this really? (Theater? Venue? Bar with a stage?)_
-- _What kind of music played here?_
+**Known:**
+- In 1989, this was the ONE bar. If you went to college there, you went to the Opera House.
+- Thursday nights, everybody went out to the Opera House. That was the night.
+- A girl in Jeff's first 8am class told him about it — that's how he learned the town.
+- Owned by DoDo (same owner as the pool hall).
+- The pool hall connects forward to the Opera House arc.
+
+**Open questions:**
+- _What was this really? (Theater? Venue? Bar with a stage? All three?)_
+- _What kind of music played here in 1989 vs. 1994?_
 - _How big was the room? How many people fit?_
 - _What did it feel like when a band was setting up? When the room was filling?_
 - _Was this where the music mattered, or was it everywhere?_
 - _What happened at the Opera House that made it different from Cameron's?_
+- _What did it look like from the street?_
+
+### C10 — Brewers
+**Known:**
+- Didn't exist in 1989. Opened sometime in the early '90s.
+- Started by someone Jeff didn't know well.
+
+**Open questions:**
+- _What was this place? What was the vibe?_
+- _Who went there?_
+- _What did it smell like? Sound like?_
+- _What happened here that couldn't happen at the other places?_
+- _What time of night did Brewers peak?_
 
 ### C14 — The Brick
+**Known:**
+- Didn't exist in 1989. Opened by Mitch Brooks.
+
+**Open questions:**
 - _End of the strip. What was this place?_
 - _Who ended up at the Brick? Was it first stop or last stop?_
 - _What was the physical space like? (The name suggests the material.)_
 - _What kind of night led you to the Brick?_
+- _Who was Mitch Brooks? How did Jeff know him?_
 
 ### J5 — Cameron's (across the street)
-- _Already established in Chapter 1 — "you could stand on the sidewalk and see it."_
-- _The place where Jeff first saw David's band._
+**Known:**
+- Didn't exist in 1989. Opened by Scott Cameron.
+- Established in Chapter 1 — "you could stand on the sidewalk and see it."
+- The place where Jeff first saw David's band Hero.
+
+**Open questions:**
 - _What made Cameron's different from the south side spots?_
 - _Was crossing the street a decision? Two different worlds on two sides of Hancock?_
+- _Who was Scott Cameron? How did Jeff know him?_
+- _What did Cameron's look like inside?_
 
 ---
 
-## III. Sensory Details — Hancock Street, Friday Night, 1994
+## IV. Sensory Details — Hancock Street
 
-### Sound
+### The Pool Hall, Daytime, Summer 1989
+**Known:**
+- James Dean vibe. A young loner in a room that predates him.
+- Quiet. The crack of snooker balls. Roger's voice. Maybe a radio.
+- Warm daylight through the front window.
+- Wood, brick, felt, antique fixtures.
+- Smell of hot dogs on the warmer. Smoke.
+- The old men in their shirtsleeves, focused. Nobody looks up when you walk in.
+
+### Friday Night, 1994 (the full strip)
+
+#### Sound
 - _What did the street sound like from the sidewalk?_
 - _Could you hear music bleeding from multiple doors simultaneously?_
 - _Cars? Crickets? Shouting? Laughter?_
 - _What was the baseline hum of a Friday night on Hancock?_
 - _What sound meant the night was starting? What sound meant it was over?_
 
-### Sight
+#### Sight
 - _Neon? Streetlights? Headlights? Darkness between the pools of light?_
 - _What did the storefronts look like? Brick? Painted? Weathered?_
 - _How did people dress? (This is 1994 — grunge? Southern prep? Both?)_
 - _What could you see from one end of the strip to the other?_
-- _What was invisible? What was hidden?_
 
-### Smell
+#### Smell
 - _Beer. Cigarettes. What else?_
 - _Southern air in what season? (Spring humidity? Fall crispness? Summer heat radiating off asphalt after dark?)_
 - _Food? Was there food on the strip, or just bars?_
-- _What did the inside of these places smell like versus the sidewalk?_
 
-### Touch
+#### Touch
 - _The temperature of a Georgia night — warm enough to be outside all night?_
 - _Sticky bar surfaces. Cool glass. Hot asphalt still radiating at midnight._
 - _The feel of the pool table felt under your hand._
-- _Sweat? Breeze? Stillness?_
 
-### Taste
+#### Taste
 - _What did people drink? (This matters — it's 1994 Georgia, not Brooklyn.)_
 - _Cheap beer? Bourbon? Pitchers?_
-- _Was there a taste to the air itself?_
 
 ---
 
-## IV. The People
+## V. The People
+
+### Known Characters
+- **Jeff** — arrived summer 1989, 19, knew nobody. Started summer session.
+- **Roger** — 22, math/CS student, worked the pool hall bar daytime. Oracle.
+- **DoDo** — town boss. Owned pool hall + Opera House + liquor stores.
+- **Scott Cameron** — Jeff's generation. Opened Cameron's.
+- **Mitch Brooks** — Jeff's generation. Opened The Brick.
+- **David Perry** — arrived later? First seen in Ch. 1 (1993), playing Cameron's with Hero.
+- **"The girl in the 8am class"** — told Jeff about Thursday nights at the Opera House. Unnamed.
 
 ### Who was on the strip?
 - _Georgia College students — what kind? (Majors? Vibe? Rich kids? Scholarship kids? Artists? Athletes?)_
@@ -129,7 +225,7 @@
 
 ---
 
-## V. The Music Scene
+## VI. The Music Scene
 
 ### What kind of music lived here?
 - _What was the sound of Milledgeville in 1994? (Southern rock? Alt-country? Grunge leaking in? Jam band?)_
@@ -153,7 +249,7 @@
 
 ---
 
-## VI. Time — How the Town Moved
+## VII. Time — How the Town Moved
 
 ### Daily rhythm
 - _What was daytime Milledgeville? (Dead? Busy? Different town entirely?)_
@@ -162,11 +258,13 @@
 - _Where did people go when the bars closed?_
 
 ### Weekly rhythm
-- _Was there a band night? (Thursday? Saturday?)_
+- **Thursday** — Opera House night. Everybody goes. (Confirmed for 1989; probably still true in '94?)
+- _Was there a band night? (Thursday? Saturday? Both?)_
 - _Were weeknights dead or did college keep it steady?_
 - _Sunday — what happened to the town?_
 
 ### Seasonal rhythm
+- **Summer 1989** — Jeff's first experience. Presumably quieter, fewer students.
 - _Fall semester versus spring — different energy?_
 - _Summer — did the town empty? Who stayed?_
 - _Was there a best season? A time when Milledgeville was most itself?_
@@ -179,7 +277,7 @@
 
 ---
 
-## VII. The Central Contradiction
+## VIII. The Central Contradiction
 
 - _What did the town promise versus what it delivered?_
 - _Was it a place of freedom or a place of limitation?_
@@ -188,7 +286,7 @@
 
 ---
 
-## VIII. What the Town Produced
+## IX. What the Town Produced
 
 - _Not just the band — what kind of people came out of this place?_
 - _What did Milledgeville teach you that you couldn't have learned anywhere else?_
@@ -199,3 +297,5 @@
 
 ## Notes
 _Memories, contradictions, things you're not sure about, things you need to ask David or the others._
+
+**Key insight from Telegram session (Mar 19):** The strip was BUILT by Jeff's generation. In 1989, it was DoDo's world — two rooms, one owner. By 1994, five venues. The people who would eventually be in the audience and on the stage also built the physical infrastructure. The stages, the bars, the rooms. That's the arc.
