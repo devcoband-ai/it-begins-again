@@ -306,7 +306,24 @@ The strip didn't appear all at once. It was built across five years by one gener
 
 ---
 
+## X. Threads for Later
+
+### The Lottery Thread
+Roger → DoDo → the Texaco. Three ways to approach the same impossible thing.
+
+- **1989:** Roger, 22, math/CS student behind the bar at DoDo's, trying to beat the Georgia Lottery with algorithms. Before data science was a word.
+- **~2003–2008:** DoDo (James E. Hollis) wins the Georgia Lottery. No public record found, but local knowledge. The boss won the thing the mathematician was trying to solve. Without the math.
+- **2025:** A Hancock County man wins $1 million from a VIP Billionaire scratch-off at the Texaco Food Mart on North Columbia Street in Milledgeville. Chose the lump sum — half a million. The town keeps playing. ([13WMAZ article](https://www.13wmaz.com/article/news/local/milledgeville-station-lottery-dreamers/93-b76b0fb8-4b57-49b2-b89d-9716c416678a))
+
+The lottery lives in Milledgeville. It's in the air. The mathematician, the boss, and the daily players — same town, same dream, decades apart.
+
+_Not for Chapter 5. Chapter 5 is nostalgia, present tense. This thread pays off later._
+
+---
+
 ## Notes
 _Memories, contradictions, things you're not sure about, things you need to ask David or the others._
 
 **Key insight from Telegram session (Mar 19):** The strip was BUILT by Jeff's generation. In 1989, it was DoDo's world — two rooms, one owner. By 1994, five venues. The people who would eventually be in the audience and on the stage also built the physical infrastructure. The stages, the bars, the rooms. That's the arc.
+
+**Chapter 5 voice:** Present-day nostalgia. A man looking back. Written in present day, not from inside 1989. The sensory details are memory — filtered through thirty-five years of distance.
