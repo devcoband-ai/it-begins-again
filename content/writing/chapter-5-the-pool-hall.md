@@ -80,19 +80,19 @@ For a kid with no footing, a place where sitting is enough is everything. I didn
 
 ---
 
-I went to the Opera House on a Thursday. The girl was right. Everybody was there. It was loud and dark and packed and felt like a different planet from the pool hall, even though you could walk from one door to the other in ten steps. Same owner, same block, completely different world. The pool hall was daytime and silence and old men. The Opera House was nighttime and noise and everyone your age doing what college kids do on a Thursday, which is drink too much and pretend the weekend started early.
-
-I remember the density of it. One bar, one room, every student in town compressed into a space that felt too small for the crowd. No cover charge, or if there was one I don't remember it. Cheap beer. The smell of spilled drinks and sweat and cigarette smoke — you could still smoke inside in 1989, and everybody did. The music was whatever was playing, and I don't remember what was playing, because the music wasn't the point. The point was being in the room. Existing in proximity to other people your age after a week of existing in proximity to nobody.
-
-I went back to the pool hall the next afternoon. Roger was there. The old men were there. The hot dog warmer was turning. Nothing had changed and nothing needed to.
-
-That became the rhythm. Class in the morning, pool hall in the afternoon, Opera House on Thursday. The rest of the week was dead time — walking the campus, eating in the cafeteria alone, reading whatever I could find in the library. Milledgeville in the summer was a skeleton town. Half the students were gone. The ones who remained were there for the same reason I was, which was that they didn't have anywhere better to be, or couldn't afford to wait until fall, or had their own version of the story I'm not telling yet.
+That became the rhythm. Class in the morning, pool hall in the afternoon. The rest of the week was dead time — walking the campus, eating in the cafeteria alone, reading whatever I could find in the library. Milledgeville in the summer was a skeleton town. Half the students were gone. The ones who remained were there for the same reason I was, which was that they didn't have anywhere better to be, or couldn't afford to wait until fall, or had their own version of the story I'm not telling yet.
 
 The town itself was small in the way that central Georgia towns are small — not quaint, not charming, just small. Two colleges and a main street and a Walmart and churches and the kind of heat that makes the asphalt shimmer at two in the afternoon. You could drive from one end to the other in five minutes. Everybody you saw, you'd see again. The world was compressed.
 
+But Milledgeville had something underneath the smallness. An architecture. Not the kind you study in school — the kind you absorb by walking past it every day until it gets into your bones. Antebellum columns on houses that had no business being that beautiful in a town that size. The Old Governor's Mansion. The brick facades downtown that looked like they'd been standing since before the Civil War because some of them had. Georgia's old capital, before Atlanta took over, and the buildings still carried that weight — the sense that something important had happened here once and the town was still deciding whether to be proud of it or embarrassed by it.
+
+This was Flannery O'Connor's town. She went to the same college I went to — Georgia State College for Women, before it became Georgia College. She lived at Andalusia, the farm just outside of town, and she died there in 1964, twenty-five years before I showed up. I didn't know that when I arrived. I learned it the way you learn everything in Milledgeville — slowly, through repetition, through the landscape itself. Her presence wasn't advertised. It was embedded. The town didn't put on a show about O'Connor. It just was the kind of place that could produce her — the grotesque living comfortably inside the ordinary, the violence underneath the manners, the peacocks on the lawn.
+
+I didn't read O'Connor until later, but I felt her. The pool hall was an O'Connor setting. Roger was an O'Connor character — the misfit genius in a room that didn't require genius. DoDo was an O'Connor character — the man who owned everything and was known only by a nickname that sounded like a children's song. The old men shooting snooker in the permanent twilight of a room that time had forgotten — that was pure O'Connor. Ordinary people in an ordinary place, and if you looked too hard, something underneath that you weren't ready for.
+
 I think that compression is what made the strip possible, later. When Scott Cameron opened his bar across the street, and Mitch Brooks opened the Brick, and somebody opened Brewers — when all of that happened over the next few years — it worked because the town was small enough that one bar could change the entire social physics. In a city, a new bar is nothing. In Milledgeville, a new bar was an event. A new room meant a new crowd meant new possibilities. And the people who opened those rooms were my age, which meant the scene wasn't something I found. It was something that assembled around me while I was busy being lost.
 
-But all of that came later. In 1989, it was just DoDo's world. The pool hall and the Opera House. Two rooms. One man. A kid at the counter eating a hot dog.
+But all of that came later. In 1989, it was just DoDo's world. The pool hall next door to the one bar in town. Two rooms. One man. A kid at the counter eating a hot dog.
 
 ---
 
@@ -100,16 +100,32 @@ I think about the pool hall now the way you think about a first apartment, or th
 
 It wasn't a scene. It wasn't a moment. It was a counter and a hot dog and a kid behind it who was too smart for where he was and didn't seem to mind. And for a few weeks in the summer of 1989, that was enough to keep me from getting in my car and driving home.
 
+---
+
 The pool hall is gone now. The building is still there — 128 West Hancock — but it's called Black Sheep, and it's a barcade with arcade games and cornhole and things that would've made the old snooker players walk out and never come back. DoDo died in 2016. The Opera House next door became an Asian restaurant and then something else and then something else. The Brick's owner bought both buildings. The strip that my generation built got consolidated back into fewer hands, the way things always do.
 
 Roger, I assume, never beat the lottery. I lost touch with him the way you lose touch with everyone from that period — not dramatically, not with a fight, but because life moved and I moved with it and the pool hall stayed where it was. I don't know where he ended up. I hope the math took him somewhere good. I hope he's running numbers on something that pays better than scratch-offs. I hope he knows that somebody remembers him — not for the algorithm, but for the conversation, for the counter, for being the first person in a new town who treated me like I was worth talking to.
 
-What I know is this: in the summer of 1989, I sat in a room that smelled like hot dogs and old wood and cigarette smoke, surrounded by men who had nothing to say to me, and felt for the first time like I might survive this town. Not thrive. Not belong. Survive. And survival, at nineteen, in a place where you know nobody, is the whole game.
+---
+
+I'm looking at a photograph on social media as I write this. A mutual friend posted it — someone who knows both me and Greg, our drummer, the one from Sandersville. The picture is of Milledgeville. I don't even remember what's in it specifically. A building, a street, the kind of shot someone takes because the light was good and the town looked the way they remembered it. What matters is that I saw it, and Greg would have seen it, and somewhere in that overlap is the thing I'm trying to get at.
+
+Greg and I shared something that none of the other guys in the band shared with me. An appreciation for the gothic architecture of the antebellum South. Not in an academic way — neither of us was an architecture student. In a *feeling* way. The columns, the porticos, the way those old houses sit on their land like they're daring you to knock them down. The scale of them in a town that small. The absurdity and the beauty coexisting in the same structure, the way a plantation house can be simultaneously the most gorgeous thing you've ever seen and a monument to something unforgivable. Greg understood that tension. He didn't talk about it much. He didn't talk about much. But you could feel it in the way he moved through those spaces — with a reverence that had nothing to do with nostalgia and everything to do with weight. The weight of a place that carries its history in its walls.
+
+Milledgeville was built for that feeling. The Old Governor's Mansion. The Federal-style houses on the side streets. The brick facades downtown that looked like they'd been standing since before Sherman and had — because Sherman didn't burn Milledgeville, not the way he burned Atlanta. He passed through. The town survived, and its architecture survived, and that survival gave the place a density that newer towns don't have. You could feel the accumulation. Layer on layer of people and decisions and buildings that outlasted the people who built them.
+
+O'Connor felt it. Greg felt it. I felt it. The pool hall was part of it — not because the building was beautiful, but because it was *old* in the right way. Old without trying. Old because nobody had bothered to make it new.
+
+I haven't heard from Greg yet. David and Rich and I have been circling this reunion of ideas — the conversations, the music, the frameworks, all of it coming back together after decades. But Greg is quiet. Greg was always quiet. He was the center of gravity in the band, and the center of gravity doesn't announce itself. It just holds.
+
+I don't know how he sees this. I don't know if he wants to see it. People move on in different ways, and some of them move on by not looking back, and that's their right. I won't push. But I look at that photograph — the light on the old brick, the street I walked when I was nineteen and lost — and I think about Greg standing in the same town, feeling the same architecture, hearing the same silence between the notes. And I wonder if he remembers it the way I do. If the weight of the place is still in him the way it's still in me.
+
+---
+
+In the summer of 1989, I sat in a room that smelled like hot dogs and old wood and cigarette smoke, surrounded by men who had nothing to say to me, and felt for the first time like I might survive this town. Not thrive. Not belong. Survive. And survival, at nineteen, in a place where you know nobody, is the whole game.
 
 Everything else — the bands, the music, the friends, the reasons I'm writing this now — came later. But it started on a stool at DoDo's, watching Roger count his numbers, listening to snooker balls crack on the green felt, eating a hot dog that cost a dollar and was worth exactly that.
 
 The pool hall didn't teach me anything. It just let me sit still long enough to figure out that I wasn't leaving.
-
----
 
 That was enough.
