@@ -8,6 +8,14 @@ Not a bar. Not a dorm party. Not orientation or a campus tour or any of the thin
 
 I don't remember why. I've tried to reconstruct the logic of it — a teenager from the suburbs who'd never shot a game of snooker in his life, walking into a room full of old men on a Tuesday afternoon — and I can't find the reason. Maybe there wasn't one. Maybe I just needed to be somewhere that wasn't my dorm room, and the door was open, and the air conditioning was on, and it was a hundred degrees outside with the kind of Georgia humidity that makes you feel like you're breathing through a wet towel.
 
+I was from the suburbs of Tampa. Palm Harbor — a planned community where the houses all had the same floor plans and the lawns were maintained by HOA covenant and the most dangerous thing that could happen to you was getting a sunburn at Clearwater Beach. I'd grown up in Florida's version of nowhere special, surrounded by strip malls and chain restaurants and the relentless flatness of a place that had been built in the seventies and hadn't developed a personality since.
+
+I came to Milledgeville because it was far enough away. That's the honest answer. Not because of the program or the campus or the town. Because it was five hundred miles from the life I was leaving, and five hundred miles felt like the minimum safe distance. I had reasons for needing that distance that I'm not ready to put in this chapter, but they were real, and they were the kind of reasons that make an eighteen-year-old choose a college in central Georgia where he knows not a single human being.
+
+If you've read *Midnight in the Garden of Good and Evil*, you know what it feels like to arrive in a Georgia town as an outsider. Berendt walked into Savannah and found a world that operated by its own rules — old money and older secrets, eccentrics who held more power than the people in suits, beauty draped over darkness like Spanish moss on a live oak. Milledgeville wasn't Savannah. It didn't have the squares or the tourism or the self-conscious charm. But it had the same underlying architecture — the sense that the town you could see was only the surface of the town that existed. That underneath the slow pace and the good manners, there was a complexity that would take years to understand, if you ever understood it at all.
+
+I didn't understand any of this at eighteen. I just knew the town felt different from anything I'd experienced. Heavier. Older. Like it knew something I didn't and wasn't in any hurry to tell me.
+
 ---
 
 The thing you have to understand about Milledgeville in 1989 is that there was nothing there.
@@ -70,7 +78,11 @@ I came back the next day. And the day after that.
 
 Here's what I think I was doing, though I didn't have the language for it then.
 
-I was nineteen years old and I had arrived at college under circumstances I'm not ready to describe in this chapter. I'll get there. But the short version is that I knew nobody. Not "I didn't know many people" — I knew *nobody*. I had no friends from high school coming with me. No family connections to the town. No girlfriend waiting for me to show up. I had a dorm room and a class schedule and a town I'd never visited before the day I moved in.
+I was nineteen years old and I had arrived at college knowing nobody. Not "I didn't know many people" — I knew *nobody*. No friends from high school tagging along. No family connections to the town. No girlfriend, no roommate I'd met at orientation, no older cousin who could show me around. I had a dorm room in a building that smelled like industrial cleaner and a class schedule that started at eight in the morning and a town I'd never visited before the day I moved in.
+
+Most kids show up to college with at least a thread — a hometown friend, a connection from summer camp, someone from church. I had cut every thread. Deliberately. The distance from Palm Harbor to Milledgeville wasn't just geographical. It was surgical. I needed to be somewhere where nobody knew me, which also meant being somewhere where I knew nobody, and in the summer of 1989 I was learning what that actually felt like on the ground, in the heat, alone.
+
+It felt like *Midnight in the Garden of Good and Evil* before I'd ever read the book. Walking through a town that was simultaneously beautiful and indifferent. Old houses with columns and wraparound porches sitting next to vacant lots. A main street that could have been a movie set if anyone had bothered to light it. People who nodded at you and meant it — Southern hospitality isn't a myth, it's a practice — but who also didn't need you, didn't notice if you came or went, didn't track your presence the way a small town in a movie would. Milledgeville was too old and too tired to care about one more freshman from Florida.
 
 The pool hall didn't ask me to be anyone. It didn't ask me to pledge anything or join anything or pretend I belonged. The old men didn't care. Roger didn't care — or rather, Roger cared about math and hot dogs and the lottery, and whether I was cool or connected or lost was irrelevant to anything that mattered in that room.
 
