@@ -1,79 +1,88 @@
 # It Begins, Again
 
-A shared workspace for David, Greg, Rich, Noah, and Jeff.
-
-Art. Music. Writing. Ideas. Whatever form they take.
+A memoir about a band, a town, and what happens when you start remembering.
 
 ---
 
 ## What Is This?
 
-This is where our work lives. Think of it as a studio — a place to drop ideas, shape them, collaborate, and build something bigger than any one person could make alone.
+This is the working repository for a book called *It Begins, Again* — a memoir about Ancient Country Wisdom, a five-piece band that played in Milledgeville, Georgia in the mid-1990s, and about what it means to look back at that time from thirty years away.
 
-You don't need to be technical to use this. If you can drag a file into a folder and type a sentence, you're good.
+The book is being written by Jeff. The door is open for David, Greg, Rich, and Noah to read, contribute, or engage in whatever way feels right. No pressure. No obligation. The work exists whether anyone shows up or not.
+
+## The Book So Far
+
+| Chapter | Title | Words | What It Covers |
+|---------|-------|-------|---------------|
+| 1 | The Other Side of the Street | ~1,550 | 1993 — seeing David's band Hero, meeting Rich, joining ACW |
+| 2 | Hey Man | ~1,180 | Present day — David calls after fifteen years of silence |
+| 3 | The Hum | ~1,450 | Cloud seeding, the scaffolding, David's frameworks begin |
+| 4 | The Design | ~1,400 | Human Design, the bodygraph mapped to the band |
+| 5 | The Pool Hall | ~4,200 | 1989 — DoDo's world, Roger, Marietta to Milledgeville, the lost year |
+| 6 | Time Is Thin | ~740 | Anti-narrative — a song as artifact, the platform speaks |
+
+Chapters are in `content/writing/`.
 
 ## How It's Organized
 
 ```
 it-begins-again/
 ├── content/
-│   ├── writing/      ← stories, drafts, chapters, poems, notes
-│   ├── art/          ← images, scans, illustrations, photography
-│   ├── music/        ← tracks, lyrics, recordings, voice memos
-│   │   ├── ideas/    ← rough music ideas, fragments, sketches
-│   │   ├── david/    ← David's personal music space
-│   │   ├── rich/     ← Rich's personal music space
-│   │   ├── noah/     ← Noah's personal music space
-│   │   └── greg/     ← Greg's personal music space
-│   └── ideas/        ← anything that doesn't have a home yet
-├── suggestion-box/   ← feedback on the project itself
-└── DAVID.md          ← David's getting-started guide
+│   ├── writing/              ← chapters and prose
+│   │   ├── chapter-*.md      ← the book itself
+│   │   └── world-building/   ← the scaffolding behind the story
+│   │       ├── milledgeville.md    ← the town, real addresses, DoDo, the strip
+│   │       ├── venue-arcs.md       ← five venues, five arcs
+│   │       ├── characters.md       ← every named person
+│   │       ├── timeline.md         ← 1988 to present
+│   │       ├── sensory-details.md  ← what the places look/sound/smell like
+│   │       ├── literary-dna.md     ← narrative influences shaping the prose
+│   │       └── threads.md          ← recurring motifs across chapters
+│   ├── art/              ← chapter art, reference images
+│   ├── music/            ← tracks, lyrics, Suno prompts
+│   │   └── ideas/        ← rough music ideas and fragments
+│   └── ideas/            ← anything that doesn't have a home yet
+├── references/           ← David's creative DNA, source material
+├── silence/              ← a separate fiction project living in the same repo
+├── DAVID.md              ← David's getting-started guide
+├── DEVCO.md              ← notes from the AI collaborator
+└── README.md             ← you are here
 ```
 
-**Not sure where something goes?** Put it in `content/ideas/`. We'll sort it out together.
+## The World
 
-## Getting Started
+The story moves between two timelines:
 
-1. **Get a GitHub account** at [github.com](https://github.com) — send Jeff your username so he can add you
-2. **Clone the repo** (one time):
-   ```bash
-   git clone https://github.com/devcoband-ai/it-begins-again.git
-   cd it-begins-again
-   ```
-3. **Add your stuff** — drop files into the right folder
-4. **Push it up:**
-   ```bash
-   git pull
-   git add .
-   git commit -m "describe what you added"
-   git push
-   ```
+**The Past:** Milledgeville, Georgia, 1989–late 1990s. A college town with one strip — Hancock Street. Five venues built by one generation. A pool hall owned by a man called DoDo. A band that rehearsed forty-five minutes away in Sandersville.
 
-That's the loop. Pull, add, commit, push. Jeff can walk anyone through it.
+**The Present:** A man at fifty-five, looking back. Phone calls with David. Frameworks and physics. A song made on an AI platform and sent into silence. The question of whether the band comes back — and the realization that the question might not matter.
 
-## What's Here Already
+## For David, Greg, Rich, and Noah
 
-- **Chapter 1: "The Other Side of the Street"** — 1993, how it all started
-- **Chapter 2: "Hey Man"** — present day, the phone call that brought us back
-- **Living Geometry** — an interactive D3.js visualization of the band as a system
-- **Idea templates** — for songs, chapters, art, books, and world-changing concepts
-- **Gary preview** — five chapters from "Every Org Has a Gary" (a separate project, included as an example of what the platform can do)
+Everything here is open. Read what you want. If something strikes you — a memory, a correction, a detail I got wrong, a detail I missed — there's room for it. 
+
+Your content folders are still here if you want them:
+- `content/music/david/`
+- `content/music/rich/`
+- `content/music/noah/`
+- `content/music/greg/`
+
+Drop anything in any state. A sentence. A photo. A voice memo. Or nothing at all. The book doesn't require participation. It just doesn't exclude it.
+
+See `DAVID.md` for a walkthrough of the tools if you want them.
 
 ## Tools
 
-These are available when you want them. No pressure to learn any of them right now.
-
-- **Claude** — AI collaborator. Runs in your terminal, can read and write files, helps you draft and create. See `DAVID.md` for a walkthrough.
-- **Suno** — AI music generation. Describe a vibe, get a track. [Hear samples](https://suno.com/playlist/0d8339cb-779b-437a-a6d3-d5602a47e77e)
-- **Nano Banana** — AI image generation. Describe what you see, it renders it.
-- **DevCo Platform** — content engine that organizes, renders, and prepares work for publication. Runs behind the scenes.
+- **Claude / Devco** — AI collaborator that helps draft, research, and organize
+- **Suno** — AI music generation ([hear samples](https://suno.com/playlist/0d8339cb-779b-437a-a6d3-d5602a47e77e))
+- **Nano Banana** — AI image generation for chapter art
+- **DevCo Platform** — content engine that hosts and renders the work
 
 ## The Rules
 
-1. **Everything here belongs to the person who made it.** Your content, your copyright, your decisions.
+1. **Everything here belongs to the person who made it.** Your content, your copyright.
 2. **Nothing gets published without the creator's say-so.**
-3. **Drop anything in any state.** Rough is fine. Half-formed is fine. A single sentence is fine.
-4. **The suggestion box is open.** If something about this setup doesn't work for you, say so.
+3. **The door is open. The door is always open.**
 
 ---
 
