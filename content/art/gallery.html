@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>It Begins, Again — Gallery</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0f;
+    color: #c8c0b4;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 80px 20px 60px;
+    border-bottom: 1px solid rgba(212, 168, 83, 0.15);
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 2.4em;
+    color: #d4a853;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .header .subtitle {
+    font-size: 1em;
+    color: #6a6570;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .header .epigraph {
+    margin-top: 30px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05em;
+    color: #8a7e6a;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Gallery grid */
+  .gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 30px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.4em;
+    color: #d4a853;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+    padding-top: 50px;
+  }
+  .section-rule {
+    width: 60px;
+    height: 1px;
+    background: rgba(212, 168, 83, 0.3);
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  .card {
+    background: #111118;
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+  }
+
+  .card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.85);
+    transition: filter 0.3s ease;
+  }
+  .card:hover img {
+    filter: saturate(1);
+  }
+
+  .card-body {
+    padding: 20px 24px 24px;
+  }
+  .card-chapter {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #d4a853;
+    margin-bottom: 6px;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15em;
+    color: #e8dcc8;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+  .card-desc {
+    font-size: 0.85em;
+    color: #6a6570;
+    line-height: 1.5;
+  }
+
+  /* Full-width feature */
+  .feature {
+    margin: 50px 0;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .feature img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.85);
+  }
+  .feature-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 30px 30px;
+    background: linear-gradient(transparent, rgba(10,10,15,0.95));
+  }
+  .feature-chapter {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #d4a853;
+    margin-bottom: 6px;
+  }
+  .feature-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    color: #e8dcc8;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .feature-desc {
+    font-size: 0.9em;
+    color: #8a7e6a;
+    max-width: 600px;
+  }
+
+  /* Interactive pieces */
+  .interactive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  .interactive-card {
+    background: #111118;
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 4px;
+    padding: 24px;
+    transition: transform 0.3s ease;
+  }
+  .interactive-card:hover {
+    transform: translateY(-4px);
+  }
+  .interactive-card a {
+    color: #d4a853;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+  }
+  .interactive-card a:hover {
+    text-decoration: underline;
+  }
+  .interactive-card .card-desc {
+    margin-top: 10px;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 60px 20px 80px;
+    border-top: 1px solid rgba(212, 168, 83, 0.08);
+    margin-top: 40px;
+  }
+  .footer p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #4a4550;
+    font-size: 0.95em;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(5,5,10,0.95);
+    z-index: 1000;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 2px;
+  }
+  .lightbox-caption {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8a7e6a;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.95em;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.6em; }
+    .grid { grid-template-columns: 1fr; gap: 24px; }
+    .card img { height: 220px; }
+    .gallery { padding: 30px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>It Begins, Again</h1>
+  <div class="subtitle">Art from the Story</div>
+  <div class="epigraph">"The pool hall didn't teach me anything. It just let me sit still long enough to figure out that I wasn't leaving."</div>
+</div>
+
+<div class="gallery">
+
+  <!-- CHAPTER ART -->
+  <div class="section-title">Chapter Art</div>
+  <div class="section-rule"></div>
+
+  <!-- Feature: Chapter 5 -->
+  <div class="feature" onclick="openLightbox('chapter-5-pool-hall-daytime.jpg', 'DoDo\'s Pool Hall — Daytime, 1989')">
+    <img src="chapter-5-pool-hall-daytime.jpg" alt="DoDo's Pool Hall, daytime, 1989 — warm oil painting of a vintage billiards room">
+    <div class="feature-overlay">
+      <div class="feature-chapter">Chapter 5</div>
+      <div class="feature-title">The Pool Hall — Daytime, 1989</div>
+      <div class="feature-desc">Wood floors, brick walls, professional snooker tables. Roger behind the bar. A nineteen-year-old who knows nobody, sitting on a stool, eating a dollar hot dog.</div>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openLightbox('chapter-1-the-other-side-of-the-street-v2.jpg', 'The Other Side of the Street — Hancock Street, 1993')">
+      <img src="chapter-1-the-other-side-of-the-street-v2.jpg" alt="Rain-slicked small town street at night, warm light spilling from storefronts, a figure playing guitar on the sidewalk">
+      <div class="card-body">
+        <div class="card-chapter">Chapter 1</div>
+        <div class="card-title">The Other Side of the Street</div>
+        <div class="card-desc">Hancock Street at night, 1993. The strip in full bloom. Music bleeding from doorways, rain on the pavement, the golden light of a town that built itself one bar at a time.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openLightbox('chapter-2-hey-man.jpg', 'Hey Man — The sacred geometry of reconnection')">
+      <img src="chapter-2-hey-man.jpg" alt="Abstract luminous geometric star structure interwoven with musical notation and mathematical equations">
+      <div class="card-body">
+        <div class="card-chapter">Chapter 2</div>
+        <div class="card-title">Hey Man</div>
+        <div class="card-desc">The sacred geometry of reconnection. Music, mathematics, and memory converging into a single structure after fifteen years of silence.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openLightbox('chapter-3-the-hum.jpg', 'The Hum — A man on the phone, receiving the signal')">
+      <img src="chapter-3-the-hum.jpg" alt="A middle-aged man holding a phone to his ear, illuminated by warm amber light against a turbulent night sky">
+      <div class="card-body">
+        <div class="card-chapter">Chapter 3</div>
+        <div class="card-title">The Hum</div>
+        <div class="card-desc">Cloud seeding. David calls with an idea that sounds like weather science and feels like prophecy. The hum beneath the noise.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openLightbox('chapter-4-bodygraph.jpg', 'The Design — Atlas carrying the bodygraph')">
+      <img src="chapter-4-bodygraph.jpg" alt="Classical Atlas figure kneeling beneath a celestial sphere filled with sacred geometry, zodiac wheels, and glowing alchemical symbols">
+      <div class="card-body">
+        <div class="card-chapter">Chapter 4</div>
+        <div class="card-title">The Design</div>
+        <div class="card-desc">Human Design mapped to the band. Atlas carrying the bodygraph — the weight of a system that describes what you already knew but couldn't name.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openLightbox('chapter-5-pool-hall.jpg', 'The Pool Hall — Nighttime, neon')">
+      <img src="chapter-5-pool-hall.jpg" alt="Dimly lit dive bar interior with green-felted pool tables, neon beer signs glowing in the darkness">
+      <div class="card-body">
+        <div class="card-chapter">Chapter 5 — Alternate</div>
+        <div class="card-title">The Pool Hall — Night</div>
+        <div class="card-desc">The other DoDo's. Neon and shadow. The version of the room that existed after dark, when the college kids might show up and the old men had gone home.</div>
+      </div>
+    </div>
+
+    <div class="card" onclick="openLightbox('time-is-thin.jpg', 'Time Is Thin — Peeling paint, same room')">
+      <img src="time-is-thin.jpg" alt="Surreal infinite hallway with peeling paint in pastels, spiral patterns, and mathematical notations on exposed walls">
+      <div class="card-body">
+        <div class="card-chapter">Chapter 6</div>
+        <div class="card-title">Time Is Thin</div>
+        <div class="card-desc">Time is paint on a wall. Peel it back. Same room. An infinite corridor of layers — each one a year, a version, a coat of paint over what was already there.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- THE BAND -->
+  <div class="section-title">The Band</div>
+  <div class="section-rule"></div>
+
+  <div class="grid">
+
+    <div class="card" onclick="openLightbox('living-geometry-warped.jpg', 'Living Geometry — Five names in the spiral')">
+      <img src="living-geometry-warped.jpg" alt="Cosmic spiral of luminous energy strands against a starfield, with five names embedded along different tendrils">
+      <div class="card-body">
+        <div class="card-chapter">Ancient Country Wisdom</div>
+        <div class="card-title">Living Geometry</div>
+        <div class="card-desc">David, Greg, Jeff, Rich, Noah. Five paths converging into a shared structure. Individual lives rendered as celestial phenomena. The band as a system.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INTERACTIVE -->
+  <div class="section-title">Interactive</div>
+  <div class="section-rule"></div>
+
+  <div class="interactive-grid">
+    <div class="interactive-card">
+      <a href="milledgeville-map.html">The Strip — Hancock Street, 1994 →</a>
+      <div class="card-desc">Interactive map of the five venues. South side, north side, and the crossing between two worlds.</div>
+    </div>
+    <div class="interactive-card">
+      <a href="living-geometry-radial.html">Living Geometry — Radial →</a>
+      <div class="card-desc">The band as a dynamic system. Five nodes, five connections, the geometry that held it together.</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>The door is open. The door is always open.</p>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script>
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-caption').textContent = caption;
+  lb.classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
