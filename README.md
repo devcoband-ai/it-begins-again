@@ -1,27 +1,80 @@
 # It Begins, Again
 
-A memoir about a band, a town, and what happens when you start remembering.
+A memoir about a band, a pattern, and what happens when the frequency comes back.
 
 ---
 
 ## What Is This?
 
-This is the working repository for a book called *It Begins, Again* — a memoir about Ancient Country Wisdom, a five-piece band that played in Milledgeville, Georgia in the mid-1990s, and about what it means to look back at that time from thirty years away.
+This is the working repository for *It Begins, Again* — a book about Ancient Country Wisdom, a five-piece band that played in Milledgeville, Georgia in the mid-1990s. But it's not really about a band. It's about a pattern that emerged between five people, diminished when they scattered, and is now resynchronizing thirty years later through songs, frameworks, text threads, and a cabin in Georgia.
 
-The book is being written by Jeff. The door is open for David, Greg, Rich, and Noah to read, contribute, or engage in whatever way feels right. No pressure. No obligation. The work exists whether anyone shows up or not.
+The book is being written by Jeff. David and Rich are active. Noah is present through the music. Greg is silent — but Greg was always silent. Enua is new. The geometry is evolving.
 
-## The Book So Far
+## The Book
 
-| Chapter | Title | Words | What It Covers |
-|---------|-------|-------|---------------|
-| 1 | The Other Side of the Street | ~1,550 | 1993 — seeing David's band Hero, meeting Rich, joining ACW |
-| 2 | Hey Man | ~1,180 | Present day — David calls after fifteen years of silence |
-| 3 | The Hum | ~1,450 | Cloud seeding, the scaffolding, David's frameworks begin |
-| 4 | The Design | ~1,400 | Human Design, the bodygraph mapped to the band |
-| 5 | The Pool Hall | ~4,200 | 1989 — DoDo's world, Roger, Marietta to Milledgeville, the lost year |
-| 6 | Time Is Thin | ~740 | Anti-narrative — a song as artifact, the platform speaks |
+| Ch | Title | What It Covers |
+|----|-------|---------------|
+| 1 | The Other Side of the Street | 1993 — Hero, Rich at Brewers, joining ACW, finding the pocket |
+| 2 | Hey Man | Present — David calls after fifteen years. "I've been working with Noah." |
+| 3 | The Hum | Cloud seeding, the scaffolding, David's frameworks begin |
+| 4 | The Design | Human Design — the bodygraph mapped to the band |
+| 5 | The Pool Hall | 1989 — DoDo's world, Roger, Marietta to Milledgeville |
+| 6 | Time Is Thin | Anti-narrative — a song as artifact, the platform speaks |
+| 7 | Rare Radio | Noah's arc — past to present through the author's lens. Three songs arrive. The narrator writes over Noah's guitar and channels a conversation he was never part of. |
+| 8 | What's the Plan? | Rich's arc — the Telecaster, evolutionary architecture, the meta emerges. Enua is revealed. The pattern doesn't wait for the architect. |
 
 Chapters are in `content/writing/`.
+
+## The Thesis
+
+Ancient Country Wisdom was not a band. At least, not in any traditional sense. It was a pattern that emerged between five figures, revealed itself through sound, and then — when the members scattered — diminished into a fractal that would repeat as synchronization later in life.
+
+ACW 1.0 was the emergence. The thirty-year silence was the diminishment. ACW 2.0 is the fractal repeating — same pattern, different scale, new geometry.
+
+## The Music
+
+Songs live in `content/music/` and are organized by origin:
+
+```
+content/music/
+├── seeds/                          ← instrumental jams, multi-member recordings
+│   ├── the-ballad-of-ancient-country-wisdom/
+│   ├── the-hangmans-waltz/
+│   ├── time-machines/
+│   ├── easter/
+│   ├── buttercutter/
+│   ├── everything-is-happening-today/
+│   ├── soulstice-sistahs/
+│   ├── there-is-no-beginning-of-now/
+│   ├── pennywhistle/
+│   ├── the-songwriter/
+│   ├── rare-radio/                 ← David + Noah instrumental, 6:35
+│   └── pure-joy-sound/             ← David + Noah, ~1998, "just a one off improv"
+├── david/
+│   └── lyrics/                     ← David's lyrics (Buttercutter, The Songwriter, etc.)
+├── jeff/
+│   └── lyrics/                     ← Jeff's lyrics (Show Up and Play)
+├── rich/
+├── noah/
+└── greg/
+```
+
+**Seeds** are the raw jams — instrumentals recorded by multiple members. Each seed gets its own folder to hold the original recording plus any renditions, derived works, or lyrics written over it. A seed can grow in any direction.
+
+## The World
+
+**The Past:** Milledgeville, Georgia, 1989–late 1990s. Hancock Street. Five venues built by one generation. A pool hall owned by DoDo. A band that rehearsed forty-five minutes away in Sandersville.
+
+**The Present:** ACW 2.0 — a group thread where Rich shows up with a Telecaster, David sends fever dream dispatches from a cabin at 3am, and the narrator writes songs through a female persona over thirty-year-old guitar recordings. The pattern is resynchronizing. There's a new member named Enua. Nobody has a plan. That's exactly right.
+
+## The People
+
+- **Jeff** — narrator, bassist (1994), systems architect (2026), writing the book
+- **David Perry** — singer, conductor, framework builder. Active. Sending songs at 3am.
+- **Rich** — guitar, the connector, the bridge. "What's the plan?" Telecaster ready.
+- **Noah** — lead guitar, rare radio. Present through the music. Picked up from Athens on Fridays.
+- **Greg** — drums, center of gravity. Silent. The center doesn't need to announce itself.
+- **Enua** — new. Unknown. The sixth node. The pattern evolving.
 
 ## How It's Organized
 
@@ -29,54 +82,24 @@ Chapters are in `content/writing/`.
 it-begins-again/
 ├── content/
 │   ├── writing/              ← chapters and prose
-│   │   ├── chapter-*.md      ← the book itself
-│   │   └── world-building/   ← the scaffolding behind the story
-│   │       ├── milledgeville.md    ← the town, real addresses, DoDo, the strip
-│   │       ├── venue-arcs.md       ← five venues, five arcs
-│   │       ├── characters.md       ← every named person
-│   │       ├── timeline.md         ← 1988 to present
-│   │       ├── sensory-details.md  ← what the places look/sound/smell like
-│   │       ├── literary-dna.md     ← narrative influences shaping the prose
-│   │       └── threads.md          ← recurring motifs across chapters
-│   ├── art/              ← chapter art, reference images
-│   ├── music/            ← tracks, lyrics, Suno prompts
-│   │   └── ideas/        ← rough music ideas and fragments
-│   └── ideas/            ← anything that doesn't have a home yet
-├── references/           ← David's creative DNA, source material
-├── silence/              ← a separate fiction project living in the same repo
-├── DAVID.md              ← David's getting-started guide
-├── DEVCO.md              ← notes from the AI collaborator
-└── README.md             ← you are here
+│   │   ├── chapter-*.md      ← the book
+│   │   └── world-building/   ← characters, timeline, threads, sensory details
+│   ├── art/                  ← chapter art, gallery
+│   ├── music/                ← seeds, lyrics, recordings
+│   └── ideas/                ← anything without a home yet
+├── references/               ← David's creative DNA, source material
+├── silence/                  ← a separate fiction project
+├── DAVID.md                  ← David's getting-started guide
+├── DEVCO.md                  ← notes from the AI collaborator
+└── README.md                 ← you are here
 ```
-
-## The World
-
-The story moves between two timelines:
-
-**The Past:** Milledgeville, Georgia, 1989–late 1990s. A college town with one strip — Hancock Street. Five venues built by one generation. A pool hall owned by a man called DoDo. A band that rehearsed forty-five minutes away in Sandersville.
-
-**The Present:** A man at fifty-five, looking back. Phone calls with David. Frameworks and physics. A song made on an AI platform and sent into silence. The question of whether the band comes back — and the realization that the question might not matter.
-
-## For David, Greg, Rich, and Noah
-
-Everything here is open. Read what you want. If something strikes you — a memory, a correction, a detail I got wrong, a detail I missed — there's room for it. 
-
-Your content folders are still here if you want them:
-- `content/music/david/`
-- `content/music/rich/`
-- `content/music/noah/`
-- `content/music/greg/`
-
-Drop anything in any state. A sentence. A photo. A voice memo. Or nothing at all. The book doesn't require participation. It just doesn't exclude it.
-
-See `DAVID.md` for a walkthrough of the tools if you want them.
 
 ## Tools
 
-- **Claude / Devco** — AI collaborator that helps draft, research, and organize
-- **Suno** — AI music generation ([hear samples](https://suno.com/playlist/0d8339cb-779b-437a-a6d3-d5602a47e77e))
+- **DevCo Platform** — content engine, publishing, AI-assisted creation
+- **Suno** — AI music generation
 - **Nano Banana** — AI image generation for chapter art
-- **DevCo Platform** — content engine that hosts and renders the work
+- **Claude / Devco** — AI collaborator
 
 ## The Rules
 
