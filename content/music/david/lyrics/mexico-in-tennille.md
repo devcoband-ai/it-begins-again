@@ -1,4 +1,4 @@
-# Mexico
+# Mexico In Tennille
 
 [Intro]
 (Instrumental)
