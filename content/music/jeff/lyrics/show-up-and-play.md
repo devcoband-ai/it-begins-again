@@ -1,11 +1,5 @@
 # Show Up and Play
 
-**Artist:** Jeff (through female persona)
-**Status:** Draft — anthem for the two who never knew what was going on
-**Context:** The tension between wanting to understand and realizing that not understanding was the gift. Rich and Jeff's position in ACW — fully inside the music, fully outside its meaning. Sometimes the ones who don't have the plan are the ones who know exactly where they stand.
-
----
-
 [Verse 1]
 I never had the language
 For the room that I was in
