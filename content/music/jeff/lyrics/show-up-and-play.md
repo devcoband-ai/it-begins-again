@@ -1,4 +1,4 @@
-# Need to Know
+# Show Up and Play
 
 **Artist:** Jeff (through female persona)
 **Status:** Draft — anthem for the two who never knew what was going on
