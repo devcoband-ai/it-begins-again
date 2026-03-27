@@ -112,8 +112,8 @@ Collabs are new works built on top of seeds — lyrics written over instrumental
 
 | Collab | Based On | Who |
 |--------|----------|-----|
-| [Rare Radio (Take me with you).mp3](content/music/seeds/rare-radio/Rare%20Radio%20(Take%20me%20with%20you).mp3) | Rare Radio | Jeff + David/Noah |
-| [Lightbringer (Ties).mp3](content/music/seeds/lightbringer/Lightbringer%20(Ties).mp3) | Lightbringer | Jeff + David |
+| [Rare Radio (Take me with you).mp3](content/music/seeds/rare-radio/Rare%20Radio%20(Take%20me%20with%20you).mp3) | Rare Radio | Jeff, David, Noah, Rich, Greg |
+| [Lightbringer (Ties).mp3](content/music/seeds/lightbringer/Lightbringer%20(Ties).mp3) | Lightbringer | Jeff, David, Noah, Rich, Greg |
 
 ## The World
 
