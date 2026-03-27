@@ -105,6 +105,14 @@ Devco covers are AI-assisted renditions of original seeds, produced through the 
 | **Pure Joy Sound** | [Pure Joy Sound (devco cover).mp3](content/music/seeds/pure-joy-sound/Pure%20Joy%20Sound%20(devco%20cover).mp3) |
 | **Mexico in Tennille** | [Mexico in Tennile (Devco cover).mp3](content/music/seeds/mexico-in-tennille/Mexico%20in%20Tennile%20(Devco%20cover).mp3) |
 
+### Collabs
+
+Collabs are new works built on top of seeds — lyrics written over instrumentals, vocals layered on recordings, or other creative combinations between members.
+
+| Collab | Based On | Who |
+|--------|----------|-----|
+| [Rare Radio (Take me with you).mp3](content/music/seeds/rare-radio/Rare%20Radio%20(Take%20me%20with%20you).mp3) | Rare Radio | Jeff + David/Noah |
+
 ## The World
 
 **The Past:** Milledgeville, Georgia, 1989–late 1990s. Hancock Street. Five venues built by one generation. A pool hall owned by DoDo. A band that rehearsed forty-five minutes away in Sandersville.
