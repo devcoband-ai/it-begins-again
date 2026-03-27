@@ -104,6 +104,7 @@ Devco covers are AI-assisted renditions of original seeds, produced through the 
 |---------------|-------|
 | **Pure Joy Sound** | [Pure Joy Sound (devco cover).mp3](content/music/seeds/pure-joy-sound/Pure%20Joy%20Sound%20(devco%20cover).mp3) |
 | **Mexico in Tennille** | [Mexico in Tennile (Devco cover).mp3](content/music/seeds/mexico-in-tennille/Mexico%20in%20Tennile%20(Devco%20cover).mp3) |
+| **Buttercutter** | [Buttercutter (Devco bublegum cover).mp3](content/music/seeds/buttercutter/Buttercutter%20(Devco%20bublegum%20cover).mp3) |
 
 ### Collabs
 
@@ -112,6 +113,7 @@ Collabs are new works built on top of seeds — lyrics written over instrumental
 | Collab | Based On | Who |
 |--------|----------|-----|
 | [Rare Radio (Take me with you).mp3](content/music/seeds/rare-radio/Rare%20Radio%20(Take%20me%20with%20you).mp3) | Rare Radio | Jeff + David/Noah |
+| [Lightbringer (Ties).mp3](content/music/seeds/lightbringer/Lightbringer%20(Ties).mp3) | Lightbringer | Jeff + David |
 
 ## The World
 
