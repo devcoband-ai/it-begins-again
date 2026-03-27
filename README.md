@@ -44,12 +44,15 @@ content/music/
 │   ├── easter/
 │   ├── buttercutter/
 │   ├── everything-is-happening-today/
+│   ├── lightbringer/
+│   ├── mexico-in-tennille/
 │   ├── soulstice-sistahs/
 │   ├── there-is-no-beginning-of-now/
 │   ├── pennywhistle/
 │   ├── the-songwriter/
-│   ├── rare-radio/                 ← David + Noah instrumental, 6:35
-│   └── pure-joy-sound/             ← David + Noah, ~1998, "just a one off improv"
+│   ├── rare-radio/
+│   ├── repeat it/
+│   └── pure-joy-sound/
 ├── david/
 │   └── lyrics/                     ← David's lyrics (Buttercutter, The Songwriter, etc.)
 ├── jeff/
@@ -60,6 +63,26 @@ content/music/
 ```
 
 **Seeds** are the raw jams — instrumentals recorded by multiple members. Each seed gets its own folder to hold the original recording plus any renditions, derived works, or lyrics written over it. A seed can grow in any direction.
+
+### Seed Index
+
+| Seed | Recordings | Lyrics |
+|------|-----------|--------|
+| **The Ballad of Ancient Country Wisdom** | The Ballad of Ancient Country Wisdom v2.mp3 | — |
+| **The Hangman's Waltz** | The Hangman's Waltz.mp3 | — |
+| **Time Machines** | Time Marches In_v1_PN.mp3, Time Marches (So is my soul).mp3, Time Marches (gospel).mp3 | — |
+| **Easter** | *(no recordings yet)* | — |
+| **Buttercutter** | Buttercutter vocal v2.m4a | buttercutter.md |
+| **Everything is Happening Today** | Everything is Happening Today first riff demo.mp3, Noah's mix 1.m4a | — |
+| **Lightbringer** | Lightbringer.m4a | — |
+| **Mexico in Tennille** | Mexico in Tennille vox 1 (Remastered).mp3, Mexico in Tennile (Devco cover).mp3 | mexico-in-tennille.md |
+| **Soulstice Sistahs** | Soulstice Sistahs.12.24.24.mp3 | — |
+| **There Is No Beginning of Now** | 03 There Is No Beginning of Now.mp3 | there-is-no-beginning-of-now.md |
+| **Pennywhistle** | Penny Whistle.noah.12.21.24.VB.02.mp3 | — |
+| **The Songwriter** | The Songwriter.mp3, The Songwriter (1).mp3, The Songwriter (963 Hz experiement).mp3 | the-songwriter.md |
+| **Rare Radio** | Rare Radio.mp3, Rare Radio (Take me with you).mp3 | — |
+| **Repeat It** | Repeat It vox update v02.mp3 | — |
+| **Pure Joy Sound** | Pure Joy Sound.mp3, Pure Joy Sound (devco cover).mp3 | pure-joy.md |
 
 ## The World
 
