@@ -136,12 +136,6 @@ it-begins-again/
 - **Nano Banana** — AI image generation for chapter art
 - **Claude / Devco** — AI collaborator
 
-## The Rules
-
-1. **Everything here belongs to the person who made it.** Your content, your copyright.
-2. **Nothing gets published without the creator's say-so.**
-3. **The door is open. The door is always open.**
-
 ---
 
 It begins, again.
