@@ -96,6 +96,15 @@ Each band member has a `lyrics/` folder under `content/music/<name>/lyrics/`. Ly
 | **Noah** | — |
 | **Greg** | — |
 
+### Covers
+
+Devco covers are AI-assisted renditions of original seeds, produced through the DevCo Platform.
+
+| Original Seed | Cover |
+|---------------|-------|
+| **Pure Joy Sound** | Pure Joy Sound (devco cover).mp3 |
+| **Mexico in Tennille** | Mexico in Tennile (Devco cover).mp3 |
+
 ## The World
 
 **The Past:** Milledgeville, Georgia, 1989–late 1990s. Hancock Street. Five venues built by one generation. A pool hall owned by DoDo. A band that rehearsed forty-five minutes away in Sandersville.
