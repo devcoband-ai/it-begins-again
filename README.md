@@ -71,7 +71,7 @@ content/music/
 | **The Ballad of Ancient Country Wisdom** | The Ballad of Ancient Country Wisdom v2.mp3 | — |
 | **The Hangman's Waltz** | The Hangman's Waltz.mp3 | — |
 | **Time Machines** | Time Marches In_v1_PN.mp3, Time Marches (So is my soul).mp3, Time Marches (gospel).mp3 | — |
-| **Easter** | *(no recordings yet)* | — |
+| **Easter** | Easter-1.m4a | — |
 | **Buttercutter** | Buttercutter vocal v2.m4a | buttercutter.md |
 | **Everything is Happening Today** | Everything is Happening Today first riff demo.mp3, Noah's mix 1.m4a | — |
 | **Lightbringer** | Lightbringer.m4a | — |
