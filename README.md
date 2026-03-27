@@ -84,6 +84,18 @@ content/music/
 | **Repeat It** | Repeat It vox update v02.mp3 | — |
 | **Pure Joy Sound** | Pure Joy Sound.mp3, Pure Joy Sound (devco cover).mp3 | pure-joy.md |
 
+### Lyrics
+
+Each band member has a `lyrics/` folder under `content/music/<name>/lyrics/`. Lyrics are written as standalone Markdown files — they may be tied to a seed or stand on their own.
+
+| Member | Lyrics |
+|--------|--------|
+| **David** | buttercutter.md, mexico-in-tennille.md, pure-joy.md, the-songwriter.md, there-is-no-beginning-of-now.md |
+| **Jeff** | show-up-and-play.md |
+| **Rich** | — |
+| **Noah** | — |
+| **Greg** | — |
+
 ## The World
 
 **The Past:** Milledgeville, Georgia, 1989–late 1990s. Hancock Street. Five venues built by one generation. A pool hall owned by DoDo. A band that rehearsed forty-five minutes away in Sandersville.
