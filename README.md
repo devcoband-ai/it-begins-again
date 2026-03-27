@@ -102,8 +102,8 @@ Devco covers are AI-assisted renditions of original seeds, produced through the 
 
 | Original Seed | Cover |
 |---------------|-------|
-| **Pure Joy Sound** | Pure Joy Sound (devco cover).mp3 |
-| **Mexico in Tennille** | Mexico in Tennile (Devco cover).mp3 |
+| **Pure Joy Sound** | [Pure Joy Sound (devco cover).mp3](content/music/seeds/pure-joy-sound/Pure%20Joy%20Sound%20(devco%20cover).mp3) |
+| **Mexico in Tennille** | [Mexico in Tennile (Devco cover).mp3](content/music/seeds/mexico-in-tennille/Mexico%20in%20Tennile%20(Devco%20cover).mp3) |
 
 ## The World
 
