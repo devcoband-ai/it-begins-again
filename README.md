@@ -91,7 +91,7 @@ Each band member has a `lyrics/` folder under `content/music/<name>/lyrics/`. Ly
 | Member | Lyrics |
 |--------|--------|
 | **David** | buttercutter.md, mexico-in-tennille.md, pure-joy.md, the-songwriter.md, there-is-no-beginning-of-now.md |
-| **Jeff** | take-me-with-you.md, ties.md, everything-is-happening-today.md |
+| **Jeff** | take-me-with-you.md, ties.md, everything-is-happening-today.md, words.md |
 | **Rich** | — |
 | **Noah** | — |
 | **Greg** | — |
