@@ -114,6 +114,8 @@ Collabs are new works built on top of seeds — lyrics written over instrumental
 |--------|----------|-----|
 | [Rare Radio (Take me with you).mp3](content/music/seeds/rare-radio/Rare%20Radio%20(Take%20me%20with%20you).mp3) | Rare Radio | Jeff, David, Noah, Rich, Greg |
 | [Lightbringer (Ties).mp3](content/music/seeds/lightbringer/Lightbringer%20(Ties).mp3) | Lightbringer | Jeff, David, Noah, Rich, Greg |
+| [Time Marches (gospel).mp3](content/music/seeds/time-machines/Time%20Marches%20(gospel).mp3) | Time Machines | Jeff, David, Noah, Rich, Greg |
+| [Time Marches (So is my soul).mp3](content/music/seeds/time-machines/Time%20Marches%20(So%20is%20my%20soul).mp3) | Time Machines | Jeff, David, Noah, Rich, Greg |
 
 ## The World
 
