@@ -118,7 +118,7 @@ Content cascades downward over time. New songs start at Layer 3, drop to Layer 2
 
 ## What Jeff Provides
 
-Jeff is not bankrolling this — he's putting his kids through college. What Jeff is investing is skill, time, and infrastructure. No cash changes hands. Think of it as a partnership where one person brings the vision and the other brings the system that makes it visible.
+This partnership runs on skill, not capital. Jeff invests time, infrastructure, and thirty years of systems architecture. No cash changes hands. One person brings the vision, the other brings the system that makes it visible.
 
 - **The DevCo Platform** — publishing, rendering, distribution. Your books, articles, and content produced and shipped through a system that already exists.
 - **AI production** — music production (Suno), art generation (Nano Banana), content acceleration. Your raw ideas turned into finished artifacts fast.
