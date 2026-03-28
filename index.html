@@ -88,6 +88,9 @@
   .door-read::before {
     background: linear-gradient(135deg, #2e1a0a 0%, #1a1410 50%, var(--bone) 100%);
   }
+  .door-experience::before {
+    background: linear-gradient(135deg, #1a0a2e 0%, #0a1a28 50%, #a07e9e 100%);
+  }
 
   .door-label {
     font-family: 'Inter', sans-serif;
@@ -613,6 +616,99 @@
     color: var(--muted);
   }
 
+  /* ─── EXPERIENCE ROOM ─── */
+
+  #experience {
+    display: none;
+    background: var(--deep);
+    padding: 0;
+    overflow: hidden;
+  }
+
+  #experience.active { display: block; }
+
+  .exp-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .exp-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .exp-track-info {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+  }
+
+  .exp-track-title {
+    font-size: 1.2rem;
+    color: var(--bone);
+    margin-bottom: 0.3rem;
+    transition: opacity 0.5s;
+  }
+
+  .exp-track-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .exp-controls {
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+  }
+
+  .exp-controls audio {
+    width: min(50vw, 350px);
+    height: 32px;
+    filter: invert(0.8) hue-rotate(180deg);
+  }
+
+  .exp-controls button {
+    background: none;
+    border: 1px solid var(--muted);
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .exp-controls button:hover {
+    border-color: var(--bone);
+    color: var(--bone);
+  }
+
+  .exp-member-hint {
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    opacity: 0.5;
+    z-index: 10;
+  }
+
   /* ─── ANIMATIONS ─── */
 
   @keyframes fadeIn {
@@ -651,6 +747,7 @@
     <button class="nav-link" data-room="listen" onclick="enterRoom('listen')">Listen</button>
     <button class="nav-link" data-room="see" onclick="enterRoom('see')">See</button>
     <button class="nav-link" data-room="read" onclick="enterRoom('read')">Read</button>
+    <button class="nav-link" data-room="experience" onclick="enterRoom('experience')">Experience</button>
   </div>
   <span class="nav-now-playing" id="navNowPlaying"></span>
 </nav>
@@ -670,6 +767,10 @@
     <div class="door door-read" onclick="enterRoom('read')">
       <span class="door-label">Read</span>
       <span class="door-hint">Nine chapters. The memoir.</span>
+    </div>
+    <div class="door door-experience" onclick="enterRoom('experience')">
+      <span class="door-label">Experience</span>
+      <span class="door-hint">The geometry. Alive.</span>
     </div>
   </div>
 </div>
@@ -1330,11 +1431,29 @@
   </div>
 </div>
 
+<!-- ─── EXPERIENCE ROOM ─── -->
+<div class="room" id="experience">
+  <div class="exp-container">
+    <div class="exp-member-hint">Click a member to hear their frequency</div>
+    <svg class="exp-svg" id="expChart"></svg>
+    <div class="exp-controls">
+      <button onclick="expPrev()">Prev</button>
+      <audio id="expPlayer" controls preload="metadata"></audio>
+      <button onclick="expNext()">Next</button>
+    </div>
+    <div class="exp-track-info">
+      <div class="exp-track-title" id="expTrackTitle"></div>
+      <div class="exp-track-sub" id="expTrackSub"></div>
+    </div>
+  </div>
+</div>
+
 <!-- ─── FOOTER ─── -->
 <div class="site-footer" id="siteFooter" style="display:none;">
   It begins, again.
 </div>
 
+<script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
   // ─── TRACK DATA ───
   const tracks = [
@@ -1442,6 +1561,10 @@
     // Trigger fade-ins for gallery
     if (room === 'see') {
       observeGallery();
+    }
+
+    if (room === 'experience') {
+      setTimeout(() => initExperience(), 100);
     }
   }
 
@@ -1555,6 +1678,295 @@
   function goToChapter(idx) {
     enterRoom('read');
     setTimeout(() => openChapter(idx), 100);
+  }
+
+  // ─── EXPERIENCE ROOM ───
+
+  const memberTracks = {
+    'Greg': [
+      { title: 'Soulstice Sistahs', src: 'content/music/seeds/soulstice-sistahs/5. Soulstice Sistahs.12.24.24.mp3', sub: 'The gravity. The center that holds.' },
+      { title: 'The Ballad of Ancient Country Wisdom', src: 'content/music/seeds/the-ballad-of-ancient-country-wisdom/The Ballad of Ancient Country Wisdom v2.mp3', sub: 'The full geometry. All five points.' }
+    ],
+    'David': [
+      { title: 'Buttercutter', src: 'content/music/seeds/buttercutter/Buttercutter vocal v2.m4a', sub: 'The scaffolding. Lyrics still arriving.' },
+      { title: 'Pure Joy Sound', src: 'content/music/seeds/pure-joy-sound/Pure Joy Sound.mp3', sub: 'David and Noah. Probably \'98. Just a one off improv.' },
+      { title: 'Mexico in Tennille', src: 'content/music/seeds/mexico-in-tennille/Mexico in Tennille vox 1 (Remastered).mp3', sub: 'Ideas scribbled on receipts while driving.' }
+    ],
+    'Jeff': [
+      { title: 'Rare Radio (Take Me With You)', src: 'content/music/seeds/rare-radio/Rare Radio (Take me with you).mp3', sub: 'Words over Noah\'s guitar. The pocket, thirty-two years later.' },
+      { title: 'Everything is Happening Today', src: 'content/music/seeds/everything-is-happening-today/Everything is Happening Today - (Devco Collab).mp3', sub: 'But I\'m not sure I know the way.' },
+      { title: 'Lightbringer (Ties)', src: 'content/music/seeds/lightbringer/Lightbringer (Ties).mp3', sub: 'Let\'s cut ties. Go back to the time when we told lies.' }
+    ],
+    'Rich': [
+      { title: 'Time Marches (Gospel)', src: 'content/music/seeds/time-machines/Time Marches (gospel).mp3', sub: 'The Telecaster. What\'s the plan?' },
+      { title: 'Time Marches (So Is My Soul)', src: 'content/music/seeds/time-machines/Time Marches (So is my soul).mp3', sub: 'The sequence stayed bounded.' }
+    ],
+    'Noah': [
+      { title: 'Rare Radio', src: 'content/music/seeds/rare-radio/Rare Radio.mp3', sub: 'Six minutes. No vocals. The floor frequency.' },
+      { title: 'Penny Whistle', src: 'content/music/seeds/pennywhistle/2. Penny Whistle.noah.12.21.24.VB.02.mp3', sub: 'A broadcast on a frequency most receivers skip past.' },
+      { title: 'There Is No Beginning of Now', src: 'content/music/seeds/there-is-no-beginning-of-now/03 There Is No Beginning of Now.mp3', sub: 'Time as geological layer.' }
+    ]
+  };
+
+  const memberOrder = ['Greg', 'David', 'Jeff', 'Rich', 'Noah'];
+  const memberColors = {
+    'Greg': '#8b7355', 'David': '#6b8cae', 'Jeff': '#d4a574',
+    'Rich': '#7a9a7e', 'Noah': '#a07e9e'
+  };
+
+  let expCurrentMember = null;
+  let expCurrentTrackIdx = 0;
+  let expInitialized = false;
+  let expNodes = null;
+  let expLinks = null;
+  let expSvgG = null;
+
+  const expPlayer = document.getElementById('expPlayer');
+
+  function initExperience() {
+    if (expInitialized) return;
+    expInitialized = true;
+
+    const container = document.querySelector('.exp-container');
+    const w = container.clientWidth;
+    const h = container.clientHeight;
+    const r = Math.min(w, h) / 2 - 80;
+
+    const svg = d3.select('#expChart')
+      .attr('width', w)
+      .attr('height', h);
+
+    expSvgG = svg.append('g')
+      .attr('transform', `translate(${w/2},${h/2 - 30})`);
+
+    // Pentagon positions for the 5 members
+    const pentPoints = memberOrder.map((name, i) => {
+      const angle = (i * 72 - 90) * Math.PI / 180;
+      return { name, x: r * 0.6 * Math.cos(angle), y: r * 0.6 * Math.sin(angle), angle: i * 72 - 90 };
+    });
+
+    // Draw connections between all members (full pentagon mesh)
+    for (let i = 0; i < pentPoints.length; i++) {
+      for (let j = i + 1; j < pentPoints.length; j++) {
+        expSvgG.append('line')
+          .attr('class', 'exp-connection')
+          .attr('x1', pentPoints[i].x).attr('y1', pentPoints[i].y)
+          .attr('x2', pentPoints[j].x).attr('y2', pentPoints[j].y)
+          .attr('stroke', '#334155')
+          .attr('stroke-width', 0.5)
+          .attr('stroke-opacity', 0.3);
+      }
+    }
+
+    // Draw orbital rings
+    [0.3, 0.5, 0.7, 0.9].forEach(scale => {
+      expSvgG.append('circle')
+        .attr('r', r * scale)
+        .attr('fill', 'none')
+        .attr('stroke', '#1a2a3a')
+        .attr('stroke-width', 0.3)
+        .attr('stroke-opacity', 0.4);
+    });
+
+    // Center text
+    expSvgG.append('text')
+      .attr('text-anchor', 'middle')
+      .attr('dy', '-0.3em')
+      .attr('fill', '#4a5568')
+      .attr('font-size', '8px')
+      .attr('font-family', 'Inter, sans-serif')
+      .attr('letter-spacing', '0.2em')
+      .text('ANCIENT COUNTRY');
+    expSvgG.append('text')
+      .attr('text-anchor', 'middle')
+      .attr('dy', '1em')
+      .attr('fill', '#4a5568')
+      .attr('font-size', '8px')
+      .attr('font-family', 'Inter, sans-serif')
+      .attr('letter-spacing', '0.2em')
+      .text('WISDOM');
+
+    // Draw member nodes
+    const nodeGroups = expSvgG.selectAll('.exp-node')
+      .data(pentPoints)
+      .enter().append('g')
+      .attr('class', 'exp-node')
+      .attr('transform', d => `translate(${d.x},${d.y})`)
+      .style('cursor', 'pointer')
+      .on('click', (event, d) => expSelectMember(d.name));
+
+    // Outer glow ring (pulses when active)
+    nodeGroups.append('circle')
+      .attr('class', 'exp-glow')
+      .attr('r', 28)
+      .attr('fill', 'none')
+      .attr('stroke', d => memberColors[d.name])
+      .attr('stroke-width', 1)
+      .attr('stroke-opacity', 0);
+
+    // Main node circle
+    nodeGroups.append('circle')
+      .attr('class', 'exp-dot')
+      .attr('r', 12)
+      .attr('fill', d => memberColors[d.name])
+      .attr('opacity', 0.6);
+
+    // Member name
+    nodeGroups.append('text')
+      .attr('text-anchor', 'middle')
+      .attr('dy', d => d.y < 0 ? -20 : 28)
+      .attr('fill', d => memberColors[d.name])
+      .attr('font-family', 'Inter, sans-serif')
+      .attr('font-size', '10px')
+      .attr('font-weight', '300')
+      .attr('letter-spacing', '0.15em')
+      .text(d => d.name);
+
+    // Track dots around each member (satellite nodes)
+    pentPoints.forEach(p => {
+      const tracks = memberTracks[p.name];
+      tracks.forEach((t, i) => {
+        const angle = (p.angle + (i - (tracks.length-1)/2) * 18) * Math.PI / 180;
+        const dist = r * 0.85;
+        const tx = dist * Math.cos(angle);
+        const ty = dist * Math.sin(angle);
+
+        // Connecting line to satellite
+        expSvgG.append('line')
+          .attr('class', `exp-sat-line exp-sat-${p.name}`)
+          .attr('x1', p.x).attr('y1', p.y)
+          .attr('x2', tx).attr('y2', ty)
+          .attr('stroke', memberColors[p.name])
+          .attr('stroke-width', 0.4)
+          .attr('stroke-opacity', 0.15);
+
+        // Satellite dot
+        expSvgG.append('circle')
+          .attr('class', `exp-sat exp-sat-${p.name}`)
+          .attr('cx', tx).attr('cy', ty)
+          .attr('r', 3)
+          .attr('fill', memberColors[p.name])
+          .attr('opacity', 0.25)
+          .style('cursor', 'pointer')
+          .datum({ member: p.name, trackIdx: i, title: t.title })
+          .on('click', (event, d) => {
+            event.stopPropagation();
+            expSelectMember(d.member);
+            expCurrentTrackIdx = d.trackIdx;
+            expPlayCurrent();
+          });
+
+        // Satellite label
+        expSvgG.append('text')
+          .attr('class', `exp-sat-label exp-sat-${p.name}`)
+          .attr('x', tx).attr('y', ty)
+          .attr('dx', 6).attr('dy', '0.35em')
+          .attr('fill', memberColors[p.name])
+          .attr('font-family', 'Inter, sans-serif')
+          .attr('font-size', '7px')
+          .attr('opacity', 0)
+          .text(t.title);
+      });
+    });
+
+    expNodes = nodeGroups;
+
+    // Auto-play listener
+    expPlayer.addEventListener('ended', expNext);
+
+    // Start with Greg
+    expSelectMember('Greg');
+  }
+
+  function expSelectMember(name) {
+    expCurrentMember = name;
+    expCurrentTrackIdx = 0;
+
+    // Update node visuals
+    expSvgG.selectAll('.exp-dot')
+      .transition().duration(400)
+      .attr('opacity', d => d.name === name ? 1 : 0.25)
+      .attr('r', d => d.name === name ? 16 : 10);
+
+    expSvgG.selectAll('.exp-glow')
+      .transition().duration(400)
+      .attr('stroke-opacity', d => d.name === name ? 0.4 : 0);
+
+    // Update connections
+    expSvgG.selectAll('.exp-connection')
+      .transition().duration(400)
+      .attr('stroke-opacity', 0.12);
+
+    // Update satellites
+    memberOrder.forEach(m => {
+      expSvgG.selectAll(`.exp-sat-${m}`)
+        .transition().duration(400)
+        .attr('opacity', m === name ? 0.7 : 0.1);
+      expSvgG.selectAll(`.exp-sat-line.exp-sat-${m}`)
+        .transition().duration(400)
+        .attr('stroke-opacity', m === name ? 0.4 : 0.05);
+      expSvgG.selectAll(`.exp-sat-label.exp-sat-${m}`)
+        .transition().duration(400)
+        .attr('opacity', m === name ? 0.6 : 0);
+    });
+
+    expPlayCurrent();
+  }
+
+  function expPlayCurrent() {
+    if (!expCurrentMember) return;
+    const t = memberTracks[expCurrentMember][expCurrentTrackIdx];
+    if (!t) return;
+
+    expPlayer.src = t.src;
+    expPlayer.play();
+
+    document.getElementById('expTrackTitle').textContent = t.title;
+    document.getElementById('expTrackSub').textContent = t.sub;
+
+    // Nav now-playing
+    const np = document.getElementById('navNowPlaying');
+    np.textContent = '♪ ' + t.title;
+    np.classList.add('visible');
+
+    // Highlight active satellite
+    expSvgG.selectAll(`.exp-sat.exp-sat-${expCurrentMember}`)
+      .transition().duration(300)
+      .attr('r', (d, i) => i === expCurrentTrackIdx ? 6 : 3)
+      .attr('opacity', (d, i) => i === expCurrentTrackIdx ? 1 : 0.4);
+  }
+
+  function expNext() {
+    if (!expCurrentMember) return;
+    const tracks = memberTracks[expCurrentMember];
+    expCurrentTrackIdx++;
+
+    if (expCurrentTrackIdx >= tracks.length) {
+      // Move to next member
+      const idx = memberOrder.indexOf(expCurrentMember);
+      const nextIdx = (idx + 1) % memberOrder.length;
+      expSelectMember(memberOrder[nextIdx]);
+    } else {
+      expPlayCurrent();
+    }
+  }
+
+  function expPrev() {
+    if (!expCurrentMember) return;
+    expCurrentTrackIdx--;
+
+    if (expCurrentTrackIdx < 0) {
+      // Move to previous member
+      const idx = memberOrder.indexOf(expCurrentMember);
+      const prevIdx = (idx - 1 + memberOrder.length) % memberOrder.length;
+      expCurrentMember = memberOrder[prevIdx];
+      expCurrentTrackIdx = memberTracks[expCurrentMember].length - 1;
+      expSelectMember(expCurrentMember);
+      expCurrentTrackIdx = memberTracks[expCurrentMember].length - 1;
+      expPlayCurrent();
+    } else {
+      expPlayCurrent();
+    }
   }
 
   // ─── UTILITIES ───
