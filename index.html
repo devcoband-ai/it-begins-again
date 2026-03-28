@@ -716,7 +716,7 @@
       <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound.mp3" controls preload="none"></audio>
     </div>
     <div class="gallery-crosswalk">
-      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(2)">Listen — Track 3</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); playInline(this,2)">Play — Pure Joy Sound</span>
       <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(6)">Read — Ch. 7: Rare Radio</span>
     </div>
   </div>
@@ -729,7 +729,7 @@
       <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3" controls preload="none"></audio>
     </div>
     <div class="gallery-crosswalk">
-      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(2)">Listen — Track 3</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); playInline(this,2)">Play — Pure Joy Sound</span>
       <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(3)">Read — Ch. 4: The Design</span>
     </div>
   </div>
@@ -742,7 +742,7 @@
       <audio src="content/music/seeds/the-songwriter/The Songwriter.mp3" controls preload="none"></audio>
     </div>
     <div class="gallery-crosswalk">
-      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(5)">Listen — Track 6</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); playInline(this,5)">Play — The Songwriter</span>
       <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(4)">Read — Ch. 5: The Pool Hall</span>
     </div>
   </div>
@@ -755,7 +755,7 @@
       <audio src="content/music/seeds/lightbringer/Lightbringer (Ties).mp3" controls preload="none"></audio>
     </div>
     <div class="gallery-crosswalk">
-      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(3)">Listen — Track 4</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); playInline(this,3)">Play — Lightbringer (Ties)</span>
       <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(7)">Read — Ch. 8: What's the Plan?</span>
     </div>
   </div>
@@ -768,7 +768,7 @@
       <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3" controls preload="none"></audio>
     </div>
     <div class="gallery-crosswalk">
-      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(2)">Listen — Track 3</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); playInline(this,2)">Play — Pure Joy Sound</span>
       <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(8)">Read — Ch. 9: Translating Light Into Form</span>
     </div>
   </div>
@@ -781,7 +781,7 @@
       <audio src="content/music/seeds/everything-is-happening-today/Everything is Happening Today - (Devco Collab).mp3" controls preload="none"></audio>
     </div>
     <div class="gallery-crosswalk">
-      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(0)">Listen — Track 1</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); playInline(this,0)">Play — Everything is Happening Today</span>
       <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(2)">Read — Ch. 3: The Hum</span>
     </div>
   </div>
@@ -794,7 +794,7 @@
       <audio src="content/music/seeds/time-machines/Time Marches (So is my soul).mp3" controls preload="none"></audio>
     </div>
     <div class="gallery-crosswalk">
-      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(7)">Listen — Track 8</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); playInline(this,7)">Play — Time Marches (So Is My Soul)</span>
       <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(1)">Read — Ch. 2: Hey Man</span>
     </div>
   </div>
@@ -1518,6 +1518,32 @@
   }
 
   // ─── CROSSWALK ───
+
+  function playInline(el, trackIdx) {
+    // Find the parent gallery-piece
+    const piece = el.closest('.gallery-piece');
+    if (!piece) return;
+
+    // Expand the piece to show its player
+    piece.classList.add('expanded');
+
+    // Pause any other audio playing in the gallery
+    document.querySelectorAll('#see audio').forEach(a => {
+      if (!piece.contains(a)) { a.pause(); a.currentTime = 0; }
+    });
+
+    // Play the inline audio
+    const audio = piece.querySelector('.gallery-player audio');
+    if (audio) {
+      audio.play();
+
+      // Update nav now-playing
+      const np = document.getElementById('navNowPlaying');
+      const title = piece.querySelector('.gallery-title');
+      np.textContent = '♪ ' + (title ? title.textContent : 'Playing');
+      np.classList.add('visible');
+    }
+  }
 
   function goToTrack(idx) {
     currentTrack = idx;
