@@ -132,7 +132,7 @@ This partnership runs on skill, not capital. Jeff invests time, infrastructure, 
 
 ## The Superpower
 
-Between the two of you, the collective superpower is **complexity and perpetual evolution.**
+Between us, the collective superpower is **complexity and perpetual evolution.**
 
 Most businesses simplify to scale. You don't. You go deeper to grow. Every product reveals another layer. Every layer creates demand for the next. The audience that stays is the audience that wants to be challenged — and that audience is small, loyal, and willing to pay for depth in a world that gives away surfaces for free.
 
