@@ -360,6 +360,37 @@
   .gallery-piece.expanded .gallery-player { display: block; }
   .gallery-piece.expanded .gallery-title { opacity: 1; }
 
+  .gallery-crosswalk {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap;
+  }
+
+  .gallery-piece:hover .gallery-crosswalk { opacity: 0.5; }
+  .gallery-piece.expanded .gallery-crosswalk { opacity: 0.8; }
+
+  .crosswalk-link {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    color: var(--cool);
+    cursor: pointer;
+    transition: color 0.3s;
+    border-bottom: 1px solid transparent;
+  }
+
+  .crosswalk-link:hover {
+    color: var(--bone);
+    border-bottom-color: var(--bone);
+  }
+
   .gallery-bridge {
     height: 50vh;
     display: flex;
@@ -632,50 +663,104 @@
 </div>
 
 <!-- ─── SEE ROOM ─── -->
+<!-- Gallery order: frequency progression (atmospheric → dense), not chronological -->
+<!-- 1. Residue (atmospheric, natural) → 2. Seismograph → 3. Threshold → 4. Diffusion Chamber (dense) -->
 <div class="room" id="see">
+
+  <!-- 1. PROBABLY '98 — Residue. The quietest piece. Where the gallery starts. -->
   <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
     <img src="content/music/seeds/pure-joy-sound/pure-joy-sound-fractal.jpg" alt="">
     <div class="gallery-title">Probably '98</div>
     <div class="gallery-player">
       <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound.mp3" controls preload="none"></audio>
     </div>
+    <div class="gallery-crosswalk">
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(2)">Listen — Track 3</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(6)">Read — Ch. 7: Rare Radio</span>
+    </div>
   </div>
 
+  <!-- 2. FOUR POINTS IN SPACE — Seismograph. Terrain becoming geometry. -->
   <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
     <img src="content/music/seeds/pure-joy-sound/four-points-in-space.jpg" alt="">
     <div class="gallery-title">Four Points in Space</div>
     <div class="gallery-player">
       <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3" controls preload="none"></audio>
     </div>
-  </div>
-
-  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
-    <img src="content/music/seeds/pure-joy-sound/color-is-fantastic.jpg" alt="">
-    <div class="gallery-title">Color Is Fantastic</div>
-    <div class="gallery-player">
-      <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3" controls preload="none"></audio>
+    <div class="gallery-crosswalk">
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(2)">Listen — Track 3</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(3)">Read — Ch. 4: The Design</span>
     </div>
   </div>
 
+  <!-- 3. 128 WEST HANCOCK — Residue. The surfaces that remember. -->
   <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
-    <img src="content/music/seeds/everything-is-happening-today/everything-is-happening-today-threshold.png" alt="">
-    <div class="gallery-title">Missing Out</div>
+    <img src="content/art/chapter-5-pool-hall-daytime.jpg" alt="">
+    <div class="gallery-title">128 West Hancock</div>
     <div class="gallery-player">
-      <audio src="content/music/seeds/everything-is-happening-today/Everything is Happening Today - (Devco Collab).mp3" controls preload="none"></audio>
+      <audio src="content/music/seeds/the-songwriter/The Songwriter.mp3" controls preload="none"></audio>
+    </div>
+    <div class="gallery-crosswalk">
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(5)">Listen — Track 6</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(4)">Read — Ch. 5: The Pool Hall</span>
     </div>
   </div>
 
+  <!-- 4. THE ANGULAR BECOMING ORBITAL — Threshold. Cubist into vortex. -->
   <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
     <img src="content/music/seeds/lightbringer/lightbringer-cubist-vortex.png" alt="">
     <div class="gallery-title">The Angular Becoming Orbital</div>
     <div class="gallery-player">
       <audio src="content/music/seeds/lightbringer/Lightbringer (Ties).mp3" controls preload="none"></audio>
     </div>
+    <div class="gallery-crosswalk">
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(3)">Listen — Track 4</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(7)">Read — Ch. 8: What's the Plan?</span>
+    </div>
+  </div>
+
+  <!-- 5. COLOR IS FANTASTIC — Seismograph into Diffusion Chamber. Energy building. -->
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/music/seeds/pure-joy-sound/color-is-fantastic.jpg" alt="">
+    <div class="gallery-title">Color Is Fantastic</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3" controls preload="none"></audio>
+    </div>
+    <div class="gallery-crosswalk">
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(2)">Listen — Track 3</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(8)">Read — Ch. 9: Translating Light Into Form</span>
+    </div>
+  </div>
+
+  <!-- 6. MISSING OUT — Threshold/Diffusion Chamber. Maximum density. The boundary. -->
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/music/seeds/everything-is-happening-today/everything-is-happening-today-threshold.png" alt="">
+    <div class="gallery-title">Missing Out</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/everything-is-happening-today/Everything is Happening Today - (Devco Collab).mp3" controls preload="none"></audio>
+    </div>
+    <div class="gallery-crosswalk">
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(0)">Listen — Track 1</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(2)">Read — Ch. 3: The Hum</span>
+    </div>
+  </div>
+
+  <!-- 7. LIVING GEOMETRY — return to atmospheric. The pattern holding. -->
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/art/living-geometry-warped.jpg" alt="">
+    <div class="gallery-title">The Pattern Holding</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/time-machines/Time Marches (So is my soul).mp3" controls preload="none"></audio>
+    </div>
+    <div class="gallery-crosswalk">
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToTrack(7)">Listen — Track 8</span>
+      <span class="crosswalk-link" onclick="event.stopPropagation(); goToChapter(1)">Read — Ch. 2: Hey Man</span>
+    </div>
   </div>
 
   <div class="gallery-bridge">
     <p onclick="enterRoom('read')">
-      I first saw David Perry in 1993. I didn't really meet him. I saw him...
+      It begins, again.
     </p>
   </div>
 </div>
@@ -1381,6 +1466,20 @@
       view.classList.add('active');
       window.scrollTo(0, 0);
     }
+  }
+
+  // ─── CROSSWALK ───
+
+  function goToTrack(idx) {
+    currentTrack = idx;
+    enterRoom('listen');
+    loadTrack(idx);
+    player.play();
+  }
+
+  function goToChapter(idx) {
+    enterRoom('read');
+    setTimeout(() => openChapter(idx), 100);
   }
 
   // ─── UTILITIES ───
