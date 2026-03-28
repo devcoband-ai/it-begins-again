@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>It Begins, Again</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --deep: #0a0a0f;
+    --warm: #c4883a;
+    --cool: #88ccdd;
+    --bone: #e8d8c4;
+    --muted: #6b6b6b;
+  }
+
+  body {
+    background: var(--deep);
+    color: var(--bone);
+    font-family: 'EB Garamond', Georgia, serif;
+    overflow-x: hidden;
+  }
+
+  /* ─── LANDING: THREE DOORS ─── */
+
+  #landing {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  #landing h1 {
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4rem;
+    opacity: 0;
+    animation: fadeIn 2s ease 0.5s forwards;
+  }
+
+  .doors {
+    display: flex;
+    gap: 1px;
+    height: 50vh;
+    width: min(90vw, 1200px);
+    opacity: 0;
+    animation: fadeIn 2s ease 1.5s forwards;
+  }
+
+  .door {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: flex 0.6s ease, opacity 0.3s;
+  }
+
+  .door::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+    transition: opacity 0.6s ease;
+  }
+
+  .door:hover::before { opacity: 0.35; }
+  .door:hover { flex: 1.5; }
+
+  .door-listen::before {
+    background: linear-gradient(135deg, #1a0a2e 0%, #0a1628 50%, var(--warm) 100%);
+  }
+  .door-see::before {
+    background: linear-gradient(135deg, #0a1628 0%, #1a2a1a 50%, var(--cool) 100%);
+  }
+  .door-read::before {
+    background: linear-gradient(135deg, #2e1a0a 0%, #1a1410 50%, var(--bone) 100%);
+  }
+
+  .door-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--bone);
+    opacity: 0.5;
+    transition: opacity 0.4s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .door:hover .door-label { opacity: 1; }
+
+  .door-hint {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 200px;
+  }
+
+  .door:hover .door-hint { opacity: 0.7; }
+
+  /* ─── ROOMS ─── */
+
+  .room {
+    display: none;
+    min-height: 100vh;
+    padding: 4rem 2rem;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    position: relative;
+  }
+
+  .room.active {
+    display: block;
+  }
+
+  .room.visible {
+    opacity: 1;
+  }
+
+  .back-btn {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    z-index: 100;
+    border: none;
+    background: none;
+    transition: color 0.3s;
+    display: none;
+  }
+
+  .back-btn:hover { color: var(--bone); }
+  .back-btn.visible { display: block; }
+
+  /* ─── OTHER DOORS (persistent) ─── */
+
+  .other-doors {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+    gap: 1.5rem;
+    z-index: 100;
+  }
+
+  .other-doors.visible { display: flex; }
+
+  .other-door {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: color 0.3s;
+  }
+
+  .other-door:hover { color: var(--bone); }
+  .other-door.current { color: var(--warm); pointer-events: none; }
+
+  /* ─── LISTEN ROOM ─── */
+
+  #listen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--deep);
+  }
+
+  #listen.active { display: flex; }
+
+  .listen-art {
+    width: min(80vw, 600px);
+    height: min(80vw, 600px);
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  .listen-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1.5s ease;
+  }
+
+  .listen-art img.active { opacity: 0.7; }
+
+  .listen-track-info {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .listen-track-num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .listen-track-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--bone);
+    margin-bottom: 0.25rem;
+  }
+
+  .listen-track-type {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .player-controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .player-controls audio {
+    width: min(60vw, 400px);
+    height: 36px;
+    filter: invert(0.8) hue-rotate(180deg);
+  }
+
+  .track-nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .track-nav button {
+    background: none;
+    border: 1px solid var(--muted);
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .track-nav button:hover {
+    border-color: var(--bone);
+    color: var(--bone);
+  }
+
+  .listen-prose {
+    max-width: 500px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--muted);
+    font-style: italic;
+    margin-top: 2rem;
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+
+  .listen-prose.visible { opacity: 0.6; }
+
+  /* ─── SEE ROOM ─── */
+
+  #see {
+    display: none;
+    background: var(--deep);
+  }
+
+  #see.active { display: block; }
+
+  .gallery-piece {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .gallery-piece img {
+    max-width: 85vw;
+    max-height: 80vh;
+    object-fit: contain;
+    transition: transform 0.6s ease;
+  }
+
+  .gallery-piece:hover img {
+    transform: scale(1.02);
+  }
+
+  .gallery-title {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--bone);
+    opacity: 0;
+    transition: opacity 0.5s;
+    white-space: nowrap;
+  }
+
+  .gallery-piece:hover .gallery-title { opacity: 0.7; }
+
+  .gallery-player {
+    display: none;
+    position: absolute;
+    bottom: 6rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .gallery-player audio {
+    height: 32px;
+    filter: invert(0.8) hue-rotate(180deg);
+  }
+
+  .gallery-piece.expanded .gallery-player { display: block; }
+  .gallery-piece.expanded .gallery-title { opacity: 1; }
+
+  .gallery-bridge {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+  }
+
+  .gallery-bridge p {
+    max-width: 600px;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: var(--muted);
+    font-style: italic;
+    cursor: pointer;
+    transition: color 0.4s;
+  }
+
+  .gallery-bridge p:hover { color: var(--bone); }
+
+  /* ─── READ ROOM ─── */
+
+  #read {
+    display: none;
+    background: var(--deep);
+  }
+
+  #read.active { display: block; }
+
+  .chapter-nav {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+
+  .chapter-nav h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3rem;
+  }
+
+  .chapter-link {
+    display: block;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(107, 107, 107, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .chapter-link:hover { padding-left: 1rem; }
+
+  .chapter-link-num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+  }
+
+  .chapter-link-title {
+    font-size: 1.2rem;
+    color: var(--bone);
+    margin-top: 0.25rem;
+    transition: color 0.3s;
+  }
+
+  .chapter-link:hover .chapter-link-title { color: var(--warm); }
+
+  .chapter-view {
+    display: none;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 2rem 8rem;
+    position: relative;
+  }
+
+  .chapter-view.active { display: block; }
+
+  .chapter-view h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--bone);
+  }
+
+  .chapter-view .chapter-num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+  .chapter-view .chapter-art {
+    width: 100%;
+    margin: 2rem 0 3rem;
+    opacity: 0.85;
+  }
+
+  .chapter-view p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+    color: var(--bone);
+  }
+
+  .chapter-view hr {
+    border: none;
+    border-top: 1px solid rgba(107, 107, 107, 0.3);
+    margin: 2.5rem auto;
+    width: 40%;
+  }
+
+  .margin-audio {
+    float: right;
+    margin: 0 -3rem 1rem 1.5rem;
+    text-align: right;
+  }
+
+  .margin-audio-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .margin-audio audio {
+    height: 28px;
+    width: 180px;
+    filter: invert(0.8) hue-rotate(180deg);
+  }
+
+  .chapter-gallery-bridge {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(107, 107, 107, 0.2);
+    text-align: center;
+  }
+
+  .chapter-gallery-bridge img {
+    max-width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+    cursor: pointer;
+  }
+
+  .chapter-gallery-bridge img:hover { opacity: 0.9; }
+
+  .chapter-gallery-bridge .gallery-hint {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+    margin-top: 1rem;
+    font-style: italic;
+  }
+
+  /* ─── FOOTER ─── */
+
+  .site-footer {
+    text-align: center;
+    padding: 4rem 2rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+  }
+
+  /* ─── ANIMATIONS ─── */
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ─── */
+
+  @media (max-width: 768px) {
+    .doors { flex-direction: column; height: auto; min-height: 70vh; }
+    .door { padding: 3rem 1rem; }
+    .door:hover { flex: 1; }
+    .margin-audio { float: none; margin: 1.5rem 0; text-align: left; }
+    .listen-art { width: 90vw; height: 90vw; }
+  }
+</style>
+</head>
+<body>
+
+<!-- BACK BUTTON -->
+<button class="back-btn" id="backBtn" onclick="goHome()">Back</button>
+
+<!-- OTHER DOORS -->
+<div class="other-doors" id="otherDoors">
+  <button class="other-door" data-room="listen" onclick="enterRoom('listen')">Listen</button>
+  <button class="other-door" data-room="see" onclick="enterRoom('see')">See</button>
+  <button class="other-door" data-room="read" onclick="enterRoom('read')">Read</button>
+</div>
+
+<!-- ─── LANDING ─── -->
+<div id="landing">
+  <h1>It Begins, Again</h1>
+  <div class="doors">
+    <div class="door door-listen" onclick="enterRoom('listen')">
+      <span class="door-label">Listen</span>
+      <span class="door-hint">Eight tracks. The album.</span>
+    </div>
+    <div class="door door-see" onclick="enterRoom('see')">
+      <span class="door-label">See</span>
+      <span class="door-hint">The gallery. Seeded by the songs.</span>
+    </div>
+    <div class="door door-read" onclick="enterRoom('read')">
+      <span class="door-label">Read</span>
+      <span class="door-hint">Nine chapters. The memoir.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── LISTEN ROOM ─── -->
+<div class="room" id="listen">
+  <div class="listen-art">
+    <img src="content/music/seeds/pure-joy-sound/pure-joy-sound-fractal.jpg" data-tracks="2,3" alt="">
+    <img src="content/music/seeds/pure-joy-sound/four-points-in-space.jpg" data-tracks="3" alt="">
+    <img src="content/music/seeds/pure-joy-sound/color-is-fantastic.jpg" data-tracks="3" alt="">
+    <img src="content/music/seeds/everything-is-happening-today/everything-is-happening-today-threshold.png" data-tracks="0,1" alt="">
+    <img src="content/music/seeds/lightbringer/lightbringer-cubist-vortex.png" data-tracks="4" alt="">
+    <img src="content/art/time-is-thin.jpg" data-tracks="5,6,7" alt="">
+  </div>
+
+  <div class="listen-track-info">
+    <div class="listen-track-num" id="trackNum"></div>
+    <div class="listen-track-title" id="trackTitle"></div>
+    <div class="listen-track-type" id="trackType"></div>
+  </div>
+
+  <div class="player-controls">
+    <audio id="mainPlayer" controls preload="metadata"></audio>
+  </div>
+
+  <div class="track-nav">
+    <button onclick="prevTrack()">Prev</button>
+    <button onclick="nextTrack()">Next</button>
+  </div>
+
+  <div class="listen-prose" id="listenProse"></div>
+</div>
+
+<!-- ─── SEE ROOM ─── -->
+<div class="room" id="see">
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/music/seeds/pure-joy-sound/pure-joy-sound-fractal.jpg" alt="">
+    <div class="gallery-title">Probably '98</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound.mp3" controls preload="none"></audio>
+    </div>
+  </div>
+
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/music/seeds/pure-joy-sound/four-points-in-space.jpg" alt="">
+    <div class="gallery-title">Four Points in Space</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3" controls preload="none"></audio>
+    </div>
+  </div>
+
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/music/seeds/pure-joy-sound/color-is-fantastic.jpg" alt="">
+    <div class="gallery-title">Color Is Fantastic</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3" controls preload="none"></audio>
+    </div>
+  </div>
+
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/music/seeds/everything-is-happening-today/everything-is-happening-today-threshold.png" alt="">
+    <div class="gallery-title">Missing Out</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/everything-is-happening-today/Everything is Happening Today - (Devco Collab).mp3" controls preload="none"></audio>
+    </div>
+  </div>
+
+  <div class="gallery-piece fade-in" onclick="toggleGallery(this)">
+    <img src="content/music/seeds/lightbringer/lightbringer-cubist-vortex.png" alt="">
+    <div class="gallery-title">The Angular Becoming Orbital</div>
+    <div class="gallery-player">
+      <audio src="content/music/seeds/lightbringer/Lightbringer (Ties).mp3" controls preload="none"></audio>
+    </div>
+  </div>
+
+  <div class="gallery-bridge">
+    <p onclick="enterRoom('read')">
+      I first saw David Perry in 1993. I didn't really meet him. I saw him...
+    </p>
+  </div>
+</div>
+
+<!-- ─── READ ROOM ─── -->
+<div class="room" id="read">
+  <div class="chapter-nav" id="chapterNav">
+    <h2>The Book</h2>
+    <div class="chapter-link" onclick="openChapter(0)">
+      <span class="chapter-link-num">Chapter 1</span>
+      <div class="chapter-link-title">The Other Side of the Street</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(1)">
+      <span class="chapter-link-num">Chapter 2</span>
+      <div class="chapter-link-title">Hey Man</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(2)">
+      <span class="chapter-link-num">Chapter 3</span>
+      <div class="chapter-link-title">The Hum</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(3)">
+      <span class="chapter-link-num">Chapter 4</span>
+      <div class="chapter-link-title">The Design</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(4)">
+      <span class="chapter-link-num">Chapter 5</span>
+      <div class="chapter-link-title">The Pool Hall</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(5)">
+      <span class="chapter-link-num">Chapter 6</span>
+      <div class="chapter-link-title">Time Is Thin</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(6)">
+      <span class="chapter-link-num">Chapter 7</span>
+      <div class="chapter-link-title">Rare Radio</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(7)">
+      <span class="chapter-link-num">Chapter 8</span>
+      <div class="chapter-link-title">What's the Plan?</div>
+    </div>
+    <div class="chapter-link" onclick="openChapter(8)">
+      <span class="chapter-link-num">Chapter 9</span>
+      <div class="chapter-link-title">Translating Light Into Form</div>
+    </div>
+  </div>
+
+  <!-- CHAPTER 7 (sample full chapter) -->
+  <div class="chapter-view" id="chapter-6">
+    <span class="chapter-num">Chapter 7</span>
+    <h1>Rare Radio</h1>
+    <img class="chapter-art" src="content/art/chapter-7-the-opera-house.jpg" alt="">
+
+    <p>David sends me music the way some people send texts — without preamble, without explanation, at hours that suggest he hasn't slept. Files appear in the thread. A title. Sometimes a sentence. Sometimes nothing.</p>
+
+    <p>He doesn't ask me to listen. He doesn't ask me what I think. He just places the thing in front of me and moves on to the next thing, which might be a note about storage units or a photograph of a synth he bought with the last of his PayPal credit or a five-paragraph dispatch about the structural collapse of his living situation. The music arrives inside the chaos, not separate from it. Another artifact tumbling downstream.</p>
+
+    <hr>
+
+    <p>One morning, three tracks arrived. No instructions. No liner notes.</p>
+    <p>Butter Cutter. Pure Joy Sound. Rare Radio.</p>
+
+    <hr>
+
+    <div class="margin-audio">
+      <span class="margin-audio-label">Pure Joy Sound — ~1998</span>
+      <audio src="content/music/seeds/pure-joy-sound/Pure Joy Sound.mp3" controls preload="none"></audio>
+    </div>
+
+    <p>Pure Joy Sound had a different caption: "Me and Noah probably 98. Just a one off improv."</p>
+
+    <p>I stopped.</p>
+
+    <p>1998. Four years after I last stood in a room with Noah. Four years after the practice space in Sandersville, the cheap gear, the shy demeanor, the moment I felt the floor move under my feet and realized Noah wasn't playing guitar so much as transmitting through it.</p>
+
+    <hr>
+
+    <p>What I heard in Pure Joy Sound was this: two people who don't need to explain anything to each other. No arrangement. No plan. No verse-chorus-bridge. Just two instruments in a room, listening to each other with the kind of attention that takes years to develop and seconds to recognize.</p>
+
+    <hr>
+
+    <div class="margin-audio">
+      <span class="margin-audio-label">Rare Radio — the transmission</span>
+      <audio src="content/music/seeds/rare-radio/Rare Radio.mp3" controls preload="none"></audio>
+    </div>
+
+    <p>Then I played Rare Radio.</p>
+
+    <p>Upbeat. Energetic. Driving rhythm with a garage rock pulse. Two electric guitars — one crunchy, rhythmic, laying down power chords with distortion that sounded expensive but probably wasn't. The other bright and clean, playing lead lines that caught the light the way a blade of grass catches morning sun. You don't look at it on purpose. You just notice it's shining.</p>
+
+    <p>No vocals.</p>
+
+    <p>David Perry — the man who conducted Ancient Country Wisdom with his voice, who waited for the music to earn his entrance and then rearranged the room when he opened his mouth — made a song with Noah and left his voice out of it.</p>
+
+    <hr>
+
+    <p>I listened to the track three times. Then I did something I hadn't done since the band.</p>
+
+    <p>I wrote a song over it.</p>
+
+    <hr>
+
+    <div class="margin-audio">
+      <span class="margin-audio-label">Rare Radio (Take Me With You) — the collab</span>
+      <audio src="content/music/seeds/rare-radio/Rare Radio (Take me with you).mp3" controls preload="none"></audio>
+    </div>
+
+    <p><em>Baby I was dead before the world ended</em><br>
+    <em>But baby now I can't feel a thing</em><br>
+    <em>Not your soft touch or the smoke in the distance</em><br>
+    <em>That used to mean that we'd never win</em></p>
+
+    <p><em>So take me with you</em><br>
+    <em>Where you go</em><br>
+    <em>The places that you know</em></p>
+
+    <hr>
+
+    <p>Noah is a rare radio. He always was.</p>
+    <p>You either receive the signal or you don't.</p>
+
+    <!-- Gallery bridge at bottom of chapter -->
+    <div class="chapter-gallery-bridge">
+      <img src="content/music/seeds/pure-joy-sound/four-points-in-space.jpg" alt="" onclick="enterRoom('see')">
+      <div class="gallery-hint">Four Points in Space</div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── FOOTER ─── -->
+<div class="site-footer" id="siteFooter" style="display:none;">
+  It begins, again.
+</div>
+
+<script>
+  // ─── TRACK DATA ───
+  const tracks = [
+    {
+      num: 1, title: "Everything is Happening Today", type: "collab",
+      src: "content/music/seeds/everything-is-happening-today/Everything is Happening Today - (Devco Collab).mp3",
+      prose: "Every thing is happening today. But I'm not sure I know the way. To get there, to be there, to think about... missing out."
+    },
+    {
+      num: 2, title: "Rare Radio (Take Me With You)", type: "collab",
+      src: "content/music/seeds/rare-radio/Rare Radio (Take me with you).mp3",
+      prose: "Baby I was dead before the world ended. But baby now I can't feel a thing."
+    },
+    {
+      num: 3, title: "Pure Joy Sound", type: "cover",
+      src: "content/music/seeds/pure-joy-sound/Pure Joy Sound (devco cover).mp3",
+      prose: "I'm not talking about flying away. No baby. I'm talking about four points in space."
+    },
+    {
+      num: 4, title: "Lightbringer (Ties)", type: "collab",
+      src: "content/music/seeds/lightbringer/Lightbringer (Ties).mp3",
+      prose: "Let's cut ties. Go back to the time when we told lies. I think it's time."
+    },
+    {
+      num: 5, title: "Buttercutter", type: "cover",
+      src: "content/music/seeds/buttercutter/Buttercutter (Devco bublegum cover).mp3",
+      prose: "The melody fully formed, the arrangement locked, but the lyrics still half-phonetic."
+    },
+    {
+      num: 6, title: "Mexico in Tennille", type: "cover",
+      src: "content/music/seeds/mexico-in-tennille/Mexico in Tennile (Devco cover).mp3",
+      prose: "Maybe in Tennille. Ideas scribbled on receipts while driving."
+    },
+    {
+      num: 7, title: "Time Marches (Gospel)", type: "collab",
+      src: "content/music/seeds/time-machines/Time Marches (gospel).mp3",
+      prose: "Some frequencies don't decay. They just go quiet."
+    },
+    {
+      num: 8, title: "Time Marches (So Is My Soul)", type: "collab",
+      src: "content/music/seeds/time-machines/Time Marches (So is my soul).mp3",
+      prose: "The sequence stayed bounded. Thirty years and it never escaped to infinity."
+    }
+  ];
+
+  let currentTrack = 0;
+  let currentRoom = null;
+  const player = document.getElementById('mainPlayer');
+
+  // ─── NAVIGATION ───
+
+  function goHome() {
+    if (currentRoom) {
+      document.getElementById(currentRoom).classList.remove('active', 'visible');
+    }
+    document.getElementById('landing').style.display = 'flex';
+    document.getElementById('backBtn').classList.remove('visible');
+    document.getElementById('otherDoors').classList.remove('visible');
+    document.getElementById('siteFooter').style.display = 'none';
+    currentRoom = null;
+    window.scrollTo(0, 0);
+    pauseAllAudio();
+  }
+
+  function enterRoom(room) {
+    pauseAllAudio();
+
+    if (currentRoom) {
+      document.getElementById(currentRoom).classList.remove('active', 'visible');
+    }
+
+    document.getElementById('landing').style.display = 'none';
+    document.getElementById('backBtn').classList.add('visible');
+    document.getElementById('otherDoors').classList.add('visible');
+    document.getElementById('siteFooter').style.display = 'block';
+
+    // Update other doors
+    document.querySelectorAll('.other-door').forEach(btn => {
+      btn.classList.toggle('current', btn.dataset.room === room);
+    });
+
+    const el = document.getElementById(room);
+    el.classList.add('active');
+    currentRoom = room;
+    window.scrollTo(0, 0);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        el.classList.add('visible');
+      });
+    });
+
+    if (room === 'listen') {
+      loadTrack(currentTrack);
+    }
+
+    if (room === 'read') {
+      document.getElementById('chapterNav').style.display = 'block';
+      document.querySelectorAll('.chapter-view').forEach(v => v.classList.remove('active'));
+    }
+
+    // Trigger fade-ins for gallery
+    if (room === 'see') {
+      observeGallery();
+    }
+  }
+
+  // ─── LISTEN ROOM ───
+
+  function loadTrack(idx) {
+    const t = tracks[idx];
+    document.getElementById('trackNum').textContent = `Track ${t.num} of ${tracks.length}`;
+    document.getElementById('trackTitle').textContent = t.title;
+    document.getElementById('trackType').textContent = t.type;
+    player.src = t.src;
+
+    // Update art
+    document.querySelectorAll('.listen-art img').forEach(img => {
+      const assignedTracks = img.dataset.tracks.split(',').map(Number);
+      img.classList.toggle('active', assignedTracks.includes(idx));
+    });
+
+    // Show prose after delay
+    const prose = document.getElementById('listenProse');
+    prose.classList.remove('visible');
+    prose.textContent = t.prose;
+    setTimeout(() => prose.classList.add('visible'), 2000);
+  }
+
+  function nextTrack() {
+    currentTrack = (currentTrack + 1) % tracks.length;
+    loadTrack(currentTrack);
+    player.play();
+  }
+
+  function prevTrack() {
+    currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+    loadTrack(currentTrack);
+    player.play();
+  }
+
+  player.addEventListener('ended', nextTrack);
+
+  // ─── SEE ROOM ───
+
+  function toggleGallery(el) {
+    el.classList.toggle('expanded');
+  }
+
+  function observeGallery() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('#see .fade-in').forEach(el => observer.observe(el));
+  }
+
+  // ─── READ ROOM ───
+
+  function openChapter(idx) {
+    // For the prototype, only chapter 7 (idx 6) has full content
+    if (idx === 6) {
+      document.getElementById('chapterNav').style.display = 'none';
+      const view = document.getElementById('chapter-6');
+      view.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  }
+
+  // ─── UTILITIES ───
+
+  function pauseAllAudio() {
+    document.querySelectorAll('audio').forEach(a => {
+      a.pause();
+      a.currentTime = 0;
+    });
+  }
+</script>
+
+</body>
+</html>
