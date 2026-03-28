@@ -121,7 +121,7 @@ Content cascades downward over time. New songs start at Layer 3, drop to Layer 2
 This partnership runs on skill, not capital. Jeff invests time, infrastructure, and thirty years of systems architecture. No cash changes hands. One person brings the vision, the other brings the system that makes it visible.
 
 - **The DevCo Platform** — publishing, rendering, distribution. Your books, articles, and content produced and shipped through a system that already exists.
-- **AI production** — music production (Suno), art generation (Nano Banana), content acceleration. Your raw ideas turned into finished artifacts fast.
+- **AI production** — music, art, content acceleration. Your raw ideas turned into finished artifacts fast.
 - **The website** — not a storefront. The product itself. A layered, organic experience with five levels of access. The four doors (Listen, See, Read, Experience) are already built. The access layers are the next build.
 - **Brand architecture** — the spiral strategy, the personas, the gallery framework, the Mandelbrot mathematics underneath everything. The system that makes your depth navigable without making it shallow.
 - **Business guidance** — how to price, how to structure, how to ship. Thirty years of enterprise architecture applied to your creative practice.
