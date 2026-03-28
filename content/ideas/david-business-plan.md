@@ -79,26 +79,40 @@ Your version, without the manipulation:
 
 ---
 
-## Revenue Streams
+## The Platform Is the Product
 
-### Immediate (0–6 months)
+No streaming platforms. No Spotify. No giving your music to an algorithm that treats it as content. The website is the product — an organic, layered experience you control. The audience comes to your world, not the other way around.
 
-- **Music releases** — singles and EPs through streaming platforms. Low cost to produce with AI-assisted tools (Suno + DevCo production). Revenue is modest but the purpose is discovery, not income.
-- **1:1 sessions** — Human Design readings, life coaching, framework application. This is your fastest path to income. You're already doing this informally. Formalize it. Set a rate. Book sessions.
-- **The first book** — published through DevCo Platform. Ebook + print-on-demand. No upfront cost. Revenue from sales.
+The site has five concentric layers. Each one goes deeper. You can't skip layers. Time and attention are the currency. See [layered-site-architecture.md](layered-site-architecture.md) for the full spec.
 
-### Medium-term (6–18 months)
+### Layer 0: The Surface (open)
+Anyone can walk in. The four doors — Listen, See, Read, Experience. Full album playback. The gallery. Chapter 1 of the book. The living geometry. Free. No login. Generous but incomplete. The visitor can feel that more exists.
 
-- **Courses** — online, self-paced. Your frameworks structured as progressive learning. Recorded once, sold indefinitely.
-- **Workshops** — group sessions, in-person or virtual. Higher price point than 1:1. Community building.
-- **Album** — full release with gallery exhibition (physical or digital). The three-door experience as a shipped product.
+### Layer 1: The Threshold (free account)
+Chapters 1–5. The raw seeds. David's Dispatches — 3am notes, fragments, provocations. The hook that pulls the intellectually curious toward the depth. Email capture. The dispatches become the most important content in the system.
 
-### Long-term (18+ months)
+### Layer 2: The Spiral (paid subscription)
+All chapters. The frameworks — Bennett, sacred geometry, Human Design as David teaches it. Courses. The full music catalog. Community. This is the recurring revenue engine.
 
-- **Retreats** — the cabin. Small groups. Immersive. Premium pricing.
-- **Publishing pipeline** — book two, book three. Each one deeper. Each one creating demand for the next.
-- **The participatory layer** — paid community, collaborative creation, the metaverse. Subscription model.
-- **Licensing** — your frameworks licensed to other coaches, practitioners. Train-the-trainer.
+### Layer 3: The Inner Circle (application + premium)
+1:1 with David. Group workshops. Advance access. Direct relationship. This is where David makes real money.
+
+### Layer 4: The Cabin (invitation only)
+Retreats. Residencies. Collaboration. The physical space. The pattern experienced in person.
+
+## Revenue Model
+
+| Layer | Price | David's Income |
+|-------|-------|---------------|
+| 0 — Surface | Free | Discovery. The funnel. |
+| 1 — Threshold | Free (email) | The list. Dispatch readership. |
+| 2 — Spiral | $9/month · $79/year | 100 subs = ~$800/mo. 1,000 = ~$8,000/mo. |
+| 3 — Inner Circle | $99/month or $150–300/session | 20 members = ~$2,000/mo + sessions. |
+| 4 — Cabin | $2,000–5,000/retreat | 2 retreats/year × 5 people = $20K–50K. |
+
+**Year 1 target:** 200 Spiral subscribers + 10 Inner Circle + 1 retreat = ~$40,000–50,000. That's not rich. That's liberated.
+
+Content cascades downward over time. New songs start at Layer 3, drop to Layer 2, eventually the produced version reaches Layer 0. David's dispatches go to Layer 1 because they're the hook — free, raw, intimate. The depth is earned through time and attention, not just purchased.
 
 ---
 
@@ -108,7 +122,7 @@ Jeff is not bankrolling this. Jeff is building the infrastructure and advising t
 
 - **The DevCo Platform** — publishing, rendering, distribution. Your books, articles, and content produced and shipped through a system that already exists.
 - **AI production** — music production (Suno), art generation (Nano Banana), content acceleration. Your raw ideas turned into finished artifacts fast.
-- **The website** — the three-door experience. Your storefront, your gallery, your listening room. Already built. Already live.
+- **The website** — not a storefront. The product itself. A layered, organic experience with five levels of access. The four doors (Listen, See, Read, Experience) are already built. The access layers are the next build.
 - **Brand architecture** — the spiral strategy, the personas, the gallery framework, the Mandelbrot mathematics underneath everything. The system that makes your depth navigable without making it shallow.
 - **Business guidance** — how to price, how to structure, how to ship. Thirty years of enterprise architecture applied to your creative practice.
 
@@ -130,15 +144,17 @@ That's not a limitation. That's the moat.
 
 ## First Steps
 
-1. **Pure Joy Sound as the first single.** Produced, mastered, distributed to streaming platforms. The pop song at the edge of the spiral. This is the thing people find.
+1. **Launch Layer 0.** The surface is already built — four doors, live at acw.ngrok.app. Polish it. Make it permanent. This is the thing people find.
 
-2. **Formalize the coaching.** Set a rate for Human Design readings and framework sessions. Build a simple booking page. Start with people you know. Word of mouth is the only marketing that works for depth.
+2. **Pure Joy Sound as the first single.** Not on Spotify — on the site. The pop song lives inside the experience. People share the URL, not a streaming link. The song brings them to the world.
 
-3. **The first book.** Start writing — or start talking and let Jeff turn it into writing. Your synthesis. Not everything. The first layer. The one that makes people want the second layer.
+3. **Start the Dispatches.** David writes. 3am notes, fragments, provocations. These become Layer 1 content and the email hook. The rhythm is David's rhythm, not a content calendar.
 
-4. **The website.** Already live at acw.ngrok.app. This becomes your home. Music, gallery, book, experience — all in one place. No social media required (though it helps). The depth lives here.
+4. **Formalize the coaching.** Set a rate for Human Design readings and framework sessions. Build a booking page inside Layer 3. Start with people you know. Word of mouth is the only marketing that works for depth.
 
-5. **One thing per week.** A song, a chapter, an essay, a piece of art. The spiral needs material. The DevCo production system means you can ship at volume without burning out. You create. The system produces.
+5. **Talk the first book.** Not write it — talk it. Phone conversations, the way Chapter 1 happened. Jeff and the platform turn the talking into the book. The book lives on the site at Layer 2, not on Amazon.
+
+6. **One thing per week.** A song, a chapter, a dispatch, a piece of art. The spiral needs material. The DevCo production system means you can ship at volume without burning out. You create. The system produces.
 
 ---
 
