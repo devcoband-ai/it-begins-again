@@ -138,41 +138,46 @@
     opacity: 1;
   }
 
-  .back-btn {
+  /* ─── PERSISTENT NAV BAR ─── */
+
+  .nav-bar {
     position: fixed;
-    top: 2rem;
-    left: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(12px);
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    z-index: 200;
+    border-bottom: 1px solid rgba(107, 107, 107, 0.15);
+  }
+
+  .nav-bar.visible { display: flex; }
+
+  .nav-title {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--muted);
     cursor: pointer;
-    z-index: 100;
-    border: none;
-    background: none;
     transition: color 0.3s;
-    display: none;
   }
 
-  .back-btn:hover { color: var(--bone); }
-  .back-btn.visible { display: block; }
+  .nav-title:hover { color: var(--bone); }
 
-  /* ─── OTHER DOORS (persistent) ─── */
-
-  .other-doors {
-    position: fixed;
-    top: 2rem;
-    right: 2rem;
-    display: none;
-    gap: 1.5rem;
-    z-index: 100;
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
   }
 
-  .other-doors.visible { display: flex; }
-
-  .other-door {
+  .nav-link {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 0.7rem;
@@ -183,10 +188,44 @@
     border: none;
     background: none;
     transition: color 0.3s;
+    padding: 0.8rem 0;
+    position: relative;
   }
 
-  .other-door:hover { color: var(--bone); }
-  .other-door.current { color: var(--warm); pointer-events: none; }
+  .nav-link:hover { color: var(--bone); }
+
+  .nav-link.current {
+    color: var(--warm);
+  }
+
+  .nav-link.current::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--warm);
+  }
+
+  .nav-now-playing {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: var(--warm);
+    opacity: 0;
+    transition: opacity 0.5s;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .nav-now-playing.visible { opacity: 0.7; }
+
+  /* rooms need top padding to clear nav bar */
+  .room { padding-top: 5rem; }
 
   /* ─── LISTEN ROOM ─── */
 
@@ -196,6 +235,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding-top: 60px;
     background: var(--deep);
   }
 
@@ -604,15 +644,16 @@
 </head>
 <body>
 
-<!-- BACK BUTTON -->
-<button class="back-btn" id="backBtn" onclick="goHome()">Back</button>
-
-<!-- OTHER DOORS -->
-<div class="other-doors" id="otherDoors">
-  <button class="other-door" data-room="listen" onclick="enterRoom('listen')">Listen</button>
-  <button class="other-door" data-room="see" onclick="enterRoom('see')">See</button>
-  <button class="other-door" data-room="read" onclick="enterRoom('read')">Read</button>
-</div>
+<!-- PERSISTENT NAV BAR -->
+<nav class="nav-bar" id="navBar">
+  <span class="nav-title" onclick="goHome()">It Begins, Again</span>
+  <div class="nav-links">
+    <button class="nav-link" data-room="listen" onclick="enterRoom('listen')">Listen</button>
+    <button class="nav-link" data-room="see" onclick="enterRoom('see')">See</button>
+    <button class="nav-link" data-room="read" onclick="enterRoom('read')">Read</button>
+  </div>
+  <span class="nav-now-playing" id="navNowPlaying"></span>
+</nav>
 
 <!-- ─── LANDING ─── -->
 <div id="landing">
@@ -1346,32 +1387,35 @@
   // ─── NAVIGATION ───
 
   function goHome() {
+    // Don't pause audio when going home — let it keep playing
     if (currentRoom) {
       document.getElementById(currentRoom).classList.remove('active', 'visible');
     }
     document.getElementById('landing').style.display = 'flex';
-    document.getElementById('backBtn').classList.remove('visible');
-    document.getElementById('otherDoors').classList.remove('visible');
+    document.getElementById('navBar').classList.remove('visible');
     document.getElementById('siteFooter').style.display = 'none';
     currentRoom = null;
     window.scrollTo(0, 0);
-    pauseAllAudio();
   }
 
   function enterRoom(room) {
-    pauseAllAudio();
+    // Only pause audio if leaving listen room for another room
+    if (currentRoom && currentRoom !== 'listen' || room === 'listen') {
+      // Don't pause — let music continue across rooms
+    } else if (currentRoom === 'listen' && room !== 'listen') {
+      // Keep playing — music persists when browsing See or Read
+    }
 
     if (currentRoom) {
       document.getElementById(currentRoom).classList.remove('active', 'visible');
     }
 
     document.getElementById('landing').style.display = 'none';
-    document.getElementById('backBtn').classList.add('visible');
-    document.getElementById('otherDoors').classList.add('visible');
+    document.getElementById('navBar').classList.add('visible');
     document.getElementById('siteFooter').style.display = 'block';
 
-    // Update other doors
-    document.querySelectorAll('.other-door').forEach(btn => {
+    // Update nav links
+    document.querySelectorAll('.nav-link').forEach(btn => {
       btn.classList.toggle('current', btn.dataset.room === room);
     });
 
@@ -1415,6 +1459,11 @@
       const assignedTracks = img.dataset.tracks.split(',').map(Number);
       img.classList.toggle('active', assignedTracks.includes(idx));
     });
+
+    // Update now-playing in nav
+    const np = document.getElementById('navNowPlaying');
+    np.textContent = '♪ ' + t.title;
+    np.classList.add('visible');
 
     // Show prose after delay
     const prose = document.getElementById('listenProse');
