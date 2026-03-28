@@ -130,6 +130,20 @@ This partnership runs on skill, not capital. Jeff invests time, infrastructure, 
 
 ---
 
+## The Others — Rich, Noah, Greg
+
+This plan starts with David and Jeff, but there are no ownership boundaries. The door is open. It's always open.
+
+Rich, Noah, and Greg fit wherever David wants them to fit. That's David's call — he's the conductor, he's always been the conductor. The geometry has room for every node. The pentagon became a hexagon when Enua arrived, and it didn't break — it reorganized.
+
+Maybe Rich runs workshops with David. Maybe Noah's music becomes its own spiral within the spiral. Maybe Greg shows up one day and the center of gravity shifts the way it always did when Greg was in the room. Maybe none of that happens and the plan works with two.
+
+The architecture doesn't prescribe participation. It accommodates it. Anyone who enters the pattern with the right frequency becomes part of the pattern. That was true in Sandersville and it's true now.
+
+The only rule is the rule from the beginning: everything here belongs to the person who made it. Nothing gets published without the creator's say-so. Participation is voluntary, ownership is individual, and the door doesn't close.
+
+---
+
 ## The Superpower
 
 Between us, the collective superpower is **complexity and perpetual evolution.**
