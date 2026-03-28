@@ -16,7 +16,7 @@ ACW was a function. Five people were the variables. The iteration was every rehe
 
 The Mandelbrot set is also the mathematical engine behind fractals — self-similar patterns at every scale. The band in 1994 was the pattern at one scale. David and Noah playing Pure Joy Sound in 1998 was the same pattern at a smaller scale. ACW 2.0 is the pattern at a larger scale. Same function. Same bounded sequence. Different magnification.
 
-Every piece in this gallery is a region of the set. The personas are not styles — they are zoom levels and coordinates within the boundary. The Residue is deep magnification on a quiet region. The Switchboard is the full set viewed from distance, the boundary visible as infrastructure. The Diffusion Chamber is the region just outside the boundary — where the sequence is *almost* bounded, iterating further before it escapes, producing the most complex visual behavior at the edge of divergence. The Threshold is the boundary itself.
+Every piece in this gallery is a region of the set. The personas are not styles — they are zoom levels and coordinates within the boundary. The Seismograph is the deep interior — stable, bounded, the terrain of sequences that never threatened to escape. The Residue is deep magnification on a quiet region — the fine grain of the set at scales where the pattern is intimate and ancient. The Diffusion Chamber is the region just outside the boundary — where the sequence is *almost* bounded, iterating further before it escapes, producing the most complex visual behavior at the edge of divergence. The Threshold is the boundary itself.
 
 The gallery never names the Mandelbrot set. The gallery never displays a fractal. But the organizational principle underneath every piece — bounded iteration, self-similarity across scale, infinite complexity at the boundary — is the set. The math is the architecture. The songs are the iterations. The pieces are the output.
 
@@ -64,27 +64,7 @@ No piece in the gallery fully diverges. If it did, it wouldn't be in the gallery
 
 ---
 
-## Persona 2: The Switchboard
-
-**Frequency range:** Mid-density to dense. Liminal to urban.
-
-**What it does:** Maps connection — not the warm human kind, the infrastructural kind. Cables, circuits, routing paths, exchange points. The architecture of how signals find each other across distance. This persona renders the ACW geometry as telecommunications, as plumbing, as neural wiring. The intimacy is hidden inside the system diagram.
-
-**Visual language:** Schematic. Blueprint aesthetics — white or amber lines on deep blue or black fields. Nodes and pathways. Junction boxes. The look of something being routed, not something being felt. But the routing paths, if you follow them, form pentagons. Hexagons. The geometry hides in plain sight.
-
-**Moves toward brutalist when:** The schematic scales up. A circuit board becomes a city grid. A junction box becomes a brutalist housing block. The pathways become highways. The signal becomes traffic. The intimacy of a five-node connection rendered at the scale of urban infrastructure — the same pattern, inhuman in scale.
-
-**Seeds from:**
-- *Everything is Happening Today* — the overwhelm of simultaneity, every signal arriving at once
-- *Lightbringer* — a single signal cutting through noise
-- *The Ballad of Ancient Country Wisdom* — the full network, all nodes active
-- *Repeat It* — loop architecture, the signal cycling back through itself
-
-**The innuendo:** The viewer sees infrastructure. The listener sees the band. The five nodes on the schematic are five people in a room. The six nodes are what happens when Enua arrives. The gallery doesn't say this. The viewer either catches it or they see a beautiful diagram of nothing in particular.
-
----
-
-## Persona 3: The Residue
+## Persona 2: The Residue
 
 **Frequency range:** Atmospheric. Natural to abandoned-urban.
 
@@ -104,7 +84,7 @@ No piece in the gallery fully diverges. If it did, it wouldn't be in the gallery
 
 ---
 
-## Persona 4: The Diffusion Chamber
+## Persona 3: The Diffusion Chamber
 
 **Frequency range:** Dense. Urban to post-urban.
 
@@ -126,7 +106,7 @@ No piece in the gallery fully diverges. If it did, it wouldn't be in the gallery
 
 ---
 
-## Persona 5: The Threshold
+## Persona 4: The Threshold
 
 **Frequency range:** Full spectrum. This persona exists only at transition points between the other four.
 
